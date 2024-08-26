@@ -15,7 +15,7 @@ int main() {
     double AB = distance(x1, y1, x2, y2);
     double AP = distance(x1, y1, px, py);
     double PB = distance(px, py, x2, y2);
-
+    
     // Check if point P is a trisection point
     if (AP == PB && AP == AB / 3) {
         printf("Point P(%d, %d) is one of the trisection points of line segment AB.\n", px, py);
@@ -34,7 +34,7 @@ int main() {
     fprintf(fp, "Point A: (%d, %d)\n", x1, y1);
     fprintf(fp, "Point P: (%d, %d)\n", px, py);
     fprintf(fp, "Point B: (%d, %d)\n", x2, y2);
-
+    fprintf(fp, "Point R: (%d, %d)\n", 3, -4);
     fclose(fp);
 
     // Plot the coordinates using a plotting library (e.g., gnuplot, matplotlib)
