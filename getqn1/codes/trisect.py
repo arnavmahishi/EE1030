@@ -1,3 +1,4 @@
+import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_coordinates(filename):
@@ -6,16 +7,19 @@ def plot_coordinates(filename):
     Args:
         filename: The name of the text file containing coordinates.
     """
-    coordinates = {}
+
     with open(filename, 'r') as f:
-        for line in f:
-            point_name, coords_str = line.strip().split(': ')
-            coords = tuple(map(int, coords_str.strip('()').split(',')))
-            coordinates[point_name] = coords
+        coordinates = {
+            line.strip().split(': ')[0]: tuple(map(int, line.strip().split(': ')[1].strip('()').split(',')))
+            for line in f
+        }
 
     # Extract x and y values
-    x_values = [coord[0] for coord in coordinates.values()]
-    y_values = [coord[1] for coord in coordinates.values()]
+    x_values, y_values = zip(*coordinates.values())
+
+    # Create NumPy arrays (if needed for other calculations)
+    # x_array = np.array(x_values)
+    # y_array = np.array(y_values)
 
     # Plot the points
     plt.scatter(x_values, y_values, color='blue')
@@ -36,9 +40,9 @@ def plot_coordinates(filename):
     plt.ylabel("Y-coordinate")
     plt.title("Coordinates Plot")
 
-    # Annotate points with labels and coordinates
-    for point_name, (x, y) in coordinates.items():
-        plt.annotate(f"{point_name} ({x}, {y})", (x, y), textcoords="offset points", xytext=(0, 10), ha="center")
+    # Annotate points using list comprehension with zip
+    annotations = [plt.annotate(f"{name} ({x}, {y})", (x, y), textcoords="offset points", xytext=(0, 10), ha="center")
+                   for name, (x, y) in coordinates.items()]
 
     plt.show()
 
