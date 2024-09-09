@@ -7,7 +7,7 @@
 
 \setlength{\headheight}{1cm} % Set the height of the header box
 \setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
-\usepackage{xparse}
+
 \usepackage{gvv-book}
 \usepackage{gvv}
 \usepackage{cite}
@@ -36,7 +36,6 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
-
 \begin{document}
 
 \bibliographystyle{IEEEtran}
@@ -65,12 +64,12 @@ Q) Find the value of $k$, if the point $P\brak{2,4}$ is equidistant from the poi
   \caption{Input Parameters}
 \end{table}
 \begin{align}
-\|AP\|=\|PB\| \implies
+\abs{AP}=\abs{PB}\implies
 \brak{A-P}^T\brak{A-P}=\brak{B-P}^T\brak{B-P}\\
-\myvec{3\\k-4}^T\myvec{3\\k-4}=\myvec{k-2\\3}^T\myvec{k-2\\3}\\
-\myvec{3&k-4}\myvec{3\\k-4}=\myvec{k-2&3}\myvec{k-2\\3}\\
-\brak{k-4}^2+9=\brak{k-2}^2+9\\
-\brak{k-4}=\pm\brak{k-2}\\
+\implies\myvec{3\\k-4}^T\myvec{3\\k-4}=\myvec{k-2\\3}^T\myvec{k-2\\3}\\
+\implies\myvec{3&k-4}\myvec{3\\k-4}=\myvec{k-2&3}\myvec{k-2\\3}\\
+\implies\brak{k-4}^2+9=\brak{k-2}^2+9\\
+\implies\brak{k-4}=\pm\brak{k-2}\\
 \therefore k=3
 \end{align}
 \begin{figure}[h!]
