@@ -1,50 +1,33 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
-def read_points(filename):
-    """Reads points from a text file and returns them as a list of tuples.
+# Define the coordinates of points P, A, and B
+point_P = (2, 4)
+point_A = (5, 3)
+point_B = (3, 7)
 
-    Args:
-        filename: The name of the text file.
+# Create the plot
+plt.figure(figsize=(6, 6))
 
-    Returns:
-        A list of tuples, where each tuple represents a point (x, y).
-    """
+# Plot the points with labels and coordinates
+plt.plot(point_P[0], point_P[1], 'o', markersize=10, label='P')
+plt.text(point_P[0], point_P[1] - 0.5, f'P ({point_P[0]}, {point_P[1]})', ha='center')
+plt.plot(point_A[0], point_A[1], 'o', markersize=10, label='A')
+plt.text(point_A[0], point_A[1] - 0.5, f'A ({point_A[0]}, {point_A[1]})', ha='center')
+plt.plot(point_B[0], point_B[1], 'o', markersize=10, label='B')
+plt.text(point_B[0], point_B[1] - 0.5, f'B ({point_B[0]}, {point_B[1]})', ha='center')
 
-    with open(filename, 'r') as f:
-        points = [(float(x), float(y)) for line in f for x, y in [line.split()]]
-    return points
+# Draw the lines from P to A and P to B
+plt.plot([point_P[0], point_A[0]], [point_P[1], point_A[1]], '-b', label='P-A')
+plt.plot([point_P[0], point_B[0]], [point_P[1], point_B[1]], '-b', label='P-B')
 
-def plot_points(points, labels):
-    """Plots the points with labels and lines connecting A and B to P.
+# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Points and Connecting Lines')
 
-    Args:
-        points: A list of tuples representing points (x, y).
-        labels: A list of labels for each point.
-    """
+# Add legend
+plt.legend()
 
-    x, y = zip(*points)  # Unpack coordinates into separate arrays
-
-    plt.figure(figsize=(8, 6))
-    plt.scatter(x, y, color='blue', marker='o')
-
-    # Label the points using a list comprehension
-    for i, (px, py) in enumerate(points):
-        plt.text(px, py, f"P{i+1} ({px:.2f}, {py:.2f})", ha='center', va='bottom')
-
-    # Connect points A and B to P
-    plt.plot([points[0][0], points[1][0], points[2][0]],
-             [points[0][1], points[1][1], points[2][1]],
-             color='red', linestyle='-', linewidth=2)
-
-    plt.xlabel('X-axis')
-    plt.ylabel('Y-axis')
-    plt.title('Plot of Points')
-
-    plt.show()
-
-if __name__ == '__main__':
-    filename = 'points.txt'
-    points = read_points(filename)
-    labels = [f"P{i+1}" for i in range(len(points))]
-    plot_points(points, labels)
+# Show the plot
+plt.grid(True)
+plt.show()
