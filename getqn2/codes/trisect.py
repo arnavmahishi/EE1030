@@ -1,9 +1,12 @@
 import matplotlib.pyplot as plt
 
+with open(points, 'r') as file:
+  lines = file.readlines()
+
 # Define the coordinates of points P, A, and B
-point_P = (2, 4)
-point_A = (5, 3)
-point_B = (3, 7)
+point_P = tuple(map(float, lines[0].strip().replace('B(', '').replace(')', '').split(', ')))
+point_A = tuple(map(float, lines[1].strip().replace('C(', '').replace(')', '').split(', ')))
+point_B = tuple(map(float, lines[2].strip().replace('A(', '').replace(')', '').split(', ')))
 
 # Create the plot
 plt.figure(figsize=(6, 6))
