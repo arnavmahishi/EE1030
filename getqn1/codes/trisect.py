@@ -1,5 +1,26 @@
 import matplotlib.pyplot as plt
 
+#Code by GVV Sharma
+#September 12, 2023
+#Revised July 21, 2024
+#released under GNU GPL
+#Point Vectors
+
+import sys                                          #for path to external scripts
+sys.path.insert(0,'/home/arnav/matgeo/codes/CoordGeo')        #path to my scripts
+import numpy as np
+import numpy.linalg as LA
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from mpl_toolkits.mplot3d import Axes3D
+
+#local imports
+from line.funcs import *
+from triangle.funcs import *
+from conics.funcs import circ_gen
+import ctypes
+from ctypes import Structure, c_double
+
 # Read coordinates from the text file (assuming 4 points)
 with open("coordinates.txt", 'r') as f:
     lines = f.readlines()
