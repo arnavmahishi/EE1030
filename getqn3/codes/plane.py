@@ -20,31 +20,38 @@ from conics.funcs import circ_gen
 import ctypes
 from ctypes import Structure, c_double
 
+def plot_plane_and_normal(plane_normal):
+    # Extract coefficients from the plane equation
+    a, b, c, d = plane_normal
 
-# Function to calculate Z values based on X and Y
-def calculate_z(x, y):
-    return x**2 + y**2
+    # Generate points for the plane
+    x = np.linspace(-10, 10, 100)
+    y = np.linspace(-10, 10, 100)
+    X, Y = np.meshgrid(x, y)
+    Z = (-d - a * X - b * Y) / c
 
-# Generate X and Y data
-x = np.linspace(-5, 5, 100)
-y = np.linspace(-5, 5, 100)
-X, Y = np.meshgrid(x, y)
+    # Plot the plane
+    plt.plot_surface(X, Y, Z, alpha=0.5)
 
-# Calculate Z values
-Z = calculate_z(X, Y)
+    # Plot the normal vector
+    origin = np.array([0, 0, 0])
+    end_point = np.array([a, b, c])
+    plt.quiver(origin[0], origin[1], origin[2], end_point[0], end_point[1], end_point[2], color='red')
 
-# Create the 3D plot
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.zlabel('z')
+    plt.show()
 
-# Plot the surface
-ax.plot_surface(X, Y, Z)
+# Load input parameters from the text file
+with open("plane_data.txt", "r") as file:
+    line = file.readline()
+    plane_normal = np.array(list(map(float, line.split())))
 
-# Set labels and title
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-plt.title('3D Surface Plot')
+# Calculate direction cosines using matrix method
+direction_cosines = plane_normal / np.linalg.norm(plane_normal)
 
-# Show the plot
-plt.show()
+print("Direction cosines of the normal vector:", direction_cosines)
+
+# Plot the plane and normal vector
+plot_plane_and_normal(plane_normal)
