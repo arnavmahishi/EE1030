@@ -1,12 +1,5 @@
-#Code by GVV Sharma
-#September 12, 2023
-#Revised July 21, 2024
-#released under GNU GPL
-#Point Vectors
-
-
-import sys                                          #for path to external scripts
-sys.path.insert(0, '/home/arnav/matgeo/codes/CoordGeo')        #path to my scripts
+import sys
+sys.path.insert(0, '/home/arnav/matgeo/codes/CoordGeo')
 import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
@@ -37,6 +30,17 @@ def plot_plane_and_normal(plane_normal):
     origin = np.array([0, 0, 0])
     end_point = np.array([a, b, c])
     plt.quiver(origin[0], origin[1], origin[2], end_point[0], end_point[1], end_point[2], color='red')
+
+    # Calculate direction cosines
+    direction_cosines = plane_normal / np.linalg.norm(plane_normal)
+
+    # Label direction cosines below the arrow
+    x_label = f"x: {direction_cosines[0]:.3f}"
+    y_label = f"y: {direction_cosines[1]:.3f}"
+    z_label = f"z: {direction_cosines[2]:.3f}"
+    plt.text(end_point[0] + 0.5, end_point[1] - 0.5, end_point[2] + 0.5,
+             f"{x_label}\n{y_label}\n{z_label}",
+             ha='center', va='center')
 
     plt.xlabel('x')
     plt.ylabel('y')
