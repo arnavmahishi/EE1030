@@ -57,7 +57,7 @@
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
-Q) Construct a rhombus whose diagonals are 4cm and 6cm in lengths.\\
+Q) Construct a rhombus whose diagonals are $4$cm and $6$cm in lengths.\\
 \begin{table}[h!]    
   \centering
   \input{tables/table.tex}
@@ -65,15 +65,16 @@ Q) Construct a rhombus whose diagonals are 4cm and 6cm in lengths.\\
 \end{table}\\
 Soln: Assuming x and y axis as diagonals of rhombus and center as origin\\
 \begin{align}
-\norm{\overrightarrow{OA}}=\norm{\overrightarrow{OC}}\implies \overrightarrow{OA}=\myvec{3\\0}\text{ and }\overrightarrow{OC}=\myvec{-3\\0}\\
-\norm{\overrightarrow{OB}}=\norm{\overrightarrow{OD}}\implies \overrightarrow{OB}=\myvec{0\\2}\text{ and }\overrightarrow{OD}=\myvec{0\\-2}\\
-\implies\text{Sidelength}=\overline{AB}=\sqrt{3^2+2^2}=\sqrt{13}\\
-\implies\text{Perimeter}=4\cdot\overline{AB}=4\cdot\sqrt{13}
+\norm{\overrightarrow{OA}}&=\norm{\overrightarrow{OC}}\implies \overrightarrow{OA}=\myvec{3\\0}\text{ and }\overrightarrow{OC}=\myvec{-3\\0}\\
+\norm{\overrightarrow{OB}}&=\norm{\overrightarrow{OD}}\implies \overrightarrow{OB}=\myvec{0\\2}\text{ and }\overrightarrow{OD}=\myvec{0\\-2}\\
+\implies\overrightarrow{AB}&=\overrightarrow{OA}-\overrightarrow{OB}=\myvec{3\\-2}\\
+\implies\text{Sidelength}&=\norm{\overrightarrow{AB}}=\sqrt{\overrightarrow{AB}^T\cdot\overrightarrow{AB}}=\sqrt{\myvec{3 -2}\myvec{3\\-2}}=\sqrt{3^2+2^2}=\sqrt{13}\\
+\implies\text{Perimeter}&=4\cdot\overline{AB}=4\cdot\sqrt{13}
 \end{align}
 \begin{figure}[h!]
    \centering
    \includegraphics[width=0.7\linewidth]{figs/Figure_1.png}
-   \caption{Plot of rhombus}
+   \caption{Plot of plane and normal vector}
    \label{stemplot}
 \end{figure}
 \end{document}
