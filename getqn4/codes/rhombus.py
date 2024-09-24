@@ -22,9 +22,6 @@ from ctypes import Structure, c_double
 import numpy as np
 import matplotlib.pyplot as plt
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 def read_points_from_file(filename):
     """Reads points from a text file and returns a NumPy array."""
     with open(filename, 'r') as file:
@@ -51,9 +48,9 @@ def plot_rhombus(points):
     # Fill the rhombus with light blue
     ax.fill(points[:, 0], points[:, 1], color='lightblue')
 
-    # Label the points
-    for i, point in enumerate(points):
-        ax.text(point[0], point[1] - 0.5, f'A{i+1}({point[0]}, {point[1]})', ha='center', va='top')
+    # Label the points using NumPy's vectorized operations
+    labels = np.array([f'A{i+1}({point[0]}, {point[1]})' for i, point in enumerate(points)])
+    ax.annotate(labels, points, xytext=(0, -5), textcoords='offset points', ha='center', va='top')
 
     # Show the plot
     plt.show()
