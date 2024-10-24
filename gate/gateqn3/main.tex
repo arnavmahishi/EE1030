@@ -1,0 +1,405 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2008-PH-52-68}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+When the refractive index $\mu$ of the active medium changes by $\Delta\mu$ in a laser resonator of length $L$, the change in the spectral spacing between the longitudinal modes of the laser is $\brak{\text{ c is the speed of light in free space}}$ 
+\begin{multicols}{2}
+\begin{enumerate}
+\item$\frac{c}{2\brak{\mu+\Delta\mu}L}$
+\item$\frac{c}{2\Delta\mu L}$
+\item$\frac{c\Delta\mu}{2L\mu\brak{\mu+\Delta\mu}}$
+\item zero
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The primitive translation vectors of the body centered cubic lattice are $\overrightarrow{a}=\frac{a}{2}\brak{\hat{x}-\hat{y}+\hat{z}}$. The primitive translation vectors $\overrightarrow{A},\overrightarrow{B}$, and $\overrightarrow{C}$ of the reciprocal lattice are
+\begin{enumerate}
+\item $\overrightarrow{A}=\frac{2\pi}{a}\brak{\hat{x}-\hat{y}};\overrightarrow{B}=\frac{2\pi}{a}\brak{\hat{y}+\hat{z}};\overrightarrow{C}=\frac{2\pi}{a}\brak{\hat{x}+\hat{z}}$
+\item $\overrightarrow{A}=\frac{2\pi}{a}\brak{\hat{x}+\hat{y}};\overrightarrow{B}=\frac{2\pi}{a}\brak{\hat{y}-\hat{z}};\overrightarrow{C}=\frac{2\pi}{a}\brak{\hat{x}+\hat{z}}$
+\item $\overrightarrow{A}=\frac{2\pi}{a}\brak{\hat{x}+\hat{y}};\overrightarrow{B}=\frac{2\pi}{a}\brak{\hat{y}+\hat{z}};\overrightarrow{C}=\frac{2\pi}{a}\brak{\hat{x}-\hat{z}}$
+\item $\overrightarrow{A}=\frac{2\pi}{a}\brak{\hat{x}+\hat{y}};\overrightarrow{B}=\frac{2\pi}{a}\brak{\hat{y}+\hat{z}};\overrightarrow{C}=\frac{2\pi}{a}\brak{\hat{x}+\hat{z}}$
+\end{enumerate}
+\item{
+The structure factor of a single cell of identical atoms of form factor $f$ is given by $S_{hkl}=f\sum_jexp\brak{-i2\pi\brak{x_jh+y_jk+z_jl}}$ where $\brak{x_j,y_j,z_j}$ is the coordinate of an atom, and $hkl$ are the Miller indices. Which one of the following statement is correct for the differentiation peaks of the body centered cubic $\brak{\text{BCC}}$ and face centered cubic $\brak{\text{FCC}}$ lattices?
+\begin{multicols}{2}
+\begin{enumerate}
+\item BCC: $\brak{200};\brak{110};\brak{222}$\\FCC: $\brak{111};\brak{311};\brak{400}$
+\item BCC: $\brak{210};\brak{110};\brak{222}$\\FCC: $\brak{111};\brak{311};\brak{400}$
+\item BCC: $\brak{200};\brak{110};\brak{222}$\\FCC: $\brak{111};\brak{211};\brak{400}$
+\item BCC: $\brak{200};\brak{210};\brak{222}$\\FCC: $\brak{111};\brak{211};\brak{400}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The lattice specific heat $C$ of a crystalline solid can be obtained using the Dulong Petit model, Einstie model and Debye model. At low temperature $\hbar\omega\textgreater\textgreater k_bT$, which one of the following statements are true $\brak{\text{a and A are constants}}$
+\begin{enumerate}
+\item Dulong Petit: $C\propto exp\brak{\frac{-a}{T}}$; Einstein: $C=constant$;Debye: $C\propto\brak{\frac{T}{A}}^3$
+\item Dulong Petit: $C=constant$; Einstein:$C\propto\brak{\frac{T}{A}}^3$;Debye:  $C\propto exp\brak{\frac{-a}{T}}$
+\item Dulong Petit: $C\propto exp\brak{\frac{-a}{T}}$; Einstein:  $C\propto\frac{e^{\frac{-a}{T}}}{T^2}$;Debye: $C\propto\brak{\frac{T}{A}}^3$
+\item Dulong Petit:$C\propto\brak{\frac{T}{A}}^3$; Einstein:$C\propto\frac{e^{\frac{-a}{T}}}{T^2}$;Debye: $C=constant$ 
+\end{enumerate}
+}
+\item{
+A linear diatomic lattice of lattice constant a with masses $M$ and $m\brak{M\textgreater m}$ are coupled by a force constant $C$. The dispersion relation is given by\\
+$\omega_\pm^2=C\brak{\frac{M+m}{Mm}}\pm\sbrak{C^2\brak{\frac{M+m}{Mm}}^2-\frac{4C^2}{Mm}\sin^2\frac{ka}{2}}^{\frac{1}{2}}$\\
+Which of the follwing statements is INCORRECT?
+\begin{enumerate}
+\item The atoms vibrating in transverse mode correspond to the optical branch.
+\item The maximum frequency of the acoustic branch depends on the mass of the lighter atom $m$.
+\item The dispersion of frequency in the optical branch is smaller than that in the acoustic branch.
+\item No normal modes exist in the acoustic branch for any frequency greater than the maximum frequency at $k=\frac{\pi}{a}$.
+\end{enumerate}
+}
+\item{
+The kinetic energy of a free electron at a corner of the first Brillouin zone of a two dimensional square lattice is larger than that of an electron at the mid-point of a side of the zone by a factor $b$. The value of $b$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $b=\sqrt{2}$
+\item $b=2$
+\item $b=4$
+\item $b=8$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+An intrinsic semiconductor with a mass of a hole $m_h$ and mass of an electron $m_e$ is at a finite temperature $T$. If the top of the valence band energy is $E_v$ and the bottom of the conduction band energy is $E_c$, the Fermi energy of the semiconductor is  
+\begin{multicols}{2}
+\begin{enumerate}
+\item $E_F=\brak{\frac{E_v+E_c}{2}}-\frac{3}{4}k_bT\ln\brak{\frac{m_h}{m_e}}$
+\item $E_F=\brak{\frac{k_bT}{2}}+\frac{3}{4}\brak{E_v+E_c}\ln\brak{\frac{m_h}{m_e}}$
+\item $E_F=\brak{\frac{E_v+E_c}{2}}+\frac{3}{4}k_bT\ln\brak{\frac{m_h}{m_e}}$
+\item $E_F=\brak{\frac{k_bT}{2}}-\frac{3}{4}\brak{E_v+E_c}\ln\brak{\frac{m_h}{m_e}}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Choose the correct statement from the following:
+\begin{enumerate}
+\item The reaction $K^+K^-\rightarrow p\overline{p}$ can proceed irrespective of the kinetic energies of $K^+$ and $K^-$
+\item The reaction $K^+K^-\rightarrow p\overline{p}$ is forbidden by the baryon number conservation
+\item The reaction $K^+K^-\rightarrow 2\gamma$ is forbidden by strangeness conservation.
+\item The decay $K^0\rightarrow\pi^+\pi^-$ proceeds via weak interactions.
+\end{enumerate}
+}
+\item{
+The following gives a list of pairs containing $\brak{i}$ a nucleus $\brak{ii}$ one of its properties. Find the pair which is INAPPROPRIATE.
+\begin{enumerate}
+\item $\brak{i}$ $_{10}Ne^{20}$ nucleus;$\brak{ii}$ stable nucleus 
+\item $\brak{i}$ A spheroidal nucleus;$\brak{ii}$ an electric quadrupole moment
+\item $\brak{i}$ $_8O^{16}$ nucleus;$\brak{ii}$ nuclear spin J=$\frac{1}{2}$
+\item $\brak{i}$ $U^{238}$ nucleus; $\brak{ii}$ Binding energy=$1785$ MeV $\brak{\text{approximately}}$
+\end{enumerate}
+}
+\item{
+The four possible configurations of neutrons in the ground state of $_4Be^9$ nucleus, according to the shell model, and the associated nuclear spin are listed below. Choose the correct one
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\brak{1s_\frac{1}{2}}^2\brak{1p_\frac{3}{2}}^3;J=\frac{3}{2}$
+\item $\brak{1s_\frac{1}{2}}^2\brak{1p_\frac{1}{2}}^2\brak{1p_\frac{3}{2}}^1;J=\frac{3}{2}$
+\item $\brak{1s_\frac{1}{2}}^1\brak{1p_\frac{3}{2}}^4;J=\frac{1}{2}$
+\item $\brak{1s_\frac{1}{2}}^2\brak{1p_\frac{3}{2}}^2\brak{1p_\frac{1}{2}}^1;J=\frac{1}{2}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The mass difference between the pair of mirror nuclei $_6C^11$ and $_5B^{11}$ is given to be $\Delta\frac{MeV}{c^2}$. According to the semi-empirical mass formula, the mass difference between the pair of mirror nuclei $_9F^{17}$ and $_8O^{17}$ will approximately be $\brak{\text{rest mass of proton }m_p=938.27\frac{MeV}{c^2}\text{ and rest mass of neutron }m_n=939.57\frac{MeV}{c^2}}$
+\begin{multicols}{2}
+\begin{enumerate}
+\item $1.39\Delta\frac{MeV}{c^2}$ 
+\item $\brak{1.39\Delta+0.5}\frac{MeV}{c^2}$
+\item $0.86\Delta\frac{MeV}{c^2}$ 
+\item $\brak{1.6\Delta+0.78}\frac{MeV}{c^2}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A heavy nucleus is found to contain more neutrons than protons. This fact is related to which one of the following statements
+\begin{enumerate}
+\item The nuclear force between neutrons is stronger than that between protons
+\item The nuclear force between protons is of a shorter range than those between neutrons, so that a smaller number of protons are held together by the nuclear force.
+\item Protons are unstable, so their number in a nucleus diminishes
+\item It costs more energy to add a proton to a $\brak{\text{heavy}}$ nucleus than a neutron because of the coulomb repulsion between protons.
+\end{enumerate}
+}
+\item{
+A neutral pi meson $\brak{\pi^0}$ has a rest-mass of approximately $140\frac{MeV}{c^2}$ and a lifetime of $\tau$ sec. A $\pi^0$ produced in the laboratory is found to decay after $1.25\tau$ sec into two photons. Which of the follwing sets represents a possible set of energies of the two photons as seen in the laboratory?
+\begin{multicols}{2}
+\begin{enumerate}
+\item $70$ MeV and $70$ MeV
+\item $35$ MeV and $100$ MeV
+\item $75$ MeV and $100$ MeV  
+\item $25$ MeV and $150$ MeV
+\end{enumerate}
+\end{multicols}
+}
+\item{
+An $a\cdot c$ voltage of $220$ $V_{rms}$ is applied to the primary of a 10:1 step-down transformer. The secondary of the transformer is centre tapped and connected to a full wave rectifier with a load resistance. The $d\cdot c$ voltage appearing across the load is 
+\begin{enumerate}
+\item $\frac{22}{\pi}$
+\item $\frac{31}{\pi}$
+\item $\frac{62}{\pi}$
+\item $\frac{44}{\pi}$
+\end{enumerate}
+}
+\item{
+Let $I_1$ and $I_2$ represent mesh currents in the loop $abcda$ and $befcb$ respectively. The correct expression describing Kirchoff's voltage loop law in one of the follwing loops is,
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (5.25,8.75) to[short] (5.25,9.25);
+\draw (5.25,9.25) to[american current source] (5.25,11.25);
+\draw (5.25,8.75) to[short] (6.5,8.75);
+\draw (5.25,11.25) to[short] (6.5,11.25);
+\draw (6.5,8.75) to[short] (6.5,9.25);
+\draw (6.5,11.25) to[short] (6.5,10.75);
+\draw (6.5,10.75) to[R] (6.5,9.25);
+\draw (6.5,11.25) to[short] (7,11.25);
+\draw (7,11.25) to[R] (8,11.25);
+\draw (6.5,8.75) to[short] (8.5,8.75);
+\draw (8,11.25) to[short] (8.5,11.25);
+\draw (8.5,11.25) to[short] (8.5,10.75);
+\draw (8.5,8.75) to[short] (8.5,9.25);
+\draw (8.5,10.75) to[R] (8.5,9.25);
+\draw (8.5,8.75) to[short] (10.5,8.75);
+\draw (8.5,11.25) to[short] (9,11.25);
+\draw (9,11.25) to[R] (10,11.25);
+\draw (10,11.25) to[short] (10.5,11.25);
+\draw (10.5,11.25) to[short] (10.5,10.5);
+\draw (10.5,10.5) to[american voltage source] (10.5,9.5);
+\draw (10.5,9.5) to[short] (10.5,8.75);
+\node [font=\normalsize] at (4.5,10.25) {2A};
+\node [font=\normalsize] at (6,10) {5$\Omega$};
+\node [font=\normalsize] at (7.5,11.75) {10$\Omega$};
+\node [font=\normalsize] at (9,10) {15$\Omega$};
+\node [font=\normalsize] at (9.5,11.75) {20$\Omega$};
+\node [font=\normalsize] at (11.25,10) {20V};
+\node [font=\normalsize] at (6.5,11.5) {a};
+\node [font=\normalsize] at (6.5,8.5) {d};
+\node [font=\normalsize] at (8.5,8.5) {c};
+\node [font=\normalsize] at (8.5,11.5) {b};
+\node [font=\normalsize] at (10.5,8.5) {f};
+\node [font=\normalsize] at (10.5,11.5) {e};
+\end{circuitikz}
+}%
+\label{Circuit}
+\end{figure}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $30I_1+5I_2=10$
+\item $-15I_1+20I_2=-20$
+\item $30I_1-15I_2=10$
+\item $-15I_1+20I_2=20$    
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The simplest logic gate circuit corresponding to the Boolean expression, $Y=P+\overline{P}Q$ is
+\begin{multicols}{2}
+\begin{enumerate}
+    \item{
+    \begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+\draw (8,9.25) to[short] (8.25,9.25);
+\draw (8,8.75) to[short] (8.25,8.75);
+\draw (8.25,9.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10,9);
+\draw [short] (8,9.25) -- (7.25,9.25);
+\draw [short] (8,8.75) -- (7.25,8.75);
+\draw [short] (10,9) -- (10.25,9);
+\draw [short] (10.25,9) -- (10.75,9);
+\node [font=\normalsize] at (7,9.5) {P};
+\node [font=\normalsize] at (7,8.5) {Q};
+\node [font=\normalsize] at (11,9) {Y};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+    }
+    \item {
+    \begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+\draw [short] (4.5,11) -- (4.75,11);
+\draw [short] (4.75,11) -- (5.75,11);
+\draw [short] (5,11) -- (5,10);
+\draw [short] (5,10) -- (5,9.25);
+\draw [short] (5,9.25) -- (6.25,9.25);
+\draw (6.5,9.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.25);
+\draw (port.in) to[short] (6.25,9.25);
+\draw [short] (5.75,11) -- (6.5,11);
+\draw [short] (8.25,9.25) -- (9,9.25);
+\draw (9,9.25) to[short] (9.25,9.25);
+\draw (9,8.75) to[short] (9.25,8.75);
+\draw (9.25,9.25) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (11,9);
+\draw [short] (9,8.75) -- (5,8.75);
+\draw [short] (5,8.75) -- (4.5,8.75);
+\draw [short] (6.5,11) -- (6.5,11.25);
+\draw [short] (6.5,11) -- (6.5,10.75);
+\draw (6.5,11.25) to[short] (6.75,11.25);
+\draw (6.5,10.75) to[short] (6.75,10.75);
+\draw (6.75,11.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (8.5,11);
+\draw [short] (8.5,11) -- (10.75,11);
+\draw [short] (10.75,11) -- (11,11);
+\draw [short] (11,11) -- (11,10.5);
+\draw (11.75,10.25) to[short] (12,10.25);
+\draw (11.75,9.75) to[short] (12,9.75);
+\draw (12,10.25) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (13.75,10);
+\draw [short] (11.75,10.25) -- (11,10.25);
+\draw [short] (11,10.5) -- (11,10.25);
+\draw [short] (11,9) -- (11.25,9);
+\draw [short] (11.25,9) -- (11.25,9.75);
+\draw [short] (11.25,9.75) -- (11.75,9.75);
+\node [font=\normalsize] at (4.25,11) {P};
+\node [font=\normalsize] at (4.25,8.75) {Q};
+\node [font=\normalsize] at (14,10) {Y};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+    \item{
+    \begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+\draw [short] (8,9.25) -- (7.25,9.25);
+\draw [short] (8,8.75) -- (7.25,8.75);
+\draw [short] (10,9) -- (10.25,9);
+\draw [short] (10.25,9) -- (10.75,9);
+\node [font=\normalsize] at (7,9.5) {P};
+\node [font=\normalsize] at (7,8.5) {Q};
+\node [font=\normalsize] at (11,9) {Y};
+\draw (8,9.25) to[short] (8.25,9.25);
+\draw (8,8.75) to[short] (8.25,8.75);
+\draw (8.25,9.25) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10,9);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+    }
+    \item{
+    \begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+\draw [short] (4.5,11) -- (4.75,11);
+\draw [short] (4.75,11) -- (5.75,11);
+\draw [short] (5,11) -- (5,10);
+\draw [short] (5,10) -- (5,9.25);
+\draw [short] (5,9.25) -- (6.25,9.25);
+\draw (6.5,9.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.25);
+\draw (port.in) to[short] (6.25,9.25);
+\draw [short] (5.75,11) -- (6.5,11);
+\draw [short] (8.25,9.25) -- (9,9.25);
+\draw [short] (9,8.75) -- (5,8.75);
+\draw [short] (5,8.75) -- (4.5,8.75);
+\draw [short] (6.5,11) -- (6.5,11.25);
+\draw [short] (6.5,11) -- (6.5,10.75);
+\draw [short] (8.5,11) -- (10.75,11);
+\draw [short] (10.75,11) -- (11,11);
+\draw [short] (11,11) -- (11,10.5);
+\draw [short] (11.75,10.25) -- (11,10.25);
+\draw [short] (11,10.5) -- (11,10.25);
+\draw [short] (11,9) -- (11.25,9);
+\draw [short] (11.25,9) -- (11.25,9.75);
+\draw [short] (11.25,9.75) -- (11.75,9.75);
+\node [font=\normalsize] at (4.25,11) {P};
+\node [font=\normalsize] at (4.25,8.75) {Q};
+\node [font=\normalsize] at (14,10) {Y};
+\draw (6.5,11.25) to[short] (6.75,11.25);
+\draw (6.5,10.75) to[short] (6.75,10.75);
+\draw (6.75,11.25) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (8.5,11);
+\draw (9,9.25) to[short] (9.25,9.25);
+\draw (9,8.75) to[short] (9.25,8.75);
+\draw (9.25,9.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (11,9);
+\draw (11.75,10.25) to[short] (12,10.25);
+\draw (11.75,9.75) to[short] (12,9.75);
+\draw (12,10.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (13.75,10);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+    }
+\end{enumerate}
+\end{multicols}
+}
+\item{
+An analog voltage $V$ is converted into $2$-bit binary number. The minimum number of comparators required and their reference voltages are
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $3,\brak{\frac{V}{4},\frac{V}{2},\frac{3V}{4}}$
+    \item $3,\brak{\frac{V}{3},\frac{2V}{3},V}$
+    \item $4,\brak{\frac{V}{5},\frac{2V}{5},\frac{3V}{5},\frac{4V}{5}}$
+    \item $4,\brak{\frac{V}{4},\frac{V}{2},\frac{3V}{4},V}$
+\end{enumerate}
+\end{multicols}
+}
+}
+\end{enumerate}
+\end{document}
+n
