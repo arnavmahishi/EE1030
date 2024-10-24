@@ -94,11 +94,11 @@ If the two eigen values of the matrix $M=\myvec{2&6&0\\1&p&0\\0&0&3}$ are $-1$ a
 }
 \item{
 Consider the system of linear simultaneous equations
-\begin{align*}
+\begin{align}
 x+10y &= 5, \\
 y+5z &= 1, \\
 10x-y+z &= 0
-\end{align*}
+\end{align}
 On applying Gauss-Seidel method the value of $x$ correct up to $4$ decimal places is
 \begin{multicols}{4}
 \begin{enumerate}
@@ -170,7 +170,7 @@ The area bounded by the curve $y=1-x^2$ and the $x$-axis from $x=-1$ to $x=1$ us
 \end{multicols}
 }
 \item{
-The iteration scheme $x_{n+1}=\sqrt{a}\brak{1+\frac{3a^2}{x_n^2}}-\frac{3a^2}{x_n}$, $a>0$ converges to the real number
+The iteration scheme $x_{n+1}=\sqrt{a}\brak{1+\frac{3a^2}{x_n^2}}-\frac{3a^2}{x_n}$, $a\textgreater0$ converges to the real number
 \begin{multicols}{4}
 \begin{enumerate}
 \item $\sqrt{a}$
@@ -222,10 +222,10 @@ Recursive integer function $g\brak{m, n}$ result $\brak{r}$\\
 end\\}
 Which value will be returned if the function $g$ is called with $6,6$?
 \begin{enumerate}
-\item 2 
-\item 4
-\item 6
-\item 8
+\item $2$
+\item $4$
+\item $6$
+\item $8$
 \end{enumerate}
 }
 \item{
@@ -237,7 +237,7 @@ real function print\textunderscore value$\brak{x}$\\
     i = $0$\\
     sum = $2.0$\\
     term = $1.0$\\
-    do while (term $> 0.00001$)\\
+    do while (term $\textgreater 0.00001$)\\
         term = $x$ * term / (i + 1)\\
         sum = sum + term\\
         i = i + 1\\
@@ -258,9 +258,9 @@ The value returned will be close to
 \item{
 Consider the following C program\\
 \textit{
-include $<$stdio.h$>$\\
-include $<$string.h$>$\\
-void main()\\
+include $\textless$stdio.h$\textgreater$\\
+include $\textless$string.h$\textgreater$\\
+void main$\brak{}$\\
 {\\
     char s$\sbrak{80}$, *p;\\
     int sum = 0;\\
@@ -291,13 +291,13 @@ Which number will be printed if the input string is $10110$
 \item{
 Consider the following C program segment\\
 \textit{
-\#include $<$stdio.h$>$\\
+\#include $\textless$stdio.h$\textgreater$\\
 void print\_mat$\brak{\text{int mat$\sbrak{1}\sbrak{3}$}}$\\\\
 void main$\brak{}$\{\\
 int i,j,sum=0;\\
 int m$\sbrak{3}\sbrak{3}$=\{\{1, 3, 5\}, \{7, 9, 11\}, \{13, 15, 17\}\};\\
-for$\brak{i=0;i<3;i++}$\{\\
-for$\brak{j=2;j>1;j--}$\{\\
+for$\brak{i=0;i\textless3;i++}$\{\\
+for$\brak{j=2;j\textgreater1;j--}$\{\\
 sum+=m$\sbrak{i}\sbrak{j}*m\sbrak{i}\sbrak{j-1}$;\\
 printf$\brak{\text{"\%d", sum}}$\\
 print\_mat$\brak{m}$;//FUNCTION CALL\}\\\\
@@ -317,4 +317,4 @@ The value of sum that will be printed by the above program is\\
 \end{multicols}
 }
 \end{enumerate}
-\end{document}e
+\end{document}
