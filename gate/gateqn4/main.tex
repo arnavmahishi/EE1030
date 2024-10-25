@@ -1,0 +1,185 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2009-MA-13-24}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+The subspace $\mathbb{Q}\times\sbrak{0,1}$ of $\mathbb{R}^2\brak{\text{ with the usual topology}}$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+\item dense in $\mathbb{R}^2$
+\item connected
+\item separable 
+\item compact
+\end{enumerate}
+\end{multicols}
+}
+\item{
+$\frac{\mathbb{Z}_2\sbrak{x}}{\textless x^3+x^2+1\textgreater}$ is
+\begin{multicols}{2}
+\begin{enumerate}
+\item a field having $8$ elements 
+\item a field having $9$ elements 
+\item an infinite field
+\item NOT a field
+\end{enumerate}
+\end{multicols}}
+\item{
+The number of elements in a principal ideal domain can be
+\begin{multicols}{4}
+\begin{enumerate}
+\item $15$
+\item $25$
+\item $35$
+\item $36$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $F,G$ and $H$ be pairwise independent events such that $P\brak{F}=P\brak{G}=P\brak{H}=\frac{1}{3}$ and $\brak{F\cap G\cap H}=\frac{1}{4}$. Then the probability that at least one event among $F,G$ and $H$ occurs is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{11}{12}$
+\item $\frac{7}{12}$
+\item $\frac{5}{12}$
+\item $\frac{3}{4}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $X$ be a random variable such that $E\brak{X^2}=E\brak{X}=1$. Then $E\brak{X^{100}}=$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $1$
+\item $2^{100}$
+\item $2^{100}+1$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+For which of the following distributions, the weak law of large numbers does NOT hold?
+\begin{multicols}{4}
+\begin{enumerate}
+\item Normal
+\item Gamma
+\item Beta
+\item Cauchy
+\end{enumerate}
+\end{multicols}
+}
+\item{
+If $D\equiv\frac{d}{dx}$ then the value of $\frac{1}{xD+1}\brak{x^{-1}}$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\log{x}$
+\item $\frac{\log{x}}{x}$
+\item $\frac{\log{x}}{x^2}$
+\item $\frac{\log{x}}{x^3}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The equation $\brak{\alpha xy^3+y\cos x}dx+\brak{x^2y^2+\beta\sin x}dy=0$ is exact for
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\alpha=\frac{3}{2},\beta=1$
+\item $\alpha=1,\beta=\frac{3}{2}$
+\item $\alpha=\frac{2}{3},\beta=1$
+\item $\alpha=1,\beta=\frac{2}{3}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+If $A=\myvec{1&0&0\\i&\frac{-1+i\sqrt{3}}{2}&0\\0&1+2i&\frac{-1-i\sqrt{3}}{2}}$ then the trace of $A^{102}$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Which of the following matrices are NOT diagonalizable?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\myvec{11\\1&2}$
+\item $\myvec{1&0\\3&2}$
+\item $\myvec{0&-1\\1&0}$ 
+\item $\myvec{1&1\\0&1}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $V$ be the column space of the matrix $A=\myvec{1&-1\\1&2\\1&-1}$. Then the orthogonal projection of $\myvec{0\\1\\0}$ on $V$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\myvec{0\\1\\0}$
+\item $\myvec{0\\0\\1}$
+\item $\myvec{1\\1\\0}$
+\item $\myvec{1\\0\\1}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $\sum_{n=-\infty}^\infty a_n\brak{z+1}^n$ be the Laurent series expansion of $f\brak{z}=\sin\brak{\frac{z}{z+1}}$. Then $a_{-2}=$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1$
+\item $0$
+\item $\cos\brak{1}$
+\item $\frac{-1}{2}\sin\brak{1}$
+\end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
+&
