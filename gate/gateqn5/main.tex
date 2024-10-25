@@ -364,6 +364,39 @@ If the electrical circuit of figure$\brak{\text{b}}$ is an equivalent of the cou
 \item $A,C$ are resistances and $B,D$ are capacitances
 \end{enumerate}
 }
+\item{
+A single-phase transformer has turns ratio of $1:2$ and is connected to a purely resistive load as shown in the figure. THe magentizing current drawn is $1A$ and the secondary current is $1A$. If core losses and leakage reactances are neglected, the primary current is
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6,13.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (8,13.75);
+\draw (6,13.75) to[short] (6,12.25);
+\draw (6,12.25) to[short] (8,12.25);
+\draw (8,13.75) to[L ] (8,12.25);
+\draw (8.5,13.75) to[short] (8.5,12.25);
+\draw (8.75,13.75) to[short] (8.75,12.25);
+\draw (9.25,13.75) to[short] (11.75,13.75);
+\draw (9.25,12.25) to[short] (11.75,12.25);
+\draw (11.75,13.75) to[R] (11.75,12.25);
+\draw (9.25,13.75) to[L ] (9.25,12.25);
+\node [font=\normalsize] at (8.5,14.25) {$1:2$};
+\draw [->, >=Stealth] (9.75,14) -- (10.75,14);
+\node [font=\normalsize] at (10.25,14.25) {$1A$};
+\end{circuitikz}
+}%
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $1.4A$
+    \item $2A$
+    \item $2.24A$
+    \item $3A$
+\end{enumerate}
+\end{multicols}
+
+}
 \end{enumerate}
 \end{document}
 
