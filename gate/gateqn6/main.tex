@@ -1,0 +1,307 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2010-XE-14-26}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+The residue of the function $f\brak{z}=\frac{\sin^4z}{\brak{z+\frac{\pi}{4}}^3}$ at $z=\frac{-\pi}{4}$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $2$
+\item $1$
+\item $-1$ 
+\item $-2$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The variance of the number of heads resulting from independent tosses of a fair coin is
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\frac{5}{4}$ 
+\item $\frac{5}{2}$
+\item $\frac{3}{4}$
+\item $\frac{3}{2}$
+\end{enumerate}
+\end{multicols}}
+\item{
+If the quadrature rule $\int_0^3f\brak{x}dx=\alpha f\brak{1}+\beta f\brak{3}$ is exact for all polynomials of degree $2$ or less, then
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\alpha=\frac{3}{4},\beta=\frac{3}{4}$
+\item $\alpha=\frac{3}{4},\beta=\frac{9}{4}$
+\item $\alpha=\frac{9}{4},\beta=\frac{3}{4}$
+\item $\alpha=\frac{9}{4},\beta=\frac{9}{4}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Given that $\frac{dy}{dx}=1+y^2,y\brak{0}=0$, which one of the following is nearest to $y\brak{0.4}$ computed by Euler's method with step size of $0.2$?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0.408$
+\item $0.404$
+\item $0.208$
+\item $0.204$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+$f\brak{x}=$
+$\begin{cases}
+\frac{\sin x}{x} \text{ if }x\neq 0\\
+1\text{ if }x=0
+\end{cases}$
+Then
+\begin{enumerate}
+\item $f$ is not continuous at $x=0$
+\item $f$ is continuous at $x=0$ but not differentiable at $x=0$
+\item $f$ is differentiable at $x=0$ and $f^{\prime}\brak{0}=0$
+\item $f$ is differentiable at $x=0$ and $f^{\prime}\brak{0}=1$
+\end{enumerate}
+}
+\item{
+Let $u\brak{x,y}=\tan\cbrak{xy\brak{x+y}}$. Then
+\begin{enumerate}
+\item $x\frac{\delta u}{\delta x}+y\frac{\delta u}{\delta x}=\frac{1}{3}xy\brak{x+y}\sec^2\cbrak{xy\brak{x+y}}$
+\item $x\frac{\delta u}{\delta x}-y\frac{\delta u}{\delta x}=\frac{1}{3}xy\brak{x+y}\sec^2\cbrak{xy\brak{x+y}}$
+\item $x\frac{\delta u}{\delta x}+y\frac{\delta u}{\delta x}=3xy\brak{x+y}\sec^2\cbrak{xy\brak{x+y}}$
+\item $x\frac{\delta u}{\delta x}-y\frac{\delta u}{\delta x}=3xy\brak{x+y}\sec^2\cbrak{xy\brak{x+y}}$
+\end{enumerate}
+}
+\item{
+Which one of the following is a particular solution of ordinary differntial equation $x\frac{d^2y}{dx^2}-\frac{dy}{dx}=2x^2f\brak{x}$?
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x^2\int xf\brak{x}dx+\int x^3f\brak{x}dx$
+\item $x^2\int f\brak{x}dx+\int x^2f\brak{x}dx$
+\item $x^2\int xf\brak{x}dx-\int x^3f\brak{x}dx$
+\item $x^2\int f\brak{x}dx-\int x^2f\brak{x}dx$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Which one of the following is a possible solution to the partial differential equation $\frac{\delta^2u}{\delta t^2}-\frac{\delta^2u}{\delta x^2}=0$ with boundary conditions $u\brak{0,t}=0,\frac{\delta u\brak{\pi,t}}{\delta x}=0$ for $t\geq 0$,  $u\brak{x,0}=0,\frac{\delta u\brak{x,0}}{\delta t}=\pi$, for $0\leq x\leq \pi$?
+\begin{enumerate}
+\item $u\brak{x,t}=\sum_{n=0}^\infty a_n\sin\brak{\brak{n+\frac{1}{2}}t}\sin\brak{\brak{n+\frac{1}{2}}x}$
+\item $u\brak{x,t}=\sum_{n=0}^\infty a_n\cos\brak{\brak{n+\frac{1}{2}}t}\sin\brak{\brak{n+\frac{1}{2}}x}$
+\item $u\brak{x,t}=\sum_{n=0}^\infty a_n\sin\brak{\brak{n+\frac{1}{2}}t}\cos\brak{\brak{n+\frac{1}{2}}x}$
+\item $u\brak{x,t}=\sum_{n=0}^\infty a_n\cos\brak{\brak{n+\frac{1}{2}}t}\cos\brak{\brak{n+\frac{1}{2}}x}$
+\end{enumerate}
+}
+\item{
+A cylindrical container is filled with a liquid up to half of its height. The container is mounted on the center of a turn-table and is held fixed using a spindle. The turn-table is now rotated about its central axis with a certain angular velocity. After some time interval, the fluid attains rigid body rotation. Which of the following profiles best represents the constant pressure surfaces in the container?
+\begin{multicols}{2}
+\begin{enumerate}
+\item{\begin{figure}[H]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (6.75,11.25) rectangle (9.5,7.75);
+\draw [dashed] (8.25,11.75) -- (8.25,7.5);
+\draw [short] (6.75,10) .. controls (8.25,8.5) and (8,8) .. (9.5,10);
+\draw [short] (6.75,9.5) .. controls (8.25,7.75) and (8.25,7.75) .. (9.5,9.5);
+\draw [short] (6.75,8.75) .. controls (7.75,8) and (8.25,7) .. (9.5,8.75);
+\draw  (8,7.75) rectangle (8.5,7.5);
+\draw [->, >=Stealth] (7.75,7.25) -- (8.75,7.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}}
+\item{
+\begin{figure}[H]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (6.75,11.25) rectangle (9.5,7.75);
+\draw [dashed] (8.25,11.75) -- (8.25,7.5);
+\draw [short] (6.75,10) .. controls (8.25,8.5) and (8,8) .. (9.5,10);
+\draw  (8,7.75) rectangle (8.5,7.5);
+\draw [->, >=Stealth] (7.75,7.25) -- (8.75,7.25);
+\draw [short] (6.75,8.5) -- (9.5,8.5);
+\draw [short] (6.75,8.25) -- (9.5,8.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{\begin{figure}[H]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (6.75,11.25) rectangle (9.5,7.75);
+\draw [dashed] (8.25,11.75) -- (8.25,7.5);
+\draw  (8,7.75) rectangle (8.5,7.5);
+\draw [->, >=Stealth] (7.75,7.25) -- (8.75,7.25);
+\draw [short] (6.75,8.75) .. controls (8.25,9.75) and (8.25,9.5) .. (9.5,8.75);
+\draw [short] (6.75,8.25) .. controls (8.25,9.25) and (8.25,9.25) .. (9.5,8.25);
+\draw [short] (6.75,9) .. controls (8,10.25) and (8.25,10.25) .. (9.5,9);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}}
+\item{\begin{figure}[H]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (6.75,11.25) rectangle (9.5,7.75);
+\draw [dashed] (8.25,11.75) -- (8.25,7.5);
+\draw  (8,7.75) rectangle (8.5,7.5);
+\draw [->, >=Stealth] (7.75,7.25) -- (8.75,7.25);
+\draw [short] (6.75,8.5) -- (9.5,8.5);
+\draw [short] (6.75,8.25) -- (9.5,8.25);
+\draw [short] (6.75,9) -- (9.5,9);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}}
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Match the items given in the following two columns using appropriate combinations:
+\begin{table}[h!]    
+  \centering
+  \input{tables/table.tex}
+\end{table}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $P-1;R-2;Q-3;S-4$
+\item $P-1;Q-2;R-3;S-4$
+\item $P-1;R-2;S-3;Q-4$ 
+\item $P-1;S-2;Q-3;R-4$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the context of boundry layers, which of the following statements is FALSE?
+\begin{enumerate}
+\item It is a frictional layer, close to the body
+\item It is a region where fluid flow is irrotational 
+\item It is a region across which the pressure gradient is negligible 
+\item It is diffusion layer of vorticity
+\end{enumerate}
+}
+\item{
+Consider an ideal fluid flow past a circular cylinder shown in the figure below. The peripheral velocity at a point $P$ on the surface of the cylinder is
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (7.75,10.25) circle (1.5cm);
+\draw [->, >=Stealth] (7.75,10.25) -- (7,11.5);
+\draw [->, >=Stealth] (7.75,10.25) -- (6.25,10.25);
+\node [font=\normalsize] at (7.25,10.5) {$\theta$};
+\node [font=\normalsize] at (6.75,11.75) {P};
+\draw [->, >=Stealth] (3.25,12) -- (6,12);
+\draw [->, >=Stealth] (3.25,11) -- (6,11);
+\draw [->, >=Stealth] (3.25,9.75) -- (5.75,9.75);
+\draw [->, >=Stealth] (3.25,8.5) -- (6,8.5);
+\node [font=\normalsize] at (4.5,12.5) {$U_{\infty}$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $U_\infty$
+\item $U_\infty\sin\theta$
+\item $2U_\infty\sin\theta$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The Rheological diagram depicting the relation between shear stress and strain rate for different types of fluids is shown in the figure below.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (5.5,12.25) -- (5.5,6.75);
+\draw [short] (5.5,6.75) -- (11.25,6.75);
+\draw [short] (5.5,9.75) -- (9,11.75);
+\draw [short] (5.5,6.75) -- (10.5,10);
+\draw [short] (5.5,6.75) .. controls (7,9.75) and (7.75,10.5) .. (9.75,10.5);
+\draw [short] (5.5,6.75) .. controls (9,7.25) and (9.75,7.5) .. (11,8.75);
+\node [font=\normalsize] at (8.5,12) {P};
+\node [font=\normalsize] at (9.5,11) {Q};
+\node [font=\normalsize] at (10,10) {R};
+\node [font=\normalsize] at (10.5,9) {S};
+\node [font=\normalsize, rotate around={90:(0,0)}] at (5,9.5) {Shear Stress};
+\node [font=\normalsize] at (8.5,6.5) {Strain Rate};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+The most suitable relation for flow of tooth paste being squeezed out of the tube is given by the curve
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item P
+        \item Q
+        \item R
+        \item S
+    \end{enumerate}
+\end{multicols}
+
+}
+\end{enumerate}
+\end{document}
+d
