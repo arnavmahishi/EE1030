@@ -1,0 +1,282 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2012-EE-1-13}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+Two independent random variables $X$ and $Y$ are uniformly distributed in the interval $\sbrak{-1,1}$. The probability that max$\sbrak{X,Y}$ is less than $\frac{1}{2}$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{3}{4}$
+\item $\frac{9}{16}$
+\item $\frac{1}{4}$
+\item $\frac{2}{3}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+If $x=\sqrt{-1}$, then the value of $x^x$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $e^{\frac{-\pi}{2}}$ 
+\item $e^{\frac{\pi}{2}}$ 
+\item $x$
+\item $1$ 
+\end{enumerate}
+\end{multicols}}
+\item{
+Given $f\brak{z}=\frac{1}{z+1}-\frac{2}{z+3}$. If $C$ is a counterclockwise path in the $z-plane$ such that $\abs{z+1}=1$, the value of $\frac{1}{2\pi j}\oint_cf\brak{z}dz$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-2$
+\item $-1$
+\item $1$
+\item $2$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the circuit shown below, the current through the inductor is
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (6,8.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (8,8.75);
+\draw (6,8.75) to[R] (7.75,10.5);
+\draw (6,8.75) to[C] (7.75,7);
+\draw (7.75,7) to[R] (9.5,8.75);
+\draw (7.75,7) to[american current source] (7.75,8.75);
+\draw (7.75,8.75) to[american current source] (7.75,10.5);
+\draw (8,8.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (9.5,8.75);
+\draw (7.75,10.5) to[L ] (9.5,8.75);
+\node [font=\normalsize] at (6.25,9.75) {1$\Omega$};
+\node [font=\normalsize] at (9.25,10) {j$\Omega$};
+\node [font=\normalsize] at (6.25,7.5) {-j$\Omega$};
+\node [font=\normalsize] at (9,7.5) {1$\Omega$};
+\node [font=\scriptsize] at (7.25,9.25) {$1\angle 0V$};
+\node [font=\scriptsize] at (8.35,9.25) {$1\angle 0V$};
+\node [font=\small] at (8,8.5) {$1\angle 0A$};
+\node [font=\small] at (7.75,10.75) {$1\angle 0A$};
+\end{circuitikz}
+}%
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{2}{1+j}A$
+\item $\frac{-1}{1+j}A$
+\item $\frac{1}{1+j}$
+\item $0A$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The impedence looking into nodes $1$ and $2$ in the given circuit is
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6.5,7.25) to[short] (6.5,8.5);
+\draw (6.5,8.5) to[R] (6.5,9.75);
+\draw (6.5,9.75) to[short] (6.5,10.75);
+\draw (6.5,10.75) to[short] (8.25,10.75);
+\draw (8.25,10.75) to[R] (8.25,9.5);
+\draw (8.25,9.5) to[short] (10,9.5);
+\draw (6.5,7.25) to[short] (11.5,7.25);
+\draw (9.25,9.5) to[R] (9.25,7.25);
+\draw (10,9.5) to[short, -o] (10,8.75) ;
+\draw (10,7.25) to[short, -o] (10,7.75) ;
+\draw (10,11) to[american controlled current source] (10,9.5);
+\draw (10,11) to[short] (11.5,11);
+\draw (11.5,11) to[short] (11.5,7.25);
+\draw [->, >=Stealth] (6.75,10.75) -- (7.75,10.75);
+\node [font=\normalsize] at (7.5,11) {$i_b$};
+\node [font=\normalsize] at (6,9) {$9k\Omega$};
+\node [font=\normalsize] at (8.5,8.5) {$100\Omega$};
+\node [font=\normalsize] at (10.25,8.75) {$1$};
+\node [font=\normalsize] at (10.25,7.75) {$2$};
+\node [font=\normalsize] at (10.8,10.25) {$99i_b$};
+\node [font=\normalsize] at (7.75,10) {$1k\Omega$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $50\Omega$
+\item $100\Omega$
+\item $5k\Omega$
+\item $10.1k\Omega$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A system with transfer function $G\brak{s}=\frac{\brak{s^2+9}\brak{s+2}}{\brak{s+1}\brak{s+3}\brak{s+4}}$ is excited by $\sin\omega t$. The steady-state output of the system is zero at
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\omega=1\frac{rad}{s}$
+\item $\omega=2\frac{rad}{s}$
+\item $\omega=3\frac{rad}{s}$
+\item $\omega=4\frac{rad}{s}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the sum of products function $f\brak{X,Y,Z}=\sum\brak{2,3,4,5}$, the prime implicants are 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\overline{X}Y,X\overline{Y}$
+\item $\overline{X}Y,X\overline{Y}\overline{Z},X\overline{Y}Z$
+\item $\overline{X}Y\overline{Z},\overline{X}YZ,X\overline{Y}$
+\item $\overline{X}Y\overline{Z},\overline{X}YZ,X\overline{Y}Z$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+If $x\sbrak{n}=\brak{\frac{1}{3}}^{\abs{n}}-\brak{\frac{1}{2}}^nu\sbrak{n}$, the region of convergence $\brak{\text{ROC}}$ of its $Z$-transform in the $Z$-plane will be
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{1}{3}\textless\abs{z}\textless 3$
+\item $\frac{1}{3}\textless\abs{z}\textless\frac{1}{2}$
+\item $\frac{1}{2}\textless\abs{z}\textless 3$
+\item $\frac{1}{3}\textless\abs{z}\textless 1$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The bus admittance matrix of a three-bus three-line system is\\ $Y=j\myvec{-13&10&5\\10&-18&10\\5&10&-13}$\\If each transmission line between the two buses is represented by an equivalent $\pi$-network, the magnitude of shunt susceptance of the line connecting bus $1$ and $2$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $4$
+\item $2$
+\item $1$
+\item $0$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The slip of an induction motor normally does not depend on 
+\begin{multicols}{2}
+\begin{enumerate}
+\item rotor speed
+\item synchronous speed
+\item shaft torque
+\item core-less component
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A two-phase load draws the following phase currents: $i_1\brak{t}=I_m\sin\brak{\omega t-\phi_1}$, $i_2\brak{t}=I_m\sin\brak{\omega t-\phi_2}$. These currents are balanced if $\phi_1$ is equal to
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-\phi_2$
+\item $\phi_2$
+\item $\brak{\frac{\pi}{2}-\phi_2}$
+\item $\brak{\frac{\pi}{2}+\phi_2}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A periodic voltage waveform observed on an oscilloscope across a load is shown. A permanent magnet moving coil\brak{PMMC} meter connected across the same load reads
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (5.5,6.5) -- (5.5,11.5);
+\draw [->, >=Stealth] (4.75,8) -- (11,8);
+\draw [short] (5.5,8) -- (8.25,10.5);
+\draw [short] (8.25,10.5) -- (8.25,6.75);
+\draw [short] (8.25,6.75) -- (8.75,6.75);
+\draw [short] (8.75,6.75) -- (8.75,9.25);
+\draw [short] (8.75,9.25) -- (10.25,9.25);
+\draw [short] (10.25,9.25) -- (10.25,8);
+\draw [dashed] (8.25,6.75) -- (5.5,6.75);
+\draw [dashed] (8.75,9.25) -- (5.5,9.25);
+\draw [dashed] (8.25,10.5) -- (5.5,10.5);
+\node [font=\normalsize] at (5,10.5) {$10V$};
+\node [font=\normalsize] at (5,9.25) {$5V$};
+\node [font=\normalsize] at (5,6.75) {$-5V$};
+\node [font=\normalsize] at (5.25,7.75) {$0$};
+\node [font=\normalsize] at (8,7.75) {$10$};
+\node [font=\normalsize] at (9,7.75) {$12$};
+\node [font=\normalsize] at (10.25,7.75) {$20$};
+\node [font=\normalsize] at (11.75,7.5) {$time\brak{ms}$};
+\node [font=\normalsize] at (5.5,12) {$v\brak{t}$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $4V$
+\item $5V$
+\item $8V$
+\item $10V$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The bridge method commonly used for finding mutual inductance is
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item Heavy Campbell Bridge
+        \item Schering Bridge
+        \item De Sauty bridge
+        \item Wien bridge
+    \end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
+
