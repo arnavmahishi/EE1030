@@ -1,0 +1,381 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2013-EE-40-52}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+The signal flow graph for a system in given below. The transfer function $\frac{Y\brak{s}}{U\brak{s}}$ for this system is.
+\begin{figure}[H]
+\centering
+\resizebox{7cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6,8.5) to[short, -o] (5.25,8.5) ;
+\draw [->, >=Stealth] (5.75,8.5) -- (6.75,8.5);
+\draw (6.75,8.5) to[short, -o] (7.75,8.5) ;
+\draw [->, >=Stealth] (7.75,8.5) -- (9,8.5);
+\draw (9,8.5) to[short, -o] (10,8.5) ;
+\draw [->, >=Stealth] (10,8.5) -- (11.25,8.5);
+\draw (11.25,8.5) to[short, -o] (12.25,8.5) ;
+\draw [->, >=Stealth] (12.25,8.5) -- (13.5,8.5);
+\draw (13.5,8.5) to[short, -o] (14.5,8.5) ;
+\draw [->, >=Stealth] (10,8.5) .. controls (11.25,10.75) and (11.75,10.25) .. (12.25,8.5) ;
+\draw [->, >=Stealth] (12.25,8.5) .. controls (11.5,7) and (10.75,6) .. (10.25,8.5) ;
+\draw [->, >=Stealth] (12.25,8.5) .. controls (11.25,5) and (10.5,3.25) .. (7.75,8.5) ;
+\node [font=\normalsize] at (5.25,9) {$U\brak{s}$};
+\node [font=\normalsize] at (6.75,9) {$1$};
+\node [font=\normalsize] at (9,9) {$s^{-1}$};
+\node [font=\normalsize] at (11,10.5) {1};
+\node [font=\normalsize] at (11,8.75) {$s^{-1}$};
+\node [font=\normalsize] at (13.5,9) {1};
+\node [font=\normalsize] at (14.75,8.75) {$Y\brak{s}$};
+\node [font=\normalsize] at (11,7.5) {-4};
+\node [font=\normalsize] at (10.5,5.5) {$-2$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{s+1}{5s^2+6s+2}$
+\item $\frac{s+1}{s^2+6s+2}$
+\item $\frac{s+1}{s^2+4s+2}$
+\item $\frac{1}{5s^2+6s+2}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The impulse response of a continuous time system is given by $h\brak{t}=\delta\brak{t-1}+\delta\brak{t-3}$. The value of the step response at $t=2$ is.
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $1$ 
+\item $2$
+\item $3$
+\end{enumerate}
+\end{multicols}}
+\item{
+Two magnetically uncoupled inductive coils have $Q$ factors $q_1$ and $q_2$ at the chosen operating frequency. Their respective resistances are $R_1$ and $R_2$. When connected in series, their effective $Q$ factor at the same operating frequency is.
+\begin{multicols}{4}
+\begin{enumerate}
+\item $q_1R_1+q_2R_2$
+\item $\frac{q_1}{R_2}+\frac{q_2}{R_2}$
+\item $\frac{\brak{q_1R_1+q_2R_2}}{\brak{R_1+R_2}}$
+\item $q_1R_2+q_2R_1$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The following arrangement consists of an ideal transformer and an attenuator which attenuates by a factor o $0.8$. An ac voltage $V_{WX1}=100V$ is applied across $WX$ to get an open circuit voltage $V_{YZ1}$ across $YZ$. Next, an ac voltage $V_{YZ2}=100V$ is applied across $YZ$ to get an open circuit voltage $V_{WX2}$ across $WX$. Then $\frac{V_{YZ1}}{V_{WX1}},\frac{V_{WX2}}{V_{YZ2}}$
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6.25,10) to[short, -o] (5.5,10) ;
+\draw (6.25,7) to[short, -o] (5.5,7) ;
+\draw (6.25,10) to[short] (6.25,9.25);
+\draw (6.25,7) to[short] (6.25,7.75);
+\draw (6.25,7.75) to[short] (6.75,7.75);
+\draw (6.25,9.25) to[short] (6.75,9.25);
+\draw (6.75,9.25) to[L ] (6.75,7.75);
+\draw (7.25,9.25) to[short] (7.25,8);
+\draw (7.5,9.25) to[short] (7.5,8);
+\draw (7.75,9.25) to[short] (7.75,8);
+\draw (8.75,9.25) to[short] (8.25,9.25);
+\draw (8.75,9.25) to[short] (8.75,10);
+\draw (8.75,10) to[short] (10.25,10);
+\draw (8.25,8) to[short] (8.75,8);
+\draw (8.75,8) to[short] (8.75,7);
+\draw (8.75,7) to[short] (10.25,7);
+\draw (10.25,10) to[short] (10.25,9.25);
+\draw (10.25,7) to[short] (10.25,7.75);
+\draw (10.25,9.25) to[R] (10.25,7.75);
+\draw (8.25,9.25) to[L ] (8.25,8);
+\draw (10.25,7) to[short, -o] (11.5,7) ;
+\draw (11.25,8.5) to[short, -o] (11.75,8.5) ;
+\draw [->, >=Stealth] (11.25,8.5) -- (10.5,8.5);
+\node [font=\normalsize] at (5.25,10) {$W$};
+\node [font=\normalsize] at (5.25,7) {$X$};
+\node [font=\normalsize] at (7.5,9.75) {$1:1.25$};
+\node [font=\normalsize] at (12,8.5) {$Y$};
+\node [font=\normalsize] at (11.75,7) {$Z$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{125}{100}$ and $\frac{80}{100}$
+\item $\frac{100}{100}$ and $\frac{80}{100}$
+\item $\frac{100}{100}$ and $\frac{100}{100}$
+\item $\frac{80}{100}$ and $\frac{80}{100}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Thyristor $T$ in the figure below is initially off and is triggered with a single pulse of width $10\mu s$ . It is given that $L=\brak{\frac{100}{\pi}}\propto H$ and $C=\brak{\frac{100}{\pi}}\propto F$. Assuming latching and holding currents of the thyristor are both zero and the initial charge on $C$ is zero, $T$ conducts for
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (7.25,10.5) to[short, -o] (6,10.5) ;
+\draw (7.25,10.5) to[D] (8.75,10.5);
+\draw (8.75,10.5) to[L ] (9.75,10.5);
+\draw (9.75,10.5) to[short] (10.25,10.5);
+\draw (10.25,10.5) to[short] (10.25,9.5);
+\draw (10.25,9.5) to[C] (10.25,8.75);
+\draw (10.25,8.75) to[short] (10.25,7.5);
+\draw (10.25,7.5) to[short] (7.5,7.5);
+\draw (7.5,7.5) to[short, -o] (6,7.5) ;
+\node [font=\normalsize] at (6,10) {$+$};
+\node [font=\normalsize] at (6,8) {$-$};
+\node [font=\normalsize] at (6,9) {$15V$};
+\node [font=\normalsize] at (8,10) {$T$};
+\node [font=\normalsize] at (9.25,10) {$L$};
+\node [font=\normalsize] at (9.5,9) {$C$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $10\mu s$
+\item $50\mu s$
+\item $100\mu s$
+\item $200\mu s$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A $4$-pole induction motor, supplied by a slightly unbalanced three-phase $50$Hz source, is rotating at $1440$rpm. The electrical frequency in Hz of the induced negative sequence current in the rotor is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $100$
+\item $98$
+\item $52$
+\item $48$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A function $y=5x^2+10x$ is defined over an open interval $x=\brak{1,2}$. At least at one point in this interval, $\frac{dy}{dx}$ is exactly
+\begin{multicols}{4}
+\begin{enumerate}
+\item $20$
+\item $25$
+\item $30$
+\item $35$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+When the Newton-Raphson method is applied to solve the equation $f\brak{x}=x^3+2x-1=0$, the solution at the end of the first iteration with the initial guess value as $x_o=1.2$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-0.82$
+\item $0.49$
+\item $0.705$
+\item $1.69$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the figure shown below, the chopper feeds a resistive load from a battery source. MOSFET Q is switched at $250$kHz, with a duty ratio of $0.4$. All elements of the circuit are assumed to be ideal.
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (5,10.5) to[american voltage source] (5,8);
+\draw (5,10.5) to[L ] (7.25,10.5);
+\draw (7.25,10.5) to[D] (9.25,10.5);
+\draw (9.25,10.5) to[short] (11,10.5);
+\draw (9.75,10.5) to[C] (9.75,8);
+\draw (5,8) to[short] (11,8);
+\draw (11,10.5) to[R] (11,8);
+\draw (7,10.5) to[Tpmos, transistors/scale=1.02] (7,8);
+\node [font=\normalsize] at (4,9.5) {$12 V$};
+\node [font=\normalsize] at (6,11) {$100\mu H$};
+\node [font=\normalsize] at (8.25,9.25) {$Q$};
+\node [font=\normalsize] at (9,9.75) {$470 \mu F$};
+\node [font=\normalsize] at (11.5,9.25) {$20\Omega$};
+\draw [->, >=Stealth] (7,9.25) -- (7.5,9.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+The average source current in Amps in steady-state is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{3}{2}$
+\item $\frac{5}{3}$
+\item $\frac{5}{2}$
+\item $\frac{15}{4}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the figure shown below, the chopper feeds a resistive load from a battery source. MOSFET Q is switched at $250$kHz, with a duty ratio of $0.4$. All elements of the circuit are assumed to be ideal.
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (5,10.5) to[american voltage source] (5,8);
+\draw (5,10.5) to[L ] (7.25,10.5);
+\draw (7.25,10.5) to[D] (9.25,10.5);
+\draw (9.25,10.5) to[short] (11,10.5);
+\draw (9.75,10.5) to[C] (9.75,8);
+\draw (5,8) to[short] (11,8);
+\draw (11,10.5) to[R] (11,8);
+\draw (7,10.5) to[Tpmos, transistors/scale=1.02] (7,8);
+\node [font=\normalsize] at (4,9.5) {$12 V$};
+\node [font=\normalsize] at (6,11) {$100\mu H$};
+\node [font=\normalsize] at (8.25,9.25) {$Q$};
+\node [font=\normalsize] at (9,9.75) {$470 \mu F$};
+\node [font=\normalsize] at (11.5,9.25) {$20\Omega$};
+\draw [->, >=Stealth] (7,9.25) -- (7.5,9.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+The Peak-to-Peak source current ripple in Amps is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0.96$
+\item $0.144$
+\item $0.192$ 
+\item $0.288$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The state variable formulation of a system is given as\\
+$\myvec{x_1\\x_2}=\myvec{-2&0\\0&-1}\myvec{x_1\\x_2}+\myvec{1\\1}u, x_1\brak{0}=0,x_2\brak{0}=0$ and $y=\myvec{1&0}\myvec{x_1\\x_2}$\\\\
+The system is
+
+\begin{enumerate}
+\item controllable but not observable
+\item not controllable but observable
+\item both controllable and observable
+\item both not controllable and not observable
+\end{enumerate}
+
+}
+\item{
+The state variable formulation of a system is given as\\
+$\myvec{x_1\\x_2}=\myvec{-2&0\\0&-1}\myvec{x_1\\x_2}+\myvec{1\\1}u, x_1\brak{0}=0,x_2\brak{0}=0$ and $y=\myvec{1&0}\myvec{x_1\\x_2}$\\\\
+The response $y\brak{t}$ to a unit step input is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{1}{2}-\frac{1}{2}e^{-2t}$
+\item $1-\frac{1}{2}e^{-2t}-\frac{1}{2}e^{-t}$
+\item $e^{-2t}-e^{-t}$
+\item $1-e^{-t}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the following network, the voltage magnitudes at all buses are equal to $1p_{\cdot}u$, the voltage phase angles are very small, and the line resistances are very negligible. All the line reactances are equal to $j\Omega$
+\begin{figure}[H]
+\centering
+\resizebox{6cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (4.75,9.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (5.5,9.75);
+\draw (5.5,9.75) to[short] (6.25,9.75);
+\draw (6.25,10.25) to[short] (6.25,9.25);
+\draw (6.25,9.75) to[short] (7.75,9.75);
+\draw  (7.75,10) rectangle (9.5,9.5);
+\draw (9.5,9.75) to[short] (11.25,9.75);
+\draw (10.5,10.25) to[short] (10.5,9.25);
+\draw (6.25,9.25) to[short] (6.25,8.75);
+\draw (10.5,9.5) to[short] (10.5,8.75);
+\draw (6.25,8.75) to[short] (6.75,8.75);
+\draw  (6.75,9) rectangle (8.25,8.5);
+\draw  (10.5,8.75) rectangle (10.25,8.75);
+\draw  (9,9) rectangle (10.25,8.5);
+\draw (8,8.5) to[short] (8,8);
+\draw (9.25,8.5) to[short] (9.25,8);
+\draw (7.5,8) to[short] (9.75,8);
+\draw (11.25,9.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (12,9.75);
+\draw [->, >=Stealth] (8.75,8) -- (8.75,7.25);
+\node [font=\normalsize] at (6,10.5) {$Bus 1(slack)$};
+\node [font=\normalsize] at (10.5,10.5) {$Bus 2$};
+\node [font=\normalsize] at (8.5,10.25) {$j\Omega$};
+\node [font=\normalsize] at (6.75,8.25) {$j\Omega$};
+\node [font=\normalsize] at (10.25,8.25) {$j\Omega$};
+\node [font=\normalsize] at (12,9) {$P_2=0.1 pu$};
+\node [font=\normalsize] at (8.25,7.75) {$Bus 3$};
+\draw [->, >=Stealth] (11.25,9.5) -- (10.75,9.5);
+\node [font=\normalsize] at (9.5,7.25) {$P_3=0.2pu$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\theta_2=-0.1,\theta_3=-0.2$
+    \item $\theta_2=0,\theta_3=-0.1$
+    \item $\theta_2=0.1,\theta_3=0.1$
+    \item $\theta_2=0.1,\theta_3=0.2$
+\end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
+f
