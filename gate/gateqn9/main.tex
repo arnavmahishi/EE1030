@@ -1,0 +1,285 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2014-MA-1-13}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+A student is required to demonstrate a high level of \underline{comprehension} of the subject, especially in the social sciences.\\
+The word closest in meaning to \underline{comprehension} is
+\begin{multicols}{4}
+\begin{enumerate}
+\item understanding
+\item meaning 
+\item comprehension
+\item stability
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Choose the most appropriate word from the options given below to complete the following sentence.\\
+One of his biggest \rule{2cm}{0.15mm} was his ability to forgive
+\begin{multicols}{4}
+\begin{enumerate}
+\item vice
+\item virtues
+\item choices 
+\item strength
+\end{enumerate}
+\end{multicols}}
+\item{
+Rajan was not happy that Sajan decided to do the project on his own. On observing his unhappiness, Sajan explained to Rajan that he preferred to work independently\\
+Which one of the statements below is logically valid and can be inferred from the above sentences
+\begin{enumerate}
+\item Rajan has decided to work only in a group.
+\item Rajan and Sajan were formed into a group against their wishes.
+\item Sajan had decided to give in to Rajan's request to work with him.
+\item Rajan had believed that Sajan and he would be working together.
+\end{enumerate}
+}
+\item{
+If $y=5x^2+3$, then the tangent at $x=0,y=3$ 
+\begin{multicols}{2}
+\begin{enumerate}
+\item passes through $x=0,y=0$
+\item has a slope of $+1$
+\item is parallel to the $x$-axis
+\item has a slope of $-1$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A foudry has a fixed daily cost of Rs $50,000$ whenever it operates and a variable cost of Rs $800Q$ where $Q$ is the daily production in tonnes. What is the cost of production in Rs per tonne for a daily production of $100$ tonnes?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $2000$
+\item $1300$
+\item $130$
+\item $1500$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Find the odd one in the following group: ALRVX,EPVZB,ITZDF,OYEIK
+\begin{multicols}{4}
+\begin{enumerate}
+\item ALRVX
+\item EPVZB
+\item ITZDF
+\item OYEIK
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Anuj, Bhola, Chandan, Dilip, Eswar and Faisal live on different floors in a six-storeyed building (the ground floor is numbered $1$, the floor above it $2$, and so on). Anuj lives on an even-numbered floor. Bhola does not live on an odd-numbered floor. Chandan does not live on any of the floors below Faisal's floor. Dilip does not live on floor number $2$. Eswar does not live on a floor immediately above or immdiately below Bhola. Faisal lives three floors above Dilip. Which of the following floor-person combinations is correct?
+\begin{table}[H]    
+  \centering
+  \input{tables/table.tex}
+\end{table}
+}
+\item{
+The smallest angle of a triangle is equal to two thirds of the smallest angle of a quadrilateral. The ratio between the angles of the quadrilateral is $3:4:5:6$. The largest angle of the triangle is twice its smallest angle. What is the sum, in degrees, of the second largest angle of the triangle and the largest angle of the quadrilateral? 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $180$
+\item $270$
+\item $300$
+\item $210$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+One percent of the people of country X are taller than $6$ ft. Two percent of the people of country Y are taller than $6$ ft. There are thrice as many people in country X as in country Y. Taking both countries together, what is the percentage of people taller than $6$ ft?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $3.0$
+\item $2.5$
+\item $1.5$
+\item $1.25$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The monthly rainfall chart based on $50$ years of rainfall in Agra is shown in the following figure. Which of the following are true? $\brak{k\text{ percentile is value such that }k\text{ percent of the data will fall below that value}}$
+\begin{figure}[H]
+\centering
+\resizebox{9cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw  (3.5,11) rectangle (15.25,4.5);
+\draw [short] (3.5,4.5) -- (3.5,4.25);
+\draw [short] (4.5,4.5) -- (4.5,4.25);
+\draw [short] (5.5,4.5) -- (5.5,4.25);
+\draw [short] (6.5,4.5) -- (6.25,4.5);
+\draw [short] (6.75,4.5) -- (6.5,4.5);
+\draw [short] (6.5,4.5) -- (6.5,4.25);
+\draw [short] (7.5,4.5) -- (7.5,4.25);
+\draw [short] (8.5,4.5) -- (8.5,4.25);
+\draw [short] (9.5,4.5) -- (9.5,4.25);
+\draw [short] (10.5,4.5) -- (10.5,4.25);
+\draw [short] (11.5,4.5) -- (11.5,4.25);
+\draw [short] (12.5,4.5) -- (12.5,4.25);
+\draw [short] (13.5,4.5) -- (13.5,4.25);
+\draw [short] (14.5,4.5) -- (14.5,4.25);
+\draw [short] (3.5,4.5) -- (3.25,4.5);
+\draw [short] (3.5,5.25) -- (3.25,5.25);
+\draw [short] (3.5,6) -- (3.25,6);
+\draw [short] (3.5,6.75) -- (3.25,6.75);
+\draw [short] (3.5,7.5) -- (3.25,7.5);
+\draw [short] (3.5,8.25) -- (3.25,8.25);
+\draw [short] (3.5,9) -- (3.25,9);
+\draw [short] (3.5,9.75) -- (3.25,9.75);
+\draw [short] (3.5,10.5) -- (3.25,10.5);
+\node [font=\normalsize] at (3.5,4) {Jan};
+\node [font=\normalsize] at (4.5,4) {Feb};
+\node [font=\normalsize] at (5.5,4) {Mar};
+\node [font=\normalsize] at (6.5,4) {Apr};
+\node [font=\normalsize] at (7.5,4) {May};
+\node [font=\normalsize] at (8.5,4) {Jun};
+\node [font=\normalsize] at (9.5,4) {Jul};
+\node [font=\normalsize] at (10.5,4) {Aug};
+\node [font=\normalsize] at (11.5,4) {Sep};
+\node [font=\normalsize] at (12.5,4) {Oct};
+\node [font=\normalsize] at (13.5,4) {Nov};
+\node [font=\normalsize] at (14.5,4) {Dec};
+\node [font=\normalsize] at (2.75,4.5) {0};
+\node [font=\normalsize] at (2.75,5.25) {100};
+\node [font=\normalsize] at (2.75,6) {200};
+\node [font=\normalsize] at (2.75,6.75) {300};
+\node [font=\normalsize] at (2.75,7.5) {400};
+\node [font=\normalsize] at (2.75,8.25) {500};
+\node [font=\normalsize] at (2.75,9) {600};
+\node [font=\normalsize] at (2.75,9.75) {700};
+\node [font=\normalsize] at (2.75,10.5) {800};
+\draw [short] (3.5,5) -- (4.5,4.75);
+\draw [short] (4.5,4.75) -- (5.5,5);
+\draw [short] (5.5,5) -- (6.5,5.5);
+\draw [short] (6.5,5.5) -- (7.5,6.75);
+\draw [short] (7.5,6.75) -- (8.5,9);
+\draw [short] (8.5,9) .. controls (8.75,9.5) and (9.25,9.75) .. (9.25,9.25);
+\draw [short] (9.25,9.25) -- (10.25,8.5);
+\draw [short] (10.25,8.5) -- (11.25,7.5);
+\draw [short] (11.25,7.5) -- (12.5,5.75);
+\draw [short] (12.5,5.75) -- (13.5,5.5);
+\draw [short] (13.5,5.5) -- (14.5,5.25);
+\draw [dashed] (3.5,5.5) -- (4.5,5.25);
+\draw [dashed] (4.5,5.25) -- (6.25,5.75);
+\draw [dashed] (6.25,5.75) -- (7.25,6.75);
+\draw [dashed] (7.25,6.75) -- (8.25,9);
+\draw [dashed] (8.25,9) .. controls (9,10) and (9,10) .. (9.5,9.5);
+\draw [dashed] (9.5,9.5) -- (11.25,7.75);
+\draw [dashed] (11.25,7.75) -- (12.5,6.25);
+\draw [dashed] (12.5,6.25) -- (14.75,5.75);
+\draw [dashed] (3.5,4.75) -- (4.75,4.5);
+\draw [ color={rgb,255:red,36; green,0; blue,0}, dashed] (4.5,4.5) -- (6.5,5.25);
+\draw [dashed] (6.5,5.25) -- (7.75,6.5);
+\draw [dashed] (7.75,6.5) -- (8.75,8.75);
+\draw [dashed] (8.75,8.75) .. controls (9,9.25) and (9,9.25) .. (9.25,8.75);
+\draw [dashed] (9.25,8.75) -- (10.75,7.25);
+\draw [dashed] (10.75,7.25) -- (12.25,5.5);
+\draw [dashed] (12.25,5.5) -- (14.5,5);
+\draw [short] (11.75,10) -- (14,10);
+\draw [dashed] (11.75,9.5) -- (14,9.5);
+\draw [dashed] (11.75,9) -- (14,9);
+\node [font=\footnotesize] at (14.5,10) {Average};
+\node [font=\footnotesize] at (14.5,9.5) {5 percentile};
+\node [font=\footnotesize] at (14.5,9) {95 percentile};
+\node [font=\large, rotate around={90:(0,0)}] at (1.75,7.75) {$Rainfall\brak{mm}$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\brak{i} On average it rains more in July than in December\\
+\brak{ii} Every year, the amount of rainfall in August is more than that in January\\
+\brak{iii} July rainfall can be estimated with better confidence than February rainfall\\
+\brak{iv} In August, there is at least $500$mm of rainfall\\
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item \brak{i} and \brak{ii}
+\item \brak{i} and \brak{iii}
+\item \brak{ii} and \brak{iii} 
+\item \brak{iii} and \brak{iv}
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The function $f\brak{z}=\abs{z}^2+i\overline{z}+1$ is differentiable at  
+\begin{multicols}{4}
+\begin{enumerate}
+\item $i$
+\item $1$
+\item $-i$
+\item no point in $\mathbb{C}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The radius of convergence of power series $\sum_{n=0}^{\infty}4^{\brak{-1}^nn}z^{2n}$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{1}{4}$
+\item $\frac{1}{2}$
+\item $1$
+\item $\frac{1}{3}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $E_1$ and $E_2$ be two non empty subsets of a normed linear space $X$ and let $E_1+E_2=\cbrak{x+y\in X:x\in E_1\text{ and }y\in E_2}$. Then which of the following statements in FALSE.
+\begin{enumerate}
+    \item If $E_1$ and $E_2$ are convex, then $E_1+E_2$ is convex
+    \item If $E_1$ or $E_2$ are open, then $E_1+E_2$ is open
+    \item $E_1+E_2$ must be closed if $E_1$ and $E_2$ are closed
+    \item If $E_1$ is closed and $E_2$ is compact, then $E_1+E_2$ is closed
+\end{enumerate}
+}
+\end{enumerate}
+\end{document}
+e
