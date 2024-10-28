@@ -1,0 +1,202 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2015-CE-27-39}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+For steady incompressible flow through a closed-conduit of uniform cross-section, the direction of flow will always be
+\begin{multicols}{2}
+\begin{enumerate}
+\item from higher to lower elevation 
+\item from higher to lower pressure
+\item from higher to lower velocity
+\item from higher to lower pizometric head
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A circular pipe has a diameter of $1$ m, bed slope of $1$ in $1000$, and Manning's roughness coefficient equal to $0.01$. It may be treated as an open channel flow when it is flowing just full, i.e., the water level just touches the crest. The discharge in this condition is denoted by $Q_{full}$. Similarly, the discharge when the pipe is flowing half-full, i.e., with a flow depth of $0.5$ m, is denoted by $Q_{half}$. The ratio $\frac{Q_{full}}{Q_{half}}$ is
+\begin{multicols}{2}
+\begin{enumerate}
+\item $1$ 
+\item $\sqrt{2}$
+\item $2$
+\item $4$
+\end{enumerate}
+\end{multicols}}
+\item{
+The two columns below show some parameters and their possible values\\
+\begin{table}[h!]    
+  \centering
+  \input{tables/table.tex}
+\end{table}
+\begin{multicols}{2}
+\begin{enumerate}
+\item P-I,Q-II,R-III,S-IV
+\item P-III,Q-VI,R-I,S-V
+\item P-I,Q-V,R-VI,S-II
+\item P-III,Q-II,R-V,S-IV
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Total Kjeldahl Nitrogen \brak{TKN} concentration $\brak{\frac{mg}{L}\text{as N}}$ in domestic sewage is the sum of concentrations of
+\begin{multicols}{2}
+\begin{enumerate}
+\item organic and inorganic nitrogen in sewage
+\item organic nitrogen and nitrate in sewage
+\item organic nitrogen and ammonia in sewage
+\item ammonia and nitrate in sewage
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Solid waste generated from and industry contains only two components X and Y as shown in the table below
+\begin{table}[h!]    
+  \centering
+  \input{tables/table1.tex}
+\end{table}
+Assuming $\brak{c_1+c_2}=100$, the composite density of the solid waste $\brak{\rho}$ is given by:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\frac{100}{\brak{\frac{c_1}{\rho_1}+\frac{c_2}{\rho_2}}}$
+\item $100\brak{\frac{\rho_1}{c_1}+\frac{\rho_2}{c_2}}$
+\item $100\brak{c_1\rho_1+c_2\rho_2}$
+\item $100\brak{\frac{\rho_1\rho_2}{c_1\rho_1+c_2\rho_2}}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The penetration value of a bitumen sample tested at $25\degree C$ is $80$. When this sample is heated to $60\degree C$ and tested again, the needle of the penetration test apparatus the bitume sample by $d$mm. The value of $d$ CANNOT be less than  
+\begin{multicols}{4}
+\begin{enumerate}
+\item $80$mm
+\item $100$mm
+\item $120$mm
+\item $90$mm
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Which of the following statements CANNOT be used to describe free flow speed $\brak{u_f}$ of a traffic stream? 
+\begin{enumerate}
+\item $u_f$ is the speed when flow is negigible
+\item $u_f$ is the speed when density is negigible
+\item $u_f$ is affected by geometry and surface conditions of road
+\item $u_f$ is the speed at which flow is maximum and density is optimum
+\end{enumerate}
+}
+\item{
+Which of the the following statements is FALSE
+\begin{enumerate}
+\item Plumb line is along the direction of gravity
+\item Mean sea level \brak{MSL} is used as a reference surface for establishing the horizontal control
+\item Mean sea level \brak{MSL} is a simplification of the Geoid
+\item Geoid is an equi-potenital surface of gravity
+\end{enumerate}
+}
+\item{
+In a closed loop traverse of $1$km total length, the closing errors in departure and latitude are $0.3$m and $0.4$m, respectively. The relative precision of this traverse will be: 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1:5000$
+\item $1:4000$
+\item $1:3000$
+\item $1:2000$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The smallest and largest Eigen values of the following matrix are: $\myvec{3&-2&2\\4&-4&6\\2&-3&5}$ 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1.5$ and $2.5$
+\item $0.5$ and $2.5$
+\item $1.0$ and $3.0$
+\item $1.0$ and $2.0$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The quadratic equation $x^2 - 4x + 4 = 0$ is to be solved numerically, starting with the initial guess $x_0 = 3$. The Newton-Raphson method is applied once to get a new estimate and then the Secant method is applied once using the initial guess and this new estimate. The estimated value of the root after the application of the Secant method is \rule{3cm}{0.15mm}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $2.1$
+\item $2.33$
+\item $3.33$
+\item $2.0$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Consider the following differential equation:$x\brak{ydx+xdy}\cos\frac{y}{x}=y\brak{xdy-ydx}\sin\frac{y}{x}$\\
+Which of the following is the solution of the above equation $\brak{c\text{ is an arbitrary constant}}$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{x}{y}\cos\frac{y}{x}=c$
+\item $\frac{x}{y}\sin\frac{y}{x}=c$
+\item $xy\cos\frac{y}{x}=c$
+\item $xy\sin\frac{y}{x}=c$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Consider the following complex function $f\brak{z}=\frac{9}{\brak{z-1}\brak{z+2}^2}$ Which of the following is one of the residues of the above function?
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $-1$
+        \item $\frac{9}{16}$
+        \item $2$
+        \item $9$
+    \end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
+n
