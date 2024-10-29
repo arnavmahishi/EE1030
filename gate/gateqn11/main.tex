@@ -1,0 +1,188 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2016-PH-27-39}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+The kinetic energy of a particle of rest mass $m$ is equal to its rest mass energy. Its momentum in units of $mc$, where $c$ is the speed of light in vacuum, is .$\brak{\text{Give your answer upto two decimal places}}$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1.73$
+\item $1.41$
+\item $1$
+\item $2$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The number density of electrons in the conduction band of a semiconductor at a given temperature is $2 \times 10^{19} \text{ m}^{-3}$. Upon lightly doping this semiconductor with donor impurities, the number density of conduction electrons at the same temperature becomes $4 \times 10^{20} \text{ m}^{-3}$. The ratio of majority to minority charge carrier concentration is \rule{3cm}{0.15mm}.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $20$ 
+\item $10$
+\item $30$
+\item $25$
+\end{enumerate}
+\end{multicols}}
+\item{
+Two blocks are connected by a spring of spring constant $k$. One block has mass $m$ and the other block has mass $2m$. If the ratio $k/m=4s^{-2}$, the angular frequency of vibration $\omega$ of the two block spring system in $s^{-1}$
+is. $\brak{\text{Give your answer upto two decimal places}}$
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1.45$
+\item $2.45$
+\item $3.45$
+\item $4.45$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A particle moving under the influence of a central force $\overrightarrow{F}\brak{\overrightarrow{r}} = -k\overrightarrow{r}$ $\brak{\text{where $\overrightarrow{r}$ is the position vector of the particle and $k$ is a positive constant}}$ has non-zero angular momentum. Which of the following curves is a possible orbit for this particle?
+\begin{enumerate}
+\item A straight line segment passing through the origin
+\item An ellipse with its center at the origin 
+\item An ellipse with one of its foci at origin
+\item A parabola with vertex at origin
+\end{enumerate}
+}
+\item{
+Consider the reaction $_{25}^{54}Mn+e^-\rightarrow_{24}^{54}Cr+X$. The particle $X$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\gamma$
+\item $v_e$
+\item $n$
+\item $\pi^0$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The scattering of particles by a potential can be analyzed by Born approximation. In particular, if the scattered wave is replaced by an appropriate plane wave, the corresponding Born approximation is known as the first Born approximation. Such an approximation is valid for
+\begin{enumerate}
+\item large incident energies and weak scatterin potentials
+\item large incident energies and strong scattering potentials
+\item small incident energies and weak scattering potentials
+\item small incident energies and strong scattering potentials
+\end{enumerate}
+}
+\item{
+Consider an elastic scattering of particles in $l = 0$ states. If the corresponding phase shift $\delta_0$ is $90^{\degree}$ and the magnitude of the incident wave vector is equal to $\sqrt{2\pi}$ fm$^{-1}$, then the total scattering cross section in units of fm$^2$ is.
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1$
+\item $2$
+\item $3$
+\item $5$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A hydrogen atom is in its ground state. In the presence of a uniform electric field $\overrightarrow{E} = E\hat{z}$, the leading order change in its energy is proportional to $\brak{E}^n$. The value of the exponent $n$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1$
+\item $3$
+\item $2$
+\item $5$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A solid material is found to have a temperature independent magnetic susceptibility, $\chi=C$, Which of the following statements are correct
+\begin{enumerate}
+\item If $C$ is positive, the material is a diamagnet
+\item If $C$ is positive, the material is a ferromagnet
+\item If $C$ is negative, the material could be a type $I$ semiconductor
+\item If $C$ is positive, the material could be a type $I$ semiconductor
+\end{enumerate}
+}
+\item{
+An infinite, conducting slab kept in a horizontal plane carries a uniform charge density $\sigma$. Another infinite slab of thickness $t$, made of a linear dielectric material of dielectric constant $k$, is kept above the conducting slab. The bound charge density on the upper surface of the dielectric slab is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{\sigma}{2k}$
+\item $\frac{\sigma}{k}$
+\item $\frac{\sigma\brak{k-2}}{2k}$
+\item $\frac{\sigma\brak{k-1}}{k}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The number of spectroscopic terms resulting from the $L\cdot S$ coupling of a $3p$ electron and a $3d$ electron is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $4$
+\item $6$
+\item $3$
+\item $10$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Which of the following statements is NOT correct?
+\begin{enumerate}
+\item A deuteron can be disintegrated be irridating it with gamma rays of energy $4$Mev
+\item A deuteron has no excited states
+\item A deuteron has no electric quadrupole moment
+\item The $^1S_0$ state of deuteron cannot be formed
+\end{enumerate}
+}
+\item{
+If $\overrightarrow{s_1}$ and $\overrightarrow{s_2}$ are the spin operators of the two electrons of a He atom, the value of $\langle s_1\cdot s_2 \rangle$ for the ground state is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-\frac{3}{2}\hbar^2$
+    \item $-\frac{3}{4}\hbar^2$
+    \item $0$
+    \item $-\frac{1}{4}\hbar^2$
+\end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
