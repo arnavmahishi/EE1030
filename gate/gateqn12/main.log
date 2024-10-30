@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.7)  30 OCT 2024 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.7)  30 OCT 2024 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1652,14 +1652,38 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
+) (./main.aux
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 40.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 40.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 40.
@@ -1849,6 +1873,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 40.
 LaTeX Info: Redefining \pageref on input line 40.
 LaTeX Info: Redefining \nameref on input line 40.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1931,21 +1957,15 @@ l.402 \end{enumerate}
 ? 
 [5] (./main.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 50175 strings out of 480247
- 1174587 string characters out of 5896152
- 1630571 words of memory out of 5000000
+ 50181 strings out of 480247
+ 1174641 string characters out of 5896152
+ 1630891 words of memory out of 5000000
  67251 multiletter control sequences out of 15000+600000
  552737 words of font info for 212 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
@@ -1956,7 +1976,7 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 60780 bytes).
+Output written on main.pdf (5 pages, 60828 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams
