@@ -1,0 +1,403 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2017-ME-40-52}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{A point mass of $100$ kg is dropped onto a massless elastic bar $\brak{\text{cross-sectional area = $100mm^2$, length = $1$ m, Young's modulus = $100$ GPa}}$ from a height H of $10$ mm as shown \brak{\text{Figure is not to scale}}. If g = $10\frac{m}{s^2}$, the maximum compression of the elastic bar is \rule{3cm}{0.15mm} mm.
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (6.5,12) circle (0.25cm);
+\draw  (6.25,10.5) rectangle (7,6.5);
+\draw (5.5,6.5) to[short] (7.75,6.5);
+\draw [<->, >=Stealth] (7.75,10.5) -- (7.75,6.5);
+\draw [<->, >=Stealth] (7.75,12) -- (7.75,10.5);
+\draw [->, >=Stealth] (5.5,11) -- (5.5,9.25);
+\node [font=\normalsize] at (5.5,12) {$m=100kg$};
+\node [font=\normalsize] at (8.5,11.5) {$H=10mm$};
+\node [font=\normalsize] at (8.25,8.5) {$L=1m$};
+\node [font=\normalsize] at (5,10) {$g$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+
+Two disks $A$ and $B$ with identical mass $\brak{m}$ and radius $\brak{R}$ are initially at rest. They roll down from the top of identical inclined planes without slipping. Disk $A$ has all of its mass concentrated at the rim, while Disk $B$ has its mass uniformly distributed. At the bottom of the plane, the ratio of velocity of the center of disk A to the velocity of the center of disk $B$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\sqrt{\frac{3}{4}}$
+\item $\sqrt{\frac{3}{2}}$
+\item $1$
+\item $\sqrt{2}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A rectangular region in a solid is in a state of plane strain. The $(x,y)$ coordinates of the corners of the undeformed rectangle are given by $P(0,0)$,$Q(4,0)$,$R(4,3)$, $S(0,3)$. The rectangle is subjected to uniform strains:$\epsilon_{xx} = 0.001$, $\epsilon_{yy} = 0.002$, $\gamma_{xy} = 0.003$. The deformed length of the elongated diagonal, up to three decimal places, is \rule{2cm}{0.15mm} units.
+}
+\item{
+A machine element has an ultimate strength $\brak{\sigma_u}$ of $600\frac{N}{mm^2}$ and an endurance limit $\brak{\sigma_{en}}$ of $250\frac{N}{mm^2}$. The fatigue curve for the element on a log-log plot is shown below. If the element is to be designed for a finite life of $10000$ cycles, the maximum amplitude of a completely reversed operating stress is \rule{2cm}{0.15mm} $\frac{N}{mm^2}$ 
+ is $\frac{N}{mm^2}$.
+ \begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every ode}=[font=\normalsize]
+\draw [->, >=Stealth] (5.25,7) -- (5.25,12);
+\draw [->, >=Stealth] (5.25,7) -- (10.5,7);
+\draw [dashed] (5.25,8.75) -- (7,8.75);
+\draw [dashed] (7,8.75) -- (7,7);
+\draw [short] (5.25,10.25) -- (7,8.75);
+\draw [short] (7,8.75) -- (9.25,8.75);
+\node [font=\normalsize] at (4.5,10.25) {A};
+\node [font=\normalsize] at (5.75,10.5) {$0.8\sigma_u$};
+\node [font=\normalsize] at (4.75,8.75) {$\sigma_{en}$};
+\node [font=\normalsize] at (5,6.5) {$10^3$};
+\node [font=\normalsize] at (7,6.5) {$10^6$};
+\node [font=\normalsize] at (7.25,9) {B};
+\node [font=\normalsize] at (7.5,5.75) {No. of cycles};
+\node [font=\normalsize, rotate around={90:(0,0)}] at (3.5,9) {Faliure Stress};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+A horizontal bar, fixed at one end $\brak{x = 0}$, has a length of $1$ m and a cross-sectional area of $100mm^2$. Its elastic modulus varies along its length as given by $E\brak{x}=100e^{-x}GPa$, where $x$ is the length coordinate in m along the axis of the bar. An axial tensile load of $10$ kN is applied at the free end $\brak{x=1}$. The axial displacement of the free end is \rule{2cm}{0.15mm} mm.}
+\item{
+In an epicyclic gear train, shown in the figure, the outer ring gear is fixed, while the sun gear rotates counterclockwise at $100$ rpm. Let the number of teeth on the sun, planet and outer gears to be $50, 25$, and $100$, respectively. The ratio of magnitudes of angular velocity of the planet gear to the angular velocity of the carrier arm is \rule{3cm}{0.15mm}
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw  (7.25,9) circle (3.25cm);
+\draw  (7.25,9) circle (1.75cm);
+\draw  (9,10.75) circle (0.75cm);
+\draw [short] (7.25,9) -- (9,10.75);
+\draw  (7.25,9) circle (0.25cm);
+\draw [->, >=Stealth] (3.75,11.25) -- (5.75,10);
+\draw [->, >=Stealth] (6.25,14) -- (6.5,12.25);
+\draw [->, >=Stealth] (9.5,13) -- (8.75,11.5);
+\draw [->, >=Stealth] (12,6.75) -- (8,9.75);
+\node [font=\large] at (3,11.5) {Sun Gear};
+\node [font=\large] at (6,14.5) {Outer ring gear};
+\node [font=\large] at (9.5,13.5) {Planet Gear};
+\node [font=\large] at (12.75,6.5) {Carrier arm};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}}
+\item{
+
+A thin uniform rigid bar of length $L$ and mass $M$ is hinged at point $O$, located at a distance of $\frac{L}{3}$ from one of its ends. The bar is further supported using springs, each of stiffness $k$, located at the two ends. A particle of mass $m =\frac{M}{4}$. is fixed at one end of the bar, as shown in the figure. For small rotations of the bar about $O$, the natural frequency of the system is
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [short] (3.25,10.25) -- (13.25,10.25);
+\draw [short] (6,9) -- (7,10.25);
+\draw [short] (7,10.25) -- (7.75,9);
+\draw [short] (6,9) -- (7.75,9);
+\draw [short] (3.25,10.25) -- (5.25,10.25);
+\draw (3.25,10.25) to[L ] (3.25,8.5);
+\draw (13.25,10.25) to[L ] (13.25,8.5);
+\draw [short] (3.25,8.5) -- (2.75,8.5);
+\draw [short] (2.75,8.5) -- (2.5,8.25);
+\draw [short] (3.25,8.5) -- (3,8.25);
+\draw [short] (3.25,8.5) -- (3.5,8.5);
+\draw [short] (3.5,8.5) -- (3.75,8.5);
+\draw [short] (3.75,8.5) -- (3.5,8.25);
+\draw [short] (13.25,8.5) -- (12.5,8.5);
+\draw [short] (12.5,8.5) -- (12.25,8.25);
+\draw [short] (13.25,8.5) -- (13,8.25);
+\draw [short] (13.25,8.5) -- (13.75,8.5);
+\draw [short] (13.75,8.5) -- (13.5,8.25);
+\draw [<->, >=Stealth] (3.25,10.5) -- (7,10.5);
+\draw [<->, >=Stealth] (3.25,11.75) -- (13.25,11.75);
+\draw [short] (3.25,10.25) -- (3.25,12.25);
+\draw [short] (13.25,10.25) -- (13.25,12.25);
+\node [font=\large] at (7.25,10.5) {$O$};
+\draw  (12.75,10.75) rectangle (13.25,10.25);
+\node [font=\large] at (8,12.25) {$L$};
+\node [font=\large] at (5,11) {$\frac{L}{3}$};
+\node [font=\large] at (12.25,10.75) {$M$};
+\node [font=\large] at (12.75,9.25) {$k$};
+\node [font=\large] at (2.75,9.25) {$k$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\sqrt{\frac{5k}{m}}$
+\item $\sqrt{\frac{5k}{2m}}$
+\item $\sqrt{\frac{3k}{2m}}$
+\item $\sqrt{\frac{3k}{m}}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+For an inline slider-crank mechanism, the lengths of the crank and connecting rod are $3$ m and $4$ m, respectively. At the instant when the connecting rod is perpendicular to the crank, if the velocity of the slider is $1\frac{m}{s}$, the magnitude of angular velocity $\brak{\text{upto 3 decimal points accuracy}}$ of the crank is \rule{2cm}{0.15mm}$\frac{rad}{s}$.\\
+}
+\item{
+A $10$ mm deep cylindrical cup with diameter of $15$ mm is drawn from a circular blank. Neglecting the variation in the sheet thickness, the diameter $\brak{\text{upto 2 decimal points accuracy}}$ of the blank is \rule{2cm}{0.15mm}mm.\\
+}
+\item{
+Circular arc on a part profile is being machined on a vertical CNC milling machine. CNC part program using metric units with abosolute dimensions is listed below:
+\rule{5cm}{0.15mm}\\
+N$60$ G$01$ X $30$ Y $55$ Z-$5$ F$50$\\
+N$70$ G$02$ X $50$ Y $35$ R $20$\\
+N$80$ G$01$ Z $5$\\
+\rule{5cm}{0.15mm}
+The coordinates of the circular arc are:
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\brak{30,55}$
+        \item $\brak{50,55}$
+        \item $\brak{50,35}$
+        \item $\brak{30,35} $
+    \end{enumerate}
+\end{multicols}
+}
+\item{
+Assume that the surface roughness profile is triangular as shown schematically in the figure. If the peak to valley height is $20\mu m$. The central line average surface roughness $R_a\brak{\text{in }\mu m}$
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [short] (4.25,8) -- (5.25,10);
+\draw [short] (5.25,10) -- (6,8);
+\draw [short] (6,8) -- (7,10);
+\draw [short] (7,10) -- (7.75,8);
+\draw [short] (7.75,8) -- (8.5,10);
+\draw [short] (8.5,10) -- (9.25,8);
+\draw [short] (9.25,8) -- (10,10);
+\draw [short] (10,10) -- (10.75,8);
+\draw [short] (10.75,8) -- (11.5,10);
+\draw [short] (11.5,10) -- (12.5,8);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $5$
+        \item $6.67$
+        \item $10$
+        \item $20$
+    \end{enumerate}
+\end{multicols}
+}
+\item{
+Two models, P and Q, of a product earn profits of Rs. $100$ and Rs. $80$ per piece, respectively. Production times for P and Q are $5$ hours and $3$ hours, respectively, while the total production time available is $150$ hours. For a total batch size of $40$, to maximize profit, the number of units of P to be produced is \rule{2cm}{0.15mm}}\\
+\item{
+Following data refers to the jobs \brak{P,Q,R,S} which have arrived at a machine for scheduling. The shortest possible average flow time is \rule{2cm}{0.15mm} days
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+         Job&Processing Time$\brak{\text{days}}$  \\
+         \hline
+         P&9\\
+         \hline
+         R&22\\
+         \hline
+         S&12\\
+         \hline
+    \end{tabular}
+    \label{tab:my_label}
+\end{table}
+}
+\item{
+    A block of mass $m$ rests on an inclined plane and is attached by a string to the wall as shown in the figure. The coefficient of static friction between the plane and the block is $0.25$. The string can withstand a maximum force of $20$ N. The maximum value of the mass $\brak{m}$ for which the string will not break and the block will be in static equilibrium is \rule{3cm}{0.15mm}kg. Take $\cos\theta=0.8$ and $\sin\theta=0.6$.
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (8.5,9.75) -- (5.25,6.75);
+\draw [short] (5.25,6.75) -- (8.5,6.75);
+\draw [short] (8.5,9.75) -- (8.5,6.75);
+\draw  (8.5,10.75) rectangle (9.75,6.75);
+\draw [short] (8.5,10.25) -- (7,9);
+\draw [ rotate around={46:(6.625, 8.75)}] (6.25,9.25) rectangle (7,8.25);
+\node [font=\normalsize] at (6.5,8.75) {$m$};
+\draw [short] (5.75,7.25) -- (6,6.75);
+\node [font=\normalsize] at (6.25,7) {$\theta$};
+\draw [short] (8.5,10.25) -- (9,10.75);
+\draw [short] (8.5,9.75) -- (9.5,10.75);
+\draw [short] (8.5,9.25) -- (9.75,10.5);
+\draw [short] (8.5,8.75) -- (9.75,10);
+\draw [short] (8.5,8.25) -- (9.75,9.5);
+\draw [short] (8.5,7.75) -- (9.75,9);
+\draw [short] (8.75,6.75) -- (9.75,7.75);
+\draw [short] (8.5,7.25) -- (9.75,8.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $10.2$
+\item $10.8$
+\item $9.8$
+\item $9.2$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+A two-member truss $PQR$ is supporting a load $W$. The axial forces in members $PQ$ and $QR$ are respectively
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (3.25,12) -- (3.25,11);
+\draw [short] (3.25,8.5) -- (3.25,7.5);
+\draw [short] (3.25,11.5) -- (7.25,11.5);
+\draw [short] (3.25,8) -- (7.25,11.5);
+\draw [short] (7.25,12) -- (7.25,9.5);
+\draw [<->, >=Stealth] (3.25,11.75) -- (7.25,11.75);
+\draw [->, >=Stealth] (7.25,11.5) -- (7.25,9);
+\draw [short] (6.25,11.5) .. controls (6,11.25) and (6.25,10.75) .. (6.75,11);
+\draw [short] (6.5,11) .. controls (6.75,10.5) and (7.25,10.5) .. (7.25,10.75);
+\node [font=\normalsize] at (5.5,11) {$30\degree$};
+\node [font=\normalsize] at (6.75,10.25) {60\degree};
+\node [font=\normalsize] at (5.25,12) {L};
+\node [font=\normalsize] at (3,11.5) {P};
+\node [font=\normalsize] at (2.75,8) {R};
+\node [font=\normalsize] at (7.5,11.5) {Q};
+\node [font=\normalsize] at (7.5,8.75) {W};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+\item $2$W tensile and $\sqrt{3}$W compressive
+\item $\sqrt{3}$W tensile and $2$W compressive
+\item $\sqrt{3}$W compressive and $2$W compressive
+\item $2$W compressive and $\sqrt{3}$W tensile
+\end{enumerate}
+\item{
+A horizontal bar with a constant cross-section is subjected to loading as shown in the figure. The Young's moduli for the sections $AB$ and $BC$ are $3E$ and $E$, respectively. 
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (5.5,11.75) -- (5.5,7.75);
+\draw  (5.5,10.5) rectangle (8.5,9);
+\draw  (8.5,10.5) rectangle (11.75,9);
+\draw [<->, >=Stealth] (5.5,8.75) -- (8.5,8.75);
+\draw [<->, >=Stealth] (8.5,8.75) -- (11.75,8.75);
+\node [font=\normalsize] at (7,8.25) {L};
+\node [font=\normalsize] at (10.25,8.5) {L};
+\node [font=\normalsize] at (7,9.5) {3E};
+\node [font=\normalsize] at (10,9.5) {E};
+\node [font=\normalsize] at (6,10.75) {A};
+\node [font=\normalsize] at (8.5,10.75) { B};
+\node [font=\normalsize] at (11.75,10.75) {C};
+\node [font=\normalsize] at (9,9.75) {P};
+\node [font=\normalsize] at (12,9.75) {F};
+\draw [->, >=Stealth] (9.25,9.5) -- (8.5,9.5);
+\draw [->, >=Stealth] (11.75,9.5) -- (12.5,9.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+For the deflection at $C$ to be zero, the ratio $\frac{P}{F}$ is \rule{3cm}{0.15mm}
+}
+\item{
+The figure shows cross-section of a beam subjected to bending. The area moment of inertia $\brak{\text{in }mm^4}$ of this cross-section about its base is \rule{3cm}{0.15mm}
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (6.5,10) -- (6.5,11.5);
+\draw [short] (6.5,11.5) -- (9,11.5);
+\draw [short] (9,11.5) -- (9,10);
+\draw [short] (6.5,7.25) -- (6.5,8.5);
+\draw [short] (6.5,7.25) -- (9,7.25);
+\draw [short] (9,7.25) -- (9,8.5);
+\draw [short] (6.5,8.5) .. controls (7.75,8.75) and (7.75,9.75) .. (6.5,10);
+\draw [short] (9,8.5) .. controls (7.75,8.75) and (7.75,9.75) .. (9,10);
+\draw [<->, >=Stealth] (6.5,9.25) -- (7,9.75);
+\draw [<->, >=Stealth] (9,9.25) -- (8.5,9.75);
+\draw [<->, >=Stealth] (6,10) -- (6,8.5);
+\draw [<->, >=Stealth] (9.5,11.5) -- (9.5,7);
+\draw [<->, >=Stealth] (6.5,7) -- (9,7);
+\node [font=\normalsize] at (5.75,9.25) {8};
+\node [font=\normalsize] at (10,9.25) {10};
+\node [font=\normalsize] at (8.5,9.25) {R4};
+\node [font=\normalsize] at (7,9.25) {$R4$};
+\node [font=\normalsize] at (7.75,6.75) {10};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\end{enumerate}
+\end{document}
