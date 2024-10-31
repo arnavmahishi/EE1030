@@ -1,0 +1,297 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2019-AE-40-52}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+The airplane shown in figure starts executing a symmetric pull-up maneuver from steady level attitude with a constant nose-up pitch acceleration of $20\frac{deg}{s^2}$. The vertical load factor measured at this instant at the centre of gravity $\brak{\text{CG}}$ is $2$. Given that the acceleration due to gravity is $9.81\frac{m}{s^2}$, the vertical load factor measured at point $P$ on the nose of the airplane, which is $2$ m ahead of the CG, is \rule{3cm}{0.15mm} $\brak{\text{round off to $2$ decimal places}}$.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (7.25,9.25) .. controls (4.75,9.5) and (4.5,10.25) .. (7.25,10.75);
+\draw [short] (7.25,10.75) -- (12,10.25);
+\draw [short] (12,10.25) .. controls (14.25,9.75) and (13,9.5) .. (12,9.25);
+\draw [short] (11.5,10.25) -- (12,11.5);
+\draw [short] (12,11.5) -- (13,11.5);
+\draw [short] (13,11.5) -- (13,10);
+\draw [short] (12,9.25) -- (7.25,9.25);
+\draw [short] (8,9.25) -- (9.5,9.5);
+\draw [short] (9.5,9.5) -- (11.25,8.75);
+\draw [short] (8,9.25) -- (11.25,8.75);
+\draw [short] (12,9.25) -- (13.75,9);
+\draw [short] (12.5,9.5) -- (13.75,9);
+\draw [<->, >=Stealth] (5.25,8.5) -- (9.5,8.5);
+\draw [->, >=Stealth] (5,9.25) .. controls (4.5,9.5) and (4.25,10) .. (5,10.5) ;
+\draw  (9,10) circle (0.25cm);
+\draw [short] (9,10.25) -- (9,9.75);
+\draw [short] (8.75,10) -- (9.25,10);
+\node [font=\normalsize] at (4,10) {$20\frac{deg}{s^2}$};
+\node [font=\normalsize] at (7.5,8.25) {$2m$};
+\node [font=\normalsize] at (9.75,10) {$CG$};
+\node [font=\normalsize] at (5.75,10) {$P$};
+\draw [short] (5.25,10) -- (5.25,8.25);
+\draw [short] (9.5,9.25) -- (9.5,8.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+Consider an airplane with a weight of $8000$ N, wing area of $16m^2$, wing zero-lift drag coefficient of $0.02$, Oswald's efficiency factor of $0.8$, and wing aspect ratio of $6$, in steady level flight with wing lift coefficient of $0.375$. Considering the same flight speed and ambient density, the ratio of the induced drag coefficient during steady level flight to that during a $30\degree$ climb is \rule{2cm}{0.15mm}$\brak{\text{round off to $2$ decimal places}}$.\\
+\item{
+The product of earth's mass $\brak{M}$ and the universal gravitational constant $\brak{G}$ is $GM=3.986\times10^{14}\frac{m^3}{s^2}$. The radius of earth is $6371km$. The minimum increment n the velocity to be imparted to a spacecraft flying in a circular orbit around the earth at an altitude of $4000km$ to make it exit earth's gravitational field is \rule{2cm}{0.15mm}$\frac{km}{s}$ $\brak{\text{round off to $2$ decimal places}}$.\\
+}
+\item{
+A propeller driven airplane has a gross take-off weight of $4905$ N with a wing area of $6.84 m^2$. Assume that the wings are operating at the maximum $\frac{C_L^{\frac{3}{2}}}{C_D}$, of $13$, the propeller efficiency is $0.9$ and the specific fuel consumption of the engine is $0.76\frac{kg}{kW-hr}$. Given that the density of air at sea level is $1.225\frac{kg}{m^3}$ and the acceleration due to gravity is $9.81\frac{m}{s^2}$, the weight of the fuel required for an endurance of $18$ hours at sea level is \rule{2cm}{0.15mm}$\brak{\text{round off to the nearest integer}}$.\\
+}
+\item{
+The design of an airplane is modified to increase the vertical tail area by $20\%$ and decrease the moment arm from the aerodynamic centre of the vertical tail to the airplane centre of gravity by $20\%$. Assuming all other factors remain unchanged, the ratio of the modified to the original directional static stability $\brak{C_{N_\beta}\text{, due to tail fin}}$ is \rule{2cm}{0.15mm}
+$\brak{\text{round of to two decimal places}}$\\
+}
+\item{
+For a rocket engine, the velocity ratio $r$ is $\frac{V_a}{V_e}$, where $V_a$ is the vehicle velocity and $V_e$ is the exit velocity of the exhaust gases. Assume the flow to be optimally expanded through the nozzle. For $r=2$, if $F$ is the thrust produced and $m$ is the mass flow rate of exhaust gases, then, $\frac{F}{mV_e}$ is \rule{2cm}{0.15mm}\\
+}
+\item{
+The specific impulse of a rocket engine is $3000\frac{Ns}{kg}$.The mass of the rocket at burnout is $1000$kg. The propellant consumed in the process is $720$ kg. Assume all factors contributing to velocity loss to be negligible.The change in vehicle velocity $\delta u$ is \rule{2cm}{0.15mm} $\frac{km}{s}\brak{\text{ round off to $2$ decimal places}}$.\\
+}
+\item{
+The combustion products of a gas turbine engine can be assumed to be a calorically perfect gas with $\gamma= 1.2$. The pressure ratio across the turbine stage is $0.14$. The measured turbine inlet and exit stagnation temperatures are $1200$ K and $900$ K, respectively. The total-to-total turbine efficiency is \rule{2cm}{0.15mm}$\%$ $\brak{\text{round off to the nearest integer}}$.
+}
+\item{
+The figure shows the velocity triangles for an axial compressor stage. The specific work input to the compressor stage is \rule{2cm}{0.15mm}$\frac{kJ}{kg}\brak{\text{ round of to $2$ decimal places}}$.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (5.25,6.5) -- (11.5,6.5);
+\draw [short] (5.25,6.5) -- (9.5,10);
+\draw [short] (9.5,10) -- (11.5,6.5);
+\draw [short] (11.5,6.5) -- (6.5,10);
+\draw [short] (6.5,10) -- (5.25,6.5);
+\draw [short] (9.5,10) -- (9.5,11.25);
+\draw [short] (11.5,6.5) -- (11.5,11.25);
+\draw [short] (6.5,10) -- (4.25,10);
+\draw [<->, >=Stealth] (4.75,10) -- (4.75,6.5);
+\draw [<->, >=Stealth] (9.5,10.75) -- (11.5,10.75);
+\draw [<->, >=Stealth] (11.5,6.25) -- (5.25,6.25);
+\node [font=\normalsize] at (4,8.5) {$c_2=60\frac{m}{s}$};
+\node [font=\normalsize] at (10.5,11) {$40\frac{m}{s}$};
+\node [font=\normalsize] at (4,10.25) {$\alpha_1=30\degree$};
+\node [font=\normalsize] at (8,6) {$U=100\frac{m}{s}$};
+\node [font=\normalsize] at (5.75,8.75) {$c_1$};
+\draw (6.5,10) to[short] (6.5,8.5);
+\node [font=\normalsize] at (6.25,8.5) {$\alpha_1$};
+\node [font=\normalsize] at (7,7.75) {$c_2$};
+\node [font=\normalsize] at (9.25,7.75) {$w_1$};
+\node [font=\normalsize] at (10.75,8.25) {$w_2$};
+\draw [->, >=Stealth] (13.25,9.5) -- (13.25,7.5);
+\draw [->, >=Stealth] (13.25,9.5) -- (15.25,9.5);
+\node [font=\normalsize] at (13,8) {$z$};
+\node [font=\normalsize] at (15,10) {$\theta$};
+\draw [short] (6.25,9) -- (6.5,9);
+\end{circuitikz}
+}%
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+As shown in the figure, a rigid slab CD of weight W $\brak{\text{distributed uniformly along its length}}$ is hung from a ceiling using three cables of identical length and cross-sectional area. The central cable is made of steel $\brak{\text{Young's modulus = 3E}}$ and the other two cables are made of aluminium $\brak{\text{Young's modulus=E}}$. The percentage of the total weight taken by the central cable is \rule{2cm}{0.15mm}$\%\brak{\text{round off to the nearest integer}}$
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (4.25,8.75) -- (4.25,6);
+\draw [short] (3.75,8.75) -- (10,8.75);
+\draw [short] (9.75,8.75) -- (9.75,6);
+\draw [short] (7,8.75) -- (7,6);
+\draw [short] (4.25,6) -- (9.75,6);
+\draw [short] (9.75,6) -- (9.75,5.5);
+\draw [short] (9.75,5.5) -- (4.25,5.5);
+\draw [short] (4.25,5.5) -- (4.25,6);
+\draw [short] (4.25,9.25) -- (3.75,8.75);
+\draw [short] (4.75,9.25) -- (4.25,8.75);
+\draw [short] (5.25,9.25) -- (4.75,8.75);
+\draw [short] (5.75,9.25) -- (5.25,8.75);
+\draw [short] (6.25,9.25) -- (5.75,8.75);
+\draw [short] (6.75,9.25) -- (6.25,8.75);
+\draw [short] (7.25,9.25) -- (6.75,8.75);
+\draw [short] (7.75,9.25) -- (7.25,8.75);
+\draw [short] (8.25,9.25) -- (7.75,8.75);
+\draw [short] (8.75,9.25) -- (8.25,8.75);
+\draw [short] (9.25,9.25) -- (8.75,8.75);
+\draw [short] (9.75,9.25) -- (9.25,8.75);
+\draw [short] (10.25,9.25) -- (9.75,8.75);
+\node [font=\normalsize] at (4,7) {$E$};
+\node [font=\normalsize] at (6.5,7) {$3E$};
+\node [font=\normalsize] at (10,7) {$E$};
+\node [font=\normalsize] at (4,5.5) {$C$};
+\node [font=\normalsize] at (10,5.5) {$D$};
+\node [font=\normalsize] at (5.5,10.5) {$a$};
+\node [font=\normalsize] at (8.5,10.5) {$a$};
+\draw [<->, >=Stealth] (3.75,10) -- (7,10);
+\draw [<->, >=Stealth] (7,10) -- (9.75,10);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+All the bars in the given truss are elastic with Young's modulus $200$GPa, and have identical cross-sections with moment of inertia $0.1$cm. The lowest value of the load P at which the truss fails due to buckling is \rule{2cm}{0.15mm}KN $\brak{\text{round off to the nearest integer}}$.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (5.25,8.5) to[short, -o] (7.75,11) ;
+\draw [short] (7.75,11) -- (10.25,8.5);
+\draw (5.25,8.5) to[short] (10.25,8.5);
+\draw [short] (5.25,8.5) -- (4.75,8);
+\draw [short] (5.25,8.5) -- (5.75,8);
+\draw [short] (4.5,8) -- (6,8);
+\draw [short] (10.25,8.5) -- (9.75,8);
+\draw [short] (10.25,8.5) -- (10.75,8);
+\draw [short] (9.5,8) -- (11,8);
+\draw [short] (4.5,8) -- (4.75,7.75);
+\draw [short] (4.75,8) -- (5,7.75);
+\draw [short] (5,8) -- (5.25,7.75);
+\draw [short] (5.25,8) -- (5.5,7.75);
+\draw [short] (5.5,8) -- (5.75,7.75);
+\draw [short] (9.75,8) -- (10,7.75);
+\draw [short] (10,8) -- (10.25,7.75);
+\draw [short] (10.25,8) -- (10.5,7.75);
+\draw [short] (10.5,8) -- (10.75,7.75);
+\draw [short] (9.5,8) -- (9.75,7.75);
+\draw [short] (10.75,8) -- (11,7.75);
+\draw [short] (7.5,10.75) -- (7.75,10.5);
+\draw [short] (7.75,10.5) -- (8,10.75);
+\draw [short] (6,9.25) .. controls (6.5,9.25) and (6.75,9) .. (6.5,8.5);
+\draw [short] (9.5,9.25) .. controls (9.25,9.25) and (8.75,9.25) .. (9,8.5);
+\node [font=\normalsize] at (7,9.25) {$45\degree$};
+\node [font=\normalsize] at (8.75,9.25) {$45\degree$};
+\draw [<->, >=Stealth] (5.25,7.5) -- (10.5,7.5);
+\node [font=\normalsize] at (7.5,7.75) {$10cm$};
+\node [font=\normalsize] at (5,8.5) {$B$};
+\node [font=\normalsize] at (7.25,11) {$A$};
+\node [font=\normalsize] at (10.75,8.5) {$C$};
+\node [font=\normalsize] at (8,12) {$P$};
+\draw [->, >=Stealth] (7.75,12.25) -- (7.75,11);
+\draw [short] (10,8) -- (10,8.25);
+\draw [short] (10,8.25) -- (10.5,8.25);
+\draw [short] (10.5,8.25) -- (10.5,8);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+A solid circular shaft is designed to transmit a torque T with a factor of safety of $2$. It is proposed to replace the solid shaft by a hollow shaft of the same material and identical outer radius. If the inner radius is half the outer radius, the factor of safety for the hollow shaft is \rule{2cm}{0.15mm}$\brak{\text{round off to $1$ decimal place}}$.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (5.5,10.5) circle (1cm);
+\draw  (9.25,10.5) circle (1cm);
+\draw [->, >=Stealth] (5.5,10.5) -- (6,11.25);
+\draw  (9.25,10.5) circle (0.5cm);
+\draw [->, >=Stealth] (9.25,10.5) -- (9.75,10.25);
+\draw [->, >=Stealth] (9.25,10.5) -- (9.75,11.5);
+\draw (6,11.25) to[short] (6.75,11.25);
+\draw (9.75,11.5) to[short] (10.75,11.5);
+\node [font=\normalsize] at (6.5,11.5) {$R$};
+\node [font=\normalsize] at (10.5,11.75) {$R$};
+\node [font=\normalsize] at (9.25,10.25) {$\frac{R}{2}$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+In the structure shown in the figure, bars AB and BC are made of identical material and have circular cross-sections of $10$mm radii. The yield stress of the material under uniaxial tension is $280$MPa. Using the von Mises yield criterion, the maximum load along the $z$-direction $\brak{\text{perpendicular to the plane of paper}}$ that can be applied at C, such that AB does not yield is N $\brak{\text{round off to the nearest integer}}$.\\
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (4.75,11) -- (4.75,8.75);
+\draw [short] (4.75,10) -- (9.75,10);
+\draw (9.75,10) to[short, -o] (9.75,13.75) ;
+\draw [short] (4.75,11) -- (4.5,10.75);
+\draw [short] (4.75,10.75) -- (4.5,10.5);
+\draw [short] (4.75,10.5) -- (4.5,10.25);
+\draw [short] (4.75,10.25) -- (4.5,10);
+\draw [short] (4.75,10) -- (4.5,9.75);
+\draw [short] (4.75,9.75) -- (4.5,9.5);
+\draw [short] (4.75,9.5) -- (4.5,9.25);
+\draw [short] (4.75,9.25) -- (4.5,9);
+\draw [short] (4.75,9) -- (4.5,8.75);
+\draw [short] (4.75,8.75) -- (4.5,8.5);
+\draw [->, >=Stealth] (4.75,11) -- (4.75,12);
+\draw [->, >=Stealth] (4.75,9.75) -- (6.5,9.75);
+\node [font=\normalsize] at (4.75,12.25) {$y$};
+\node [font=\normalsize] at (6.5,9.5) {$x$};
+\node [font=\normalsize] at (9.5,10.25) {$B$};
+\node [font=\normalsize] at (9.25,14) {$C$};
+\node [font=\normalsize] at (7,12) {$AB=0.55m\text{    }BC=0.5m$};
+\node [font=\normalsize] at (5,10.25) {$A$};
+\end{circuitikz}
+}%
+\label{fig:my_label}
+\end{figure}
+}}
+\end{enumerate}
+\end{document}
