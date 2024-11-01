@@ -1,0 +1,178 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2020-MA-14-26}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+Consider the following statements:\\
+I: $\log\brak{\abs{z}}$ is harmonic on $\mathbb{C}$\textbackslash$\cbrak{0}$\\
+II:$\log\brak{\abs{z}}$ has a harmonic conjugate on $\mathbb{C}$\textbackslash$\cbrak{0}$
+\begin{multicols}{2}
+\begin{enumerate}
+\item both I and II are true
+\item I is true but II is false
+\item I is false but II is true
+\item both I and II are false
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $G$ and $H$ be defined by\\
+$G=\mathbb{C}$\textbackslash$\cbrak{z=x+iy\in\mathbb{C}:x\leq 0,y=0},$\\
+$H=\mathbb{C}$\textbackslash$\cbrak{z=x+iy\in\mathbb{C}:x\in\mathbb{Z},x\leq 0,y=0},$\\
+Suppose $f:G\rightarrow\mathbb{C}$ and $g:H\rightarrow\mathbb{C}$ are analytical functions. Consider the following statements:\\
+I: $\int_{\gamma}fdz$ is independent of paths $\gamma$ in G joining $-i$ and $i$\\
+II: $\int_{\gamma}gdz$ is independent of paths $\gamma$ in H joining $-i$ and $i$
+\begin{multicols}{2}
+\begin{enumerate}
+\item both I and II are true
+\item I is true but II is false
+\item I is false but II is true
+\item both I and II are false
+\end{enumerate}
+\end{multicols}}
+\item{
+Let $f\brak{z}=e^{\frac{1}{z}},z\in\mathbb{C}$\textbackslash$\cbrak{0}$ and let, for $n\in\mathbb{N}$,\\
+$R_n=\cbrak{z=x+iy\in\mathbb{C}:\abs{x}\text{\textless}\frac{1}{n},\abs{y}\text{\textless}\frac{1}{n}}$\textbackslash$\cbrak{0}$.\\
+If for a subset of $S$ of $\mathbb{C}$, $\overline{S}$ denotes the closure of $S$ in $\mathbb{C}$, then
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\overline{f\brak{R_{n+1}}}\neq f\brak{R_n}$
+\item $\overline{f\brak{R_n}}\text{\textbackslash}\overline{f\brak{R_{n+1}}}=\overline{f\brak{R_n\text{\textbackslash}R_{n+1}}}$
+\item $\overline{f\brak{\cap_{n=1}^{\infty}R_n}}=\cap_{n=1}^{\infty}\overline{f\brak{R_n}}$
+\item $\overline{f\brak{R_n}}=\overline{f\brak{R_{n+1}}}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Suppose that $U=\mathbb{R}^2\text{\textbackslash}\cbrak{\brak{x,y}\in\mathbb{R}^2:x,y\in\mathbb{Q}},V=\mathbb{R}^2\text{\textbackslash}\cbrak{\brak{x,y}\in\mathbb{R}^2:x\text{\textgreater}0,y=\frac{1}{x}}$. Then with repsect to the Euclidean metric on $\mathbb{R}^2$,
+\begin{multicols}{2} 
+\begin{enumerate}
+\item both $U$ and $V$ are disconnected
+\item $U$ is disconnected but $V$ is connected
+\item $U$ is connected but $V$ is disconnected 
+\item both $U$ and $V$ are connected 
+\end{enumerate}
+\end{multicols}
+}
+\item{
+If $\brak{D1}$ and $\brak{D2}$ denote the dual probems of the linear programming problems $\brak{P1}$ and $\brak{P2}$, respectively, where\\
+$\brak{P1}$: minimize $x_1-2x_2$, subject to $-x_1+x_2=10,x_1,x_2\geq 0$\\
+$\brak{P2}$: minimize $x_1-2x_2$, subject to $-x_1+x_2=10,x_1-x_2=10,x_1,x_2\geq 0$, then
+\begin{enumerate}
+\item both $\brak{D1}$ and $\brak{D2}$ are infeasible
+\item $\brak{P2}$ is infeasible and $\brak{D2}$ is feasible
+\item $\brak{P2}$ is infeasible and $\brak{D2}$ is feasible but unbounded
+\item $\brak{P1}$ is feasible but unbounded and $\brak{D1}$ is feasible
+\end{enumerate}
+}
+\item{
+If $\brak{4,0}$ and $\brak{0,-\frac{1}{2}}$ are the critical points of the function $f\brak{x,y}=5-\brak{\alpha+\beta}x^2+\beta y^2+\brak{\alpha+1}y^3+x^3,$ where $\alpha,\beta\in\mathbb{R}$, then
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\brak{4,-\frac{1}{2}}$ is point of local maxima of $f$
+\item $\brak{4,-\frac{1}{2}}$ is a saddle point of $f$
+\item $\alpha=4,\beta=2$
+\item $\brak{4,-\frac{1}{2}}$ is a point of local minima of $f$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Consider the iterative scheme $x_n=\frac{x_{n-1}}{2}+\frac{3}{x_{n-1}},n\geq 1$ with initial point $x_0$\textgreater$0$. Then the sequence $\cbrak{x_n}$ 
+\begin{multicols}{2}
+\begin{enumerate}
+\item converges only if $x_0$\textgreater$1$
+\item converges only if $x_0$\textgreater$3$
+\item converges for any $x_0$
+\item does not converge for any $x_0$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $C\sbrak{0,1}$ denote the space of all real-valued continous functions on $\sbrak{0,1}$ equipped with the supremum norm $\norm{.}_{\infty}$. Let $T:C\sbrak{0,1}\rightarrow C\sbrak{0,1}$ be the linear operator defined by $T\brak{f}\brak{x}=\int_0^xe^{-y}f\brak{y}dy$ Then
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\norm{T}=1$
+\item $I-T$ is not invertible
+\item $T$ is surjective 
+\item $\norm{I+T}=1+\norm{T}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Suppose that $M$ is a $5\times 5$ matrix with real entries and $p\brak{x}=det\brak{xI-M}$. Then
+\begin{enumerate}
+\item $p\brak{0}=det\brak{M}$
+\item every eigen value of $M$ is real if $p\brak{1}+p\brak{2}=0=p\brak{2}+p\brak{3}$
+\item $M^{-1}$ is necessarily a polynomial in $M$ in degree $4$ if $M$ is invertible 
+\item $M$ is not invertible if $M^2-2M=0$ 
+\end{enumerate}
+}
+\item{
+Let $C\sbrak{0,1}$ denote the space of all real-valued continous functions on $\sbrak{0,1}$ equipped with the supremum norm $\norm{.}_{\infty}$. Let $f\in\mathbb{C}\sbrak{0,1}$ be such that $\abs{f\brak{x}-f\brak{y}}\leq M\abs{x-y}$, for all $x,y\in\sbrak{0,1}$ and for some $M$\textgreater$0$. For $n\in\mathbb{N}$, let $f_n\brak{x}=f\brak{x^{1+\frac{1}{n}}}$. If $S=\cbrak{f_n:n\in\mathbb{N}}$, then 
+\begin{multicols}{2}
+\begin{enumerate}
+\item the closure of $S$ is compact
+\item $S$ is closed and bounded
+\item $S$ is bounded but not totally bounded
+\item $S$ is compact
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $K:\mathbb{R}\times\brak{0,\infty}\rightarrow\mathbb{R}$ be a function such that the solution of the initial value problem $\frac{\delta u}{\delta t}=\frac{\delta^2u}{\delta x^2},u\brak{x,0}=f\brak{x},x\in R,t$\textgreater$0$, is given by $u\brak{x,t}=\int_\mathbb{R}K\brak{x-y,t}f\brak{y}dy$ for all bounded continous functions $f$, Then the value of $\int_\mathbb{R}K\brak{x,t}dx$ is \rule{2cm}{0.15mm}
+}
+\item{
+The number of cyclic subgroups of the quaternion group $Q_8=\langle a,b|a^4=1,a^2=b^2,ba=a^3b\rangle$ is \rule{2cm}{0.15mm}
+}
+\item{
+The number of elements of order $3$ in the symmetric group $S_6$ is \rule{2cm}{0.15mm}
+}
+\end{enumerate}
+\end{document}
