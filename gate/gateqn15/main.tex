@@ -1,0 +1,291 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2021-EE-27-39}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+ A $1\mu C$ point charge is held at the origin of a cartesian coordinate system. If a second point charge of $10\mu C$ is moved from $\brak{0,10,0}$ to $\brak{5,5,5}$ and subsequently to $\brak{5,0,0}$, then the total work done is \rule{2cm}{0.15mm}$mJ$.$\brak{\text{Round off to $2$ decimal places}}$\\
+ Take $\frac{1}{4\pi\epsilon_{0}}=9\times 10^9$ in SI units. All coordinates are in meters.
+ \\
+}
+\item{
+The power input to a $500$V, $50$Hz, $6$-pole, $3$-phase induction motor running at $975$ rpm is $40$kW. The total stator losses are $1$kW. If the total friction and windage losses are $2.025$kW, then the efficiency is \rule{2cm}{0.15mm}$\%$ 
+\\
+\item{
+An alternator with internal voltage of $1\angle\delta_1$ p.u. and synchronous reactance of $0.4$ p.u. is connected by a transmission line of reactance $0.1$ p.u. to a synchronous motor having synchronous reactance $0.35$ p.u. and internal voltage of $0.85\angle\delta_2$ p.u. If the real power supplied by the alternator is $0.866$ p.u., then $(\delta_1 - \delta_2)$ is \rule{2cm}{0.15mm} degrees. $\brak{\text{Round off to 2 decimal places.}}$\\
+$\brak{\text{Machines are of non-salient type. Neglect resistances.}}$
+\\
+}
+\item{
+The Bode magnitude plot for the transfer function $\frac{V_0\brak{S}}{V_i\brak{S}}$ of the circuit is as shown. The value of R is \rule{2cm}{0.15mm}$\Omega$.$\brak{\text{Round of to $2$ decimal places}}$
+\begin{figure}[H]
+\centering
+\resizebox{10cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (1.75,10.75) to[R] (3.75,10.75);
+\draw (3.75,10.75) to[L ] (5,10.75);
+\draw (5,10.75) to[short, -o] (6.25,10.75) ;
+\draw (4,8.75) to[short, -o] (1.75,8.75) ;
+\draw (4,8.75) to[short, -o] (6.25,8.75) ;
+\draw (5.5,10.75) to[C] (5.5,8.75);
+\draw [->, >=Stealth] (1.75,8.75) -- (1.75,10.75);
+\draw [->, >=Stealth] (6.25,8.75) -- (6.25,10.75);
+\node [font=\normalsize] at (1.25,9.75) {$V_i$};
+\node [font=\normalsize] at (6.75,9.75) {$V_0$};
+\node [font=\normalsize] at (2.75,11.25) {R};
+\node [font=\normalsize] at (4.5,11.5) {$1mH$};
+\node [font=\normalsize] at (4.5,9.75) {$250\muF$};
+\draw [short] (9,8.25) -- (16.75,8.25);
+\draw [short] (9,9.25) -- (16.75,9.25);
+\draw [short] (9,10.25) -- (16.75,10.25);
+\draw [short] (9,11.25) -- (16.75,11.25);
+\draw [short] (11.75,12.25) -- (11.75,7.5);
+\draw [short] (14.5,12.25) -- (14.5,7.5);
+\node [font=\normalsize] at (8.5,8.25) {$-60$};
+\node [font=\normalsize] at(8.5,9.25) {$-40$};
+\node [font=\normalsize] at (8.5,10.25) {$-20$};
+\node [font=\normalsize] at (9,7) {$10^2$};
+\node [font=\normalsize] at (11.75,7) {$10^3$};
+\node [font=\normalsize] at (14.5,7) {$10^4$};
+\node [font=\normalsize] at (16.75,7) {$1$};
+\node [font=\normalsize] at (8.5,11.25) {$0$};
+\draw (9,12) to[short] (16.75,12);
+\node [font=\normalsize] at (8.5,12) {$20$};
+\node [font=\normalsize, rotate around={90:(0,0)}] at (7.75,10.25) {$Magnitude\brak{dB}$};
+\draw  (9,12.25) rectangle (16.75,7.5);
+\draw [->, >=Stealth] (12.75,6) -- (12.75,7.5);
+\node [font=\normalsize] at (13,5.5) {$\omega=2000\frac{rad}{s}$};
+\draw [short] (9,11.25) .. controls (11.75,11.5) and (12.5,11.25) .. (12.75,12);
+\draw [short] (12.75,12) .. controls (13,10.25) and (15,10.5) .. (16.75,7.75);
+\draw (12.75,7.5) to[short] (12.75,12);
+\node [font=\Large] at (12.75,12.75) {Bode Diagram};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+A signal generator having a source resistance of $50\Omega$ is set to generate a $1kHz$ sinewave. Open circuit terminal voltage is $10V$ peak-to-peak. Connecting a capacitor across the terminals reduces the voltage to $8V$ peak-to-peak. The value of this capacitor is \rule{2cm}{0.15mm}$\mu F$. $\brak{\text{Round off to 2 decimal places.}}$\\
+}
+\item{
+A $16$-bit synchronous binary up-counter is clocked with a frequency $f_{CLK}$. The two most significant bits are OR-ed together to form an output $Y$. Measurements show that $Y$ is periodic, and the duration for which $Y$ remains high in each period is $24$ ms. The clock frequency $f_{CLK}$ is \rule{2cm}{0.15mm}MHz. $\brak{\text{Round off to 2 decimal places.}}$\\
+}
+\item{
+In the BJT diagram shown, beta of the PNP transistor is $100$. Assume $V_{BE}=-0.7V$. The voltage across $R_c$ will be $5$V when $R_2$ is \rule{2cm}{0.15mm}$k\Omega$. $\brak{\text{Round off to $2$ decimal places}}$
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\node at (8.75,9) [circ] {};
+\draw (8.75,9) to[R] (8.75,11.25);
+\draw (8.75,9) to[R] (8.75,6.5);
+\draw (8.75,11.25) to[short] (13.5,11.25);
+\draw (13.5,11.25) to[short] (13.5,9.75);
+\draw (13.5,9.75) to[battery ] (13.5,8.5);
+\draw (13.5,8.5) to[short] (13.5,6.5);
+\draw (8.75,6.5) to[short] (13.5,6.5);
+\node at (11.25,6.5) [circ] {};
+\node at (11.25,11.25) [circ] {};
+\draw (11.25,11.25) to[R] (11.25,9.75);
+\draw (11.25,6.5) to[R] (11.25,7.75);
+\draw (8.75,9) to[short] (10.5,9);
+\draw (10.5,9.5) to[short] (10.5,8.75);
+\draw (11.25,7.75) to[short] (11.25,8.25);
+\draw (10.5,9) to[short] (11.25,8.25);
+\draw [->, >=Stealth] (11.25,9.75) -- (10.5,9.25);
+\node [font=\normalsize] at (7.75,10) {$R_1=4.7k\Omega$};
+\node [font=\normalsize] at (8,7.75) {$R_2$};
+\node [font=\normalsize] at (12.25,10.5) {$R_E=1.2k\Omega$};
+\node [font=\normalsize] at (14.5,9) {$12V$};
+\node [font=\normalsize] at (12.25,7.25) {$R_c=3.3k\Omega$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+In the circuit shown, the input $V_i$ is a sinusoidal $AC$ voltage having an $RMS$ value of $230V\pm 20\%$. The worst-case peak-inverse voltage seen across any diode is \rule{2cm}{0.15mm}V.$\brak{\text{Round off to $2$ decimal places}}$
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (5.5,10.25) to[sinusoidal voltage source, sources/symbol/rotate=auto] (7.75,10.25);
+\draw (5.5,10.25) to[short] (5.5,8.5);
+\draw (5.5,8.5) to[short] (7.5,8.5);
+\draw (7.5,8.5) to[short] (8,8.5);
+\draw (8,8.5) to[short] (9,8.5);
+\draw (7.75,10.75) to[D] (7.75,12);
+\draw (7.75,10.75) to[short] (7.75,8.5);
+\draw (7.75,7) to[D] (7.75,8.5);
+\draw (9,7) to[D] (9,8.5);
+\draw (7.75,7) to[short] (11,7);
+\draw (7.75,12) to[short] (11,12);
+\draw (11,12) to[short] (11,10.5);
+\draw (11,7) to[short] (11,8);
+\draw (11,10.5) to[R] (11,8);
+\draw (9,8.5) to[short] (9,10.25);
+\draw (9,10.25) to[D] (9,12);
+\draw (10,7) to[C] (10,12);
+\node [font=\normalsize] at (6.5,11) {$V_i$};
+\node [font=\normalsize] at (9.4,9.5) {$C$};
+\node [font=\normalsize] at (11.5,9.25) {$R$};
+\end{circuitikz}
+}%
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+In the circuit shown, a $5$ V Zener diode is used to regulate the voltage across load $R_L$. The input is an unregulated DC voltage with a minimum value of $6$ V and a maximum value of $8$ V. The value of $R_S$ is $6$ $\Omega$. The Zener diode has a maximum rated power dissipation of $2.5$ W. Assuming the Zener diode to be ideal, the minimum value of $R_L$ is \rule{2cm}{0.15mm}$\Omega$.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6.75,11) to[battery ] (6.75,8.75);
+\draw (6.75,11) to[R] (12.25,11);
+\draw (12.25,8.75) to[empty Schottky diode] (12.25,11);
+\draw (12.25,11) to[short] (14.25,11);
+\draw (12.25,8.75) to[short] (14.25,8.75);
+\draw (14.25,8.75) to[R] (14.25,11);
+\draw [->, >=Stealth] (12.75,9) -- (12.75,10.75);
+\node [font=\normalsize] at (6,10) {$V_i$};
+\node [font=\normalsize] at (9.5,11.5) {$R_s$};
+\node [font=\normalsize] at (13,9.75) {$V_z$};
+\node [font=\normalsize] at (14.75,9.75) {$R_0$};
+\node at (12.25,11) [circ] {};
+\node at (12.25,8.75) [circ] {};
+\draw (6.75,8.75) to[short] (12.25,8.75);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+In the open interval $\brak{0,1},$ the polynomial $p\brak{x}=x^4-4x^3+2$ has 
+\begin{multicols}{4}
+\begin{enumerate}
+\item two real roots
+\item one real root
+\item three real roots
+\item no real roots
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Suppose the probability that a coin toss shows "head" is $p$, where $0\textless p\textless 1$. The coin is tossed repeatedly until the first "head" appears. The expected number of tosses required is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{p}{1-p}$
+\item $\frac{1-p}{p}$
+\item $\frac{1}{p}$
+\item $\frac{1}{p^2}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Let $\brak{-1-j},\brak{3-j},\brak{3+j}$ and $\brak{-1+j}$ be the vertices of a rectangle $C$ in the complex plane. Assuming that $C$ is traversed in counter-clockwise direction, the value of the contour integral $\oint_C\frac{dz}{z^2\brak{z-4}}$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{j\pi}{2}$
+\item $0$
+\item $\frac{-j\pi}{18}$
+\item $\frac{j\pi}{16}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In the circuit, switch 'S' is in the closed position for a very long time. If the switch is opened at time $t=0$, then $i_L\brak{t}$ in amperes, for $t\geq 0$ is
+\begin{figure}[H]
+\centering
+\resizebox{7cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (4.5,11.5) to[battery1] (4.5,8.5);
+\draw (4.5,11.5) to[short] (7,11.5);
+\draw (4.5,8.5) to[short] (12.5,8.5);
+\draw (12.5,8.5) to[L ] (12.5,11.25);
+\draw (7,11.5) to[short] (7,12.25);
+\draw (7,11.5) to[short] (7,10.75);
+\draw (7,10.75) to[R] (8.25,10.75);
+\draw (9.5,10.75) to[battery ] (8.25,10.75);
+\draw (7,12.25) to[opening switch] (9.5,12.25);
+\draw (9.5,10.75) to[short] (9.5,12.25);
+\draw (9.5,11.5) to[short] (10.25,11.5);
+\draw (10.25,11.5) to[R] (12.5,11.5);
+\draw (12.5,11.5) to[short] (12.5,11);
+\node [font=\normalsize] at (3.75,10) {$10V$};
+\node [font=\normalsize] at (8.5,12.75) {$S,t=0$};
+\node [font=\normalsize] at (7.5,10.25) {$4\Omega$};
+\node [font=\normalsize] at (8.75,10.25) {$30V$};
+\node [font=\normalsize] at (11.25,12) {$1\Omega$};
+\node [font=\normalsize] at (13.25,10) {$0.5H$};
+\node [font=\normalsize] at (11.25,10) {$i_L$};
+\draw [->, >=Stealth] (11.75,10.25) -- (11.75,9.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $8e^{-10t}$
+        \item $10$
+        \item $8+2e^{-10t}$
+        \item $10\brak{1-e^{-2t}}$
+    \end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document} 
