@@ -1,0 +1,352 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2022-EE-1-13}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+As you grow older, an injury to your \rule{1cm}{0.15mm} may take longer to \rule{1cm}{0.15mm}
+\begin{multicols}{4}
+\begin{enumerate}
+\item heel/heel
+\item heal/heel
+\item heal/heal 
+\item heel/heal
+\end{enumerate}
+\end{multicols}
+}
+\item{
+In a $500$m race, $P$ and $Q$ have speeds in the ratio of $3:4$. $Q$ starts the race when $P$ has aldready covered $140$m. What is the distance between $P$ and $Q\brak{\text{in m}}$ when $P$ wins the race?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $20$
+\item $40$
+\item $60$
+\item $140$
+\end{enumerate}
+\end{multicols}}
+\item{
+Three bells P, Q, and R are rung periodically in a school. P is rung every $20$ minutes; Q is rung every $30$ minutes and R is rung every $50$ minutes.
+If all the three bells are rung at $12:00$ PM, when will the three bells ring together again the next time?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $5:00$PM
+\item $5:30$PM
+\item $6:00$PM
+\item $6:30$PM
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Given below are two statements and four conclusions drawn based on the
+statements.\\
+Statement $1$: Some bottles are cups.\\
+Statement $2$: All cups are knives.\\
+Conclusion $I$: Some bottles are knives.\\
+Conclusion $II$: Some knives are cups.\\
+Conclusion $III$: All cups are bottles.\\
+Conclusion $IV$: All knives are cups.\\
+Which one of the following options can be logically inferred?
+\begin{enumerate}
+\item Only conclusion $I$ and conclusion $II$ are correct
+\item Only conclusion $II$ and conclusion $III$ are correct
+\item Only conclusion $II$ and conclusion $IV$ are correct
+\item Only conclusion $III$ and conclusion $IV$ are correct
+\end{enumerate}
+}
+\item{
+The figure below shows the front and rear view of a disc, which is shaded with identical patterns. The disc is flipped once with respect to any one of the fixed axes $1-1,2-2$ or $3-3$ chosen uniformly at random.
+What is the probability that the disc DOES NOT retain the same front and rear views after the flipping operation?
+\begin{figure}[H]
+\centering
+\resizebox{7cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (5.5,10) circle (1.5cm);
+\draw  (11,10) circle (1.5cm);
+\draw [dashed] (5.5,12) -- (5.5,8);
+\draw [dashed] (3.25,10) -- (7.75,10);
+\draw [dashed] (4,8.5) -- (7,11.5);
+\draw [dashed] (3.75,11.75) -- (7,8.5);
+\draw [dashed] (11,12.75) -- (11,7.75);
+\draw [dashed] (8.5,10) -- (14.25,10);
+\draw [dashed] (13,12) -- (9,8);
+\draw [dashed] (8.7,12) -- (13,8);
+\node [font=\normalsize] at (5.5,7.25) {Front View};
+\node [font=\normalsize] at (11,6.75) {Rear View};
+\node [font=\normalsize] at (5.5,12.5) {1};
+\node [font=\normalsize] at (3.5,12) {3};
+\node [font=\normalsize] at (7,12) {2};
+\node [font=\normalsize] at (3.5,8.5) {2};
+\node [font=\normalsize] at (7,8) {3};
+\node [font=\normalsize] at (8.5,12) {2};
+\node [font=\normalsize] at (11,13) {1};
+\node [font=\normalsize] at (13,12.5) {3};
+\node [font=\normalsize] at (13.25,7.75) {2};
+\node [font=\normalsize] at (11,7.25) {1};
+\node [font=\normalsize] at (9,7.5) {3};
+\draw [short] (4.25,10.75) -- (4.25,10);
+\draw [short] (4.5,11) -- (4.5,10);
+\draw [short] (4.75,10.75) -- (4.75,10);
+\draw [short] (5,10.25) -- (5,10);
+\draw [short] (5,10.5) -- (5,10);
+\draw [short] (6,10.5) -- (6,10);
+\draw [short] (6.25,10.75) -- (6.25,10);
+\draw [short] (6.5,11) -- (6.5,10);
+\draw [short] (6.75,10.75) -- (6.75,10);
+\draw [short] (5,9.5) -- (6,9.5);
+\draw [short] (4.75,9.25) -- (6.25,9.25);
+\draw [short] (6.25,9.25) -- (4.75,9.25);
+\draw [short] (4.5,9) -- (6.5,9);
+\draw [short] (4.75,8.75) -- (6.25,8.75);
+\draw [short] (9.75,10.75) -- (9.75,10);
+\draw [short] (10,10.75) -- (10,10);
+\draw [short] (10.25,10.5) -- (10.25,10);
+\draw [short] (10.5,10.25) -- (10.5,10);
+\draw [short] (11.25,10.5) -- (11.25,10);
+\draw [short] (11.5,10.5) -- (11.5,10);
+\draw [short] (11.75,10.75) -- (11.75,10);
+\draw [short] (12,11) -- (12,10);
+\draw [short] (10.75,9.75) -- (11.25,9.75);
+\draw [short] (10.5,9.5) -- (11.5,9.5);
+\draw [short] (10.25,9.25) -- (11.75,9.25);
+\draw [short] (10,9) -- (12,9);
+\draw [short] (10.25,8.75) -- (11.75,8.75);
+\node [font=\normalsize] at (5.5,8) {1};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $\frac{1}{3}$
+\item $\frac{2}{3}$
+\item $1$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Altruism is the human concern for the wellbeing of others. Altruism has been shown to be motivated more by social bonding, familiarity and identification of belongingness to a group. The notion that altruism may be attributed to empathy or guilt has now been rejected.
+Which one of the following is the CORRECT logical inference based on the information in the above passage?
+\begin{enumerate}
+\item Humans engage in altruism due to guilt but not empathy
+\item Humans engage in altruism due to empathy but not guilt
+\item Humans engage in altruism due to group identification but not empathy
+\item Humans engage in altruism due to empathy but not familiarty
+\end{enumerate}
+}
+\item{
+There are two identical dice with a single letter on each of the faces. The following six letters: Q, R, S, T, U, and V, one on each of the faces. Any of the six outcomes are equally likely.
+The two dice are thrown once independently at random.
+What is the probability that the outcomes on the dice were composed only of any combination of the following possible outcomes: Q, U and V?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{1}{4}$
+\item $\frac{3}{4}$
+\item $\frac{1}{6}$
+\item $\frac{5}{36}$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The price of an item is $10\%$ cheaper in an online store S compared to the price
+at another online store M. Store S charges $Rs.150$ for delivery. There are no
+delivery charges for orders from the store M. A person bought the item from the store S and saved $Rs.100$.
+What is the price of the item at the online store S $\brak{\text{in Rs.}}$ if there are no other charges than what is described above?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $2500$
+\item $2250$
+\item $1750$
+\item $1500$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The letters P, Q, R, S, T and U are to be placed one per vertex on a regular convex hexagon, but not necessarily in the same order.\\
+Consider the following statements:\\
+$1$.The line segment joining R and S is longer than the line segment joining P and Q.\\
+$2$.The line segment joining R and S is perpendicular to the line segment joining P and Q.\\
+$3$.The line segment joining R and U is parallel to the line segment joining T and Q.\\
+Based on the above statements, which one of the following options is
+CORRECT?
+\begin{enumerate}
+\item The line segment joining R and T is parallel to the line segment joining Q and S
+\item The line segment joining T and Q is parallel to the line segment joining P and U
+\item The line segment joining R and P is parallel to the line segment joining U and Q
+\item The line segment joining Q and S is parallel to the line segment joining R and P
+\end{enumerate}
+}
+\item{
+An ant is at the bottom-left corner of a grid $\brak{\text{point P}}$ as shown below. It aims to move to the top-right corner of the grid. The ant moves only along the lines
+marked in the grid such that the current distance to the top-right corner strictly decreases.
+Which one of the following is a part of a possible trajectory of the ant during the movement?
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (7,10.75) rectangle (11.75,6.5);
+\draw [short] (8.25,10.75) -- (8.25,6.5);
+\draw [short] (9.5,10.75) -- (9.5,6.5);
+\draw [short] (10.75,10.75) -- (10.75,6.5);
+\draw [short] (7,9.75) -- (11.75,9.75);
+\draw [short] (11.75,8.5) -- (7,8.5);
+\draw [short] (7,7.5) -- (11.75,7.5);
+\node [font=\normalsize] at (7,6.25) {P};
+\end{circuitikz}
+}%
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+\item{
+\begin{figure}[h!]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (7.25,7.25) to[short] (6.5,7.25);
+\draw (6.5,7.25) to[short] (6.5,8);
+\draw (6.5,8) to[short] (7.25,8);
+\draw (7.25,8) to[short] (7.25,8.5);
+\draw (7.25,8.5) to[short] (8,8.5);
+\draw (8,8.5) to[short] (8,8);
+\node [font=\normalsize] at (6.5,7) {P};
+\end{circuitikz}
+}%
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+\begin{figure}[!ht]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (5.75,9.25) to[short] (5.75,8.25);
+\draw (5.75,8.25) to[short] (6.75,8.25);
+\draw (6.75,8.25) to[short] (6.75,10.25);
+\draw (6.75,10.25) to[short] (7.75,10.25);
+\draw (7.75,10.25) to[short] (7.75,9.25);
+\node [font=\normalsize] at (5.5,8) {P};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+\begin{figure}[!ht]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6,7.5) to[short] (6,8.5);
+\draw (6,8.5) to[short] (7.25,8.5);
+\draw (7.25,8.5) to[short] (7.25,9.5);
+\draw (7.25,9.5) to[short] (8.5,9.5);
+\node [font=\normalsize] at (5.75,7.25) {P};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+\begin{figure}[!ht]
+\centering
+\resizebox{1cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (7.5,10) rectangle (9.25,8.5);
+\node [font=\normalsize] at (7.25,8.25) {P};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\end{enumerate}
+}
+\item{
+The transfer function of a real system, $H\brak{s}$, is given as: $H\brak{s}=\frac{As+b}{s^2+Cs+D}$ where $A,B,C$, and $D$ are positive constants. This system cannot operate as 
+\begin{multicols}{4}
+\begin{enumerate}
+\item low pass filter
+\item high pass filter
+\item band pass filter
+\item in integrator
+\end{enumerate}
+\end{multicols}
+}
+\item{
+FOr an ideal MOSFET biased in saturation, the magnitude of the small signal current gain for a common drain amplifier is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $1$
+\item $100$
+\item infinite
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The most commonly used relay, for the protection of an alternator against loss of excitation, is
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item offset Mho relay
+        \item over current relay
+        \item differential relay
+        \item Buchholz relay
+    \end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
