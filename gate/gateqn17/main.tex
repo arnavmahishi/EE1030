@@ -1,0 +1,308 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{} 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2022-ME-27-39}
+\author{EE24BTECH11006 - Arnav Mahishi}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\begin{enumerate}
+\item{
+Which of the following heat treatment processes is/are used for surface hardening of steels?
+\begin{multicols}{4}
+\begin{enumerate}
+\item Carburizing
+\item Cyaniding
+\item Annealing 
+\item Carbonitriding
+\end{enumerate}
+\end{multicols}
+}
+\item{
+Which of the following additive manufacturing techniques can use a wire as a feedstock material?
+\begin{multicols}{2}
+\begin{enumerate}
+\item Stereolithography
+\item Fused deposition modeling
+\item Selective laster sintering
+\item Directed energy deposition processes
+\end{enumerate}
+\end{multicols}}
+\item{
+Which of the following methods can improve the fatigue strength of a circular mild steel $\brak{\text{MS}}$ shaft?
+\begin{multicols}{4}
+\begin{enumerate}
+\item Enhancing surface finish
+\item Shot peening of the shaft
+\item Increasing relative humidity
+\item Reducing relative humidity
+\end{enumerate}
+\end{multicols}
+}
+\item{
+The figure shows a purely convergent nozzle with a steady, inviscid compressible flow of an ideal gas with constant thermophysical properties operating under choked condition. The exit plane shown in the figure is located within the nozzle. If the inlet pressure $\brak{P_0}$ is increased while keeping the back pressure $\brak{P_{back}}$ unchanged, which of the following statements is/are true?
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\Large]
+\draw [short] (5.25,12) -- (7.5,12);
+\draw [short] (5.25,7.25) -- (7.5,7.25);
+\draw [short] (7.5,12) -- (7.5,10.75);
+\draw [short] (7.5,7.25) -- (7.5,8.5);
+\draw [short] (7.5,10.75) -- (11.25,10);
+\draw [short] (7.5,8.5) -- (11.25,9.25);
+\draw [short] (11.25,10) -- (11.25,12);
+\draw [short] (11.25,12) -- (14,12);
+\draw [short] (11.25,9.25) -- (11.25,7);
+\draw [short] (11.25,7) -- (13.25,7);
+\draw [short] (13.25,7) -- (14,7);
+\draw [dashed] (11.25,10) -- (11.25,9.25);
+\draw [->, >=Stealth] (9.75,7.5) -- (11.25,9.75);
+\node [font=\Large] at (6,9.75) {$P_0$};
+\node [font=\Large] at (12.75,9.5) {$P_{back}$};
+\node [font=\Large] at (9.75,7) {Exit Plane};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{2}
+\begin{enumerate}
+\item Mass flow rate through the nozzle will remain unchanged.
+\item Mach number at the exit plane of the nozzle will remain unchanged at unity.
+\item Mass flow rate through the nozzle will increase.
+\item Mach number at the exit plane of the nozzle will become more than unity.
+\end{enumrate}
+\end{multicols}
+}
+\item{
+The plane of the figure represents a horizontal plane. A thin rigid rod at rest is pivoted without friction about a fixed vertical axis passing through 
+O. Its mass moment of inertia is equal to $0.1kg-cm^2$ about O. A point mass of $0.001$ kg hits it normally at $200\frac{cm}{s}$ at the location shown and sticks to it. Immediately after the impact, the angular velocity of the rod is \rule{2cm}{0.15mm} $\frac{rad}{s}$ $\brak{\text{in integer}}$.
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (4.25,10.5) to[short] (4.25,9);
+\draw  (4.25,10) rectangle (12,9.75);
+\node at (4.25,10) [circ] {};
+\draw [->, >=Stealth] (10.5,8.5) -- (10.5,9.75);
+\draw  (10.5,8.25) circle (0.25cm);
+\draw [<->, >=Stealth] (4.25,9.5) -- (10.5,9.5);
+\node [font=\normalsize] at (7.5,9) {$10cm$};
+\node [font=\normalsize] at (12,8.75) {$200\frac{cm}{s}$};
+\node [font=\normalsize] at (4.75,10.25) {$O$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+A rigid uniform annular disc is pivoted on a knife edge $\brak{A}$ in a uniform gravitational field as shown, such that it can execute small amplitude simple harmonic motion in the plane of the figure without slip at the pivot point. The inner radius $\brak{r}$ and outer radius $\brak{R}$ are such that $\brak{r^2=\frac{R^2}{2}}$, and the acceleration due to gravity is $\brak{g}$. If the time period of small amplitude simple harmonic motion is given by $T = \beta \pi \sqrt{\frac{R}{g}}$, where $\pi$ is the ratio of circumference to diameter of a circle then $\beta=$\rule{2cm}{0.15mm}$\brak{\text{round of to $2$ decimal places}}$
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (9,9) circle (2.5cm);
+\draw  (9,9) circle (1.5cm);
+\draw [->, >=Stealth] (9,9) -- (8,8);
+\draw [->, >=Stealth] (9,9) -- (11.25,8);
+\draw (8.25,9.5) to[short] (9.75,9.5);
+\draw [short] (8.5,9.5) -- (9,10.25);
+\draw [short] (9,10.25) -- (9.5,9.5);
+\draw [short] (8.5,9.5) -- (8.25,9.25);
+\draw [short] (8.75,9.5) -- (8.5,9.25);
+\draw [short] (9,9.5) -- (8.75,9.25);
+\draw [short] (9.25,9.5) -- (9,9.25);
+\draw [short] (9.5,9.5) -- (9.25,9.25);
+\node [font=\normalsize] at (9,10.75) {A};
+\node [font=\normalsize] at (8,8.5) {r};
+\node [font=\normalsize] at (10,9) {R};
+\node [font=\normalsize] at (9,8.75) {G};
+\node [font=\normalsize] at (12.25,9.5) {g};
+\draw [->, >=Stealth] (12,10.25) -- (12,8.5);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+}
+\item{
+Electrochemical machining operations are performed with tungsten as the tool, and copper and aluminium as two different workpiece materials. Properties of copper and aluminium are given in the table below.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+         Material&Atomic mass$\brak{amu}$&Valency&Density$\brak{\frac{g}{cm^3}}$  \\
+         \hline
+         Copper&$63$&$2$&$9$\\
+         \hline
+         Aluminium&$27$&$3$&$2.7$\\
+         \hline
+    \end{tabular}
+    \label{tab:my_label}
+\end{table}
+Ingore overpotentials, and assume that current efficiency is $100\%$ for both the workpiece materials. Under identical conditions, if the material is removal rate$\brak{MRR}$ of copper is $100\frac{mg}{s}$, the MRR of aluminium will be \rule{2cm}{0.15mm}$\frac{mg}{s}\brak{\text{ round-off to two decimal places}}$\\
+}
+\item{
+A polytropic process is carried out from an initial pressure of $110$ kPa and volume of $5m^3$ to a final volume of $2.5m^3$. The polytropic index is given by $n=1.2$. The absolute value of the work done during the process is \rule{2cm}{0.15mm}kJ$\brak{\text{ round off to $2$ decimal places}}$\\
+}
+\item{
+A flat plate made of cast iron is exposed to a solar flux of $600\frac{W}{m^2}$ at an ambient temperature of $25\degree C$. Assume that the entire solar flux is absorbed by the plate.
+
+Cast iron has a low temperature absorptivity of $0.21$. Use Stefan-Boltzmann constant$=5.669\times 10^{-8}\frac{W}{m^2-K^4}$. Neglect all other modes of heat transfer except radiation.
+
+Under the aforementioned conditions, the radiation equilibrium temperature of the plate is \rule{2cm}{0.15mm}$\degree C\brak{\text{ round off to the nearest integer}}$.\\
+}
+\item{
+The value of the integral $\oint\brak{\frac{6z}{2z^4-3z^3+7z^2-3z+5}}dz$ evaluated over a counter-clockwise circular contour in the complex plane enclosing only the pole $z=i$, where $i$ is the imaginary unit, is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\brak{-1+i}\pi$
+\item $\brak{1+i}\pi$
+\item $2\brak{1-i}\pi$ 
+\item $2\brak{1+i}\pi$
+\end{enumerate}
+\end{multicols}
+}
+\item{
+An L-shaped elastic member ABC with slender arms $AB$ and $BC$ of uniform cross- section is clamped at end $A$ and connected to a pin at end $C$. The pin remains in continuous contact with and is constrained to move in a smooth horizontal slot. The section modulus of the member is same in both the arms. The end $C$ is subjected to a horizontal force $P$ and all the deflections are in the plane of the figure. Given the length $AB$ is $4\alpha$ and length $BC$ is $\alpha$, the magnitude and direction of the normal force on the pin from the slot, respectively, are
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (8.5,12.5) rectangle (8.75,10.75);
+\draw (8.75,12) to[short] (13.25,12);
+\draw (8.75,11.75) to[short] (12.75,11.75);
+\draw (13.25,12) to[short] (13.25,10.25);
+\draw (12.75,11.75) to[short] (12.75,10.25);
+\draw  (11.75,10.25) rectangle (14.25,10);
+\draw [->, >=Stealth] (13.25,9.75) -- (14,9.75);
+\node [font=\normalsize] at (10.5,12.25) {4$\alpha$};
+\node [font=\normalsize] at (12.5,11) {$\alpha$};
+\node [font=\normalsize] at (14,10.5) {P};
+\node [font=\normalsize] at (13,9.5) {C};
+\node [font=\normalsize] at (8.5,13) {A};
+\node [font=\normalsize] at (13,12.5) {B};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\frac{3P}{8}$, and downwards
+        \item $\frac{5P}{8}$, and upwards
+        \item $\frac{P}{8}$, and downwards
+        \item $\frac{3P}{4}$ and upwards
+    \end{enumerate}
+\end{multicols}
+}
+\item{
+A planar four-bar linkage mechanism with $3$ revolute kinematic pairs and $1$ prismatic kinematic pair is shown in the figure, where $AB \perp CE$ and $FD \perp CE$. The T-shaped link $CDEF$ is constructed such that the slider $B$ can cross the point $D$, and $CE$ is sufficiently long. For the given lengths as shown, the mechanism is
+\begin{figure}[H]
+\centering
+\resizebox{5cm}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (6,13.5) -- (7.75,13.5);
+\draw [short] (6.25,13.5) .. controls (6.75,13) and (6.75,13) .. (7.25,13.5);
+\draw [short] (6.75,13.25) -- (9.5,11);
+\draw [short] (9.5,11) -- (12.75,11);
+\draw [short] (10.5,13.25) -- (11.5,13.25);
+\draw [short] (10.5,13.25) .. controls (10.75,12.5) and (11.5,13) .. (11.5,13.25);
+\draw [dashed] (6.75,13.5) -- (11,13);
+\draw [short] (10.5,13.25) -- (10.25,13.25);
+\draw [short] (11.5,13.25) -- (11.75,13.25);
+\draw [short] (11,13) -- (13,13);
+\draw [short] (13,16) -- (13,8.75);
+\draw [short] (12.75,11.5) -- (12.75,10.5);
+\draw [short] (13.25,11.5) -- (13.25,10.5);
+\node [font=\normalsize] at (6,13) {G};
+\node [font=\normalsize] at (9.25,13.75) {$3cm$};
+\node [font=\normalsize] at (11,12.5) {F};
+\node [font=\normalsize] at (12.25,13.25) {$1.5cm$};
+\node [font=\normalsize] at (13.25,16) {E};
+\node [font=\normalsize] at (13.5,13) {D};
+\node [font=\normalsize] at (13.75,11) {B};
+\node [font=\normalsize] at (13.5,8.5) {C};
+\node [font=\normalsize] at (11,10.5) {$3cm$};
+\node [font=\normalsize] at (9.5,10.75) {A};
+\node [font=\normalsize] at (7.5,12) {$5cm$};
+\node at (9.5,11) [circ] {};
+\node at (6.75,13.25) [circ] {};
+\node at (11,13) [circ] {};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item A Grashof chain with links $AG$,$AB$, and $CDEF$ completely rotatable about the ground link $FG$
+    \item a non-Grashof chain with all oscillating links
+    \item a Grashof chain with $AB$ completely rotatable about the ground link $FG$, and oscillatory links $AG$ and $CDEF$
+    \item on the border of Grashof and non-Grashof chains with uncertain configurations$\brak{\text{s}}$
+\end{enumerate}
+}
+\item{
+Consider a forced single degree-of-freedom system governed by
+$\ddot{x}\brak{t}+2\zeta\omega n\dot{x}\brak{t}+\omega_n^2x\brak{t}=\omega_n^2 \cos(wt)$
+where $\zeta$ and $\omega_n$ are the damping ratio and undamped natural frequency of the system, respectively, while $\omega$ is the forcing frequency. The amplitude of the forced steady-state response of this system is given by $\sbrak{\brak{1-r^2}^2+\brak{2\zeta r}^2}^{\frac{-1}{2}}$ ,where 
+$r=\frac{\omega}{\omega_n}$. The peak amplitude of this response occurs at a frequency $\omega=\omega_p$. If $\omega_d$ denotes the damped natural frequency of this system, which one of the following options is true?
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\omega_p\textless\omega_d\textless\omega_n$
+        \item $\omega_p=\omega_d\textless\omega_n$
+        \item $\omega_d\textless\omega_n=\omega_p$
+        \item $\omega_d\textless\omega_n\textless\omega_p$
+    \end{enumerate}
+\end{multicols}
+}
+\end{enumerate}
+\end{document}
