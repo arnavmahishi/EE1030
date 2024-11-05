@@ -1,0 +1,9 @@
+\begin{lstlisting}[language=C]
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Circle and Points')
+plt.legend()
+plt.grid(True)
+plt.axis('equal')  # Ensure x and y axes have the same scale
+plt.show()
+\end{lstlisting}
