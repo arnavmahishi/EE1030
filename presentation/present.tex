@@ -128,7 +128,7 @@ The augemented matrix for this
 \subsection{Finding Centre}
 \begin{frame}[fragile]
 \frametitle{Finding Centre}
-Thus 
+Thus, 
 Let $u=\myvec{-x\\-y}$ then
 \begin{align}
     \myvec{2a&0}u=-a^2\text{ and }\myvec{0&2b}u&=-b^2\\ 
@@ -153,46 +153,37 @@ Let $u=\myvec{-x\\-y}$ then
 struct Point {
   double x, y;
 };
-
-void printMatrix(const struct Matrix *matrix) {
-  for (int i = 0; i < MAX_POINTS; i++) {
-    for (int j = 0; j < MAX_POINTS; j++) {
-      printf("%.2f ", matrix->data[i][j]);
-    }
-    printf("\n");
-  }
-}
+struct Matrix {
+  double data[MAX_POINTS][MAX_POINTS];
+};
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \begin{lstlisting}[language=C]
-void rowReduction(struct Matrix *A) {
-  for (int i = 0; i < MAX_POINTS - 1; i++) {
-    if (fabs(A->data[i][i]) < 1e-6) {
-      printf("Matrix may be singular. Results might be inaccurate.\n");
-      return;
+void rowReduction(struct Matrix *A, struct Matrix *b) {
+    for (int i = 0; i < MAX_POINTS - 1; i++) {
+        for (int j = i + 1; j < MAX_POINTS; j++) {
+            double factor = A->data[j][i] / A->data[i][i];
+            for (int k = 0; k < MAX_POINTS; k++) {
+                A->data[j][k] -= factor * A->data[i][k];
+            }
+            b->data[j][0] -= factor * b->data[i][0];
+        }
     }
-    for (int j = i + 1; j < MAX_POINTS; j++) {
-      double factor = A->data[j][i] / A->data[i][i];
-      for (int k = 0; k < MAX_POINTS; k++) {
-        A->data[j][k] -= factor * A->data[i][k];
-      }
-    }
-  }
 }
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \begin{lstlisting}[language=C]
 void findCenterAndRadius(const struct Point *points, struct Point *center, double *radius) {
-  struct Matrix A = {
-    {{2 * (points[1].x - points[0].x), 2 * (points[1].y - points[0].y), points[1].x * points[1].x - points[0].x * points[0].x + points[1].y * points[1].y - points[0].y * points[0].y}},
-    {{2 * (points[2].x - points[0].x), 2 * (points[2].y - points[0].y), points[2].x * points[2].x - points[0].x * points[0].x + points[2].y * points[2].y - points[0].y * points[0].y}}
-  };
-  rowReduction(&A);
-  center->x = -A.data[0][2] / (2 * A.data[0][0]);
-  center->y = (-A.data[1][2] - 2 * A.data[1][0] * center->x) / (2 * A.data[1][1]);
-  *radius = sqrt((points[0].x - center->x) * (points[0].x - center->x) + (points[0].y - center->y) * (points[0].y - center->y));
+    struct Matrix A = {{{2 * points[0].x, 2 * points[0].y, points[0].x * points[0].x + points[0].y * points[0].y},
+         {2 * points[1].x, 2 * points[1].y, points[1].x * points[1].x + points[1].y * points[1].y},
+         {2 * points[2].x, 2 * points[2].y, points[2].x * points[2].x + points[2].y * points[2].y}}};
+    struct Matrix b = {{{points[0].x * points[0].x + points[0].y * points[0].y},{points[1].x * points[1].x + points[1].y * points[1].y},{points[2].x * points[2].x + points[2].y * points[2].y}}};
+    rowReduction(&A, &b); 
+    center->x = A.data[0][2] / (2 * A.data[0][0]);
+    center->y = A.data[1][2] / (2 * A.data[1][1]);
+    *radius = sqrt((points[0].x - center->x) * (points[0].x - center->x) + (points[0].y - center->y) * (points[0].y - center->y));
 }
 \end{lstlisting}
 \end{frame}
@@ -202,13 +193,16 @@ int main() {
   struct Point points[MAX_POINTS] = {{0, 0}, {2, 0}, {0, 2}};
   struct Point center;
   double radius;
-
   findCenterAndRadius(points, &center, &radius);
-
-  printf("Center: (%.2f, %.2f)\n", center.x, center.y);
-  printf("Radius: %.2f\n", radius);
-
-  return 0;
+  FILE *fp = fopen("circle_data.txt", "w");
+  if (fp == NULL) {
+  printf("Error opening file.\n");
+  return 1;
+}
+fprintf(fp, "Center: (%.2f, %.2f)\n", center.x, center.y);
+fprintf(fp, "Radius: %.2f\n", radius);
+fclose(fp);
+return 0;
 }
 }
 \end{lstlisting}
@@ -254,12 +248,10 @@ radius = float(lines[4])
 \begin{frame}[fragile]
 \begin{lstlisting}[language=C]
 # Generate points for the circle
-theta = np.linspace(0, 2 * np.pi, 100)
-x_circle = center_x + radius * np.cos(theta)
-y_circle = center_y + radius * np.sin(theta)
+circle=circ_gen(np.array([center_x,center_y]),radius)
 
 # Plot the circle and points
-plt.plot(x_circle, y_circle, color='blue')
+plt.plot(circle[0],circle[1], color='blue')
 plt.scatter([x1, x2, x3], [y1, y2, y3], color='red', label='Points')
 plt.scatter(center_x, center_y, color='green', label='Center')
 
@@ -286,8 +278,6 @@ plt.show()
 \begin{figure}
     \centering
     \includegraphics[width=0.7\linewidth]{./figs/Figure_1.png}
-    \caption{}
-    \label{fig:enter-label}
 \end{figure}
 \end{frame}
 \end{document}
