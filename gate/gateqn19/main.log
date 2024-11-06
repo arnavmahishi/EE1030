@@ -1652,13 +1652,13 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 40.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 40.
-
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1849,8 +1849,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 40.
 LaTeX Info: Redefining \pageref on input line 40.
 LaTeX Info: Redefining \nameref on input line 40.
-
-(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1891,131 +1889,45 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
-[]\OT1/txr/m/n/10 Let $\OML/txmi/m/it/10 C[] [] \OT1/txr/m/n/10 = []$ and $\OML
-/txmi/m/it/10 d[] [] \OT1/txr/m/n/10 =
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 53--55
-\OML/txmi/m/it/10 sup []$ \OT1/txr/m/n/10 for $\OML/txmi/m/it/10 f; g \OMS/txsy
-/m/n/10 2 \OML/txmi/m/it/10 C[] []$\OT1/txr/m/n/10 . For each $\OML/txmi/m/it/1
-0 n \OMS/txsy/m/n/10 2 \U/msb/m/n/10 N$\OT1/txr/m/n/10 , de-fine
- []
-
-
-Underfull \hbox (badness 2401) in paragraph at lines 81--85
-[]$\OML/txmi/m/it/10 l[] \OT1/txr/m/n/10 = []$. For a se-quence
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
-
- []
-
-(./tables/table.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 109--115
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
+LaTeX Font Info:    Calculating math sizes for size <17> on input line 221.
+ [2] [3] (./main.aux)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
-
- []
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 105.
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-LaTeX Font Info:    Trying to load font information for OML+txr on input line 1
-05.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxr.fd
-File: omltxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OML/txr/m/n' in size <10> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 105.
-
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 105.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--110
-
- []
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 111.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 111.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
-
- []
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 114.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 114.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 114.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 114.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 114.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 114.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-[3] (./main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49797 strings out of 480247
- 1164545 string characters out of 5896152
- 1643724 words of memory out of 5000000
- 66892 multiletter control sequences out of 15000+600000
- 537165 words of font info for 165 fonts, out of 8000000 for 9000
+ 49908 strings out of 480247
+ 1166624 string characters out of 5896152
+ 1632571 words of memory out of 5000000
+ 66977 multiletter control sequences out of 15000+600000
+ 550708 words of font info for 209 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 106i,12n,107p,595b,913s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,11n,107p,425b,919s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfo
-nts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 73084 bytes).
+e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (3 pages, 53187 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 31 named destinations out of 1000 (max. 500000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 71 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
