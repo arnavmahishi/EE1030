@@ -1,0 +1,360 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{xparse}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+
+\title{Eigenvalue Calculation Using QR Algorithm with Wilkinson's Shift}
+\author{Arnav Mahishi-ee24btech11006}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This report informs on the  the implementation and analysis of the QR Algorithm for computing eigenvalues of matrices, specifically using Wilkinson's shift strategy. The QR Algorithm is preferred because it can handle non-symmetric matrices and complex values giving us efficient computation of the eigenvalues. The implementation outlined in this report includes a detailed description of Wilkinson's shift, which is employed to accelerate convergence by adjusting the diagonal elements of the matrix.
+
+\section{QR Algorithm with Wilkinson's Shift}
+The QR Algorithm with Wilkinson's shift modifies the traditional QR iteration to improve the convergence rate by incorporating a shift that is carefully computed. This shift is based on the bottom right $2\times 2$ submatrix of the matrix $A$ and is given by:
+\begin{align}
+\text{shift} = A_{\brak{n}\brak{n}} - \sgn\brak{d} \sqrt{d^2 + A_{\brak{n}\brak{n-1}} A_{\brak{n-1}\brak{n}}},
+\end{align}
+where
+\begin{align}
+d = \frac{A_{\brak{n-1}\brak{n-1}} - A_{\brak{n}\brak{n}}}{2}.
+\end{align}
+$N$ is the size of the matrix.This strategy allows the algorithm to more rapidly converge to the eigenvalues of the matrix.
+\section{QR Algorithm Steps}
+The algorithm proceeds as follows:
+
+\subsection{Overview}
+This implementation computes the eigenvalues of a square matrix using the QR algorithm with Wilkinson's shift for improved convergence. The algorithm decomposes the matrix iteratively into orthogonal ($Q$) and upper triangular ($R$) matrices while shifting and updating the matrix to accelerate convergence.
+
+\subsection{Steps of the Algorithm}
+\begin{enumerate}
+    \item \textbf{Input:} 
+    \begin{itemize}
+        \item A square matrix $A$ of size $n \times n$.
+        \item Maximum number of iterations, $\text{Max\_iterations}$ (default: $1000$).
+        \item Convergence tolerance, $\text{Tolerance}$ (default: $10^{-10}$).
+    \end{itemize}
+
+    \item \textbf{Initialization:} 
+    \begin{itemize}
+        \item Set $A_0 = A$, the input matrix.
+        \item Initialize the iteration counter, $\text{iter} = 0$.
+    \end{itemize}
+
+    \item \textbf{Iterative Process:}
+    Repeat the following steps until the matrix converges (sub-diagonal elements are below $\text{Tolerance}$) or $\text{iter} = \text{Max\_iterations}$:
+    
+    \begin{enumerate}
+        \item \textbf{Compute Wilkinson's Shift:} For the bottom-right $2 \times 2$ submatrix:
+        \[
+        B = \begin{bmatrix}
+        a_{n-2,n-2} & a_{n-2,n-1} \\
+        a_{n-1,n-2} & a_{n-1,n-1}
+        \end{bmatrix},
+        \]
+        calculate:
+       \begin{align}
+            \text{shift} = A_{\brak{n}\brak{n}} - \sgn\brak{d} \sqrt{d^2 + A_{\brak{n}\brak{n-1}} A_{\brak{n-1}\brak{n}}},
+            \end{align}
+        where
+        \begin{align}
+        d = \frac{A_{\brak{n-1}\brak{n-1}} - A_{\brak{n}\brak{n}}}{2}.
+        \end{align}
+        where $\text{sign}(d)$ is $1$ if $d \geq 0$ and $-1$ otherwise and $N$ is the size of the matrix
+        \item \textbf{Shift the Matrix:} Subtract $\mu$ from the diagonal elements of $A_k$:
+        \[
+        \hat{A}_k = A_k -\mu I.
+        \]
+
+        \item \textbf{QR Decomposition:} Decompose $\hat{A}_k$ into $Q_k$ (orthogonal) and $R_k$ (upper triangular) using Gram-Schmidt:
+        \[
+        \hat{A}_k = Q_k R_k.
+        \]
+
+        \item \textbf{Update the Matrix:} Compute the next matrix:
+        \[
+        A_{k+1} = R_k Q_k + \mu I.
+        \]
+
+        \item \textbf{Check Convergence:} If all sub-diagonal elements $\hat{A}_k[i+1,i]$ are smaller than $\text{Tolerance}$, break the iteration loop.
+    \end{enumerate}
+
+    \item \textbf{Extract Eigenvalues:} 
+    For the resulting matrix, if any $2 \times 2$ submatrix remains on the diagonal, compute its eigenvalues using the quadratic equation:
+    \[
+    \lambda^2 + b\lambda + c = 0,
+    \]
+    where $b = -(a_{n-2,n-2} + a_{n-1,n-1})$ and $c = a_{n-2,n-2} a_{n-1,n-1} - a_{n-1,n-2} a_{n-2,n-1}$. For diagonal elements, take $\lambda = a_{i,i}$.
+
+    \item \textbf{Output:} The eigenvalues of the matrix $A$.
+\end{enumerate}
+\subsection{Time Complexity}
+The QR algorithm with Wilkinson's shift involves several computational steps. Below is the breakdown of the time complexity for each component:
+
+\begin{enumerate}
+    \item \textbf{Matrix Multiplication (\texttt{matmul} function):} 
+    The function multiplies two $n \times n$ matrices. For each element in the result matrix, it computes a dot product of two vectors of length $n$. This requires $O(n^3)$ operations.
+
+    \[
+    \text{Time Complexity: } O(n^3)
+    \]
+
+    \item \textbf{QR Decomposition (\texttt{gramschmidt} function):} 
+    The Gram-Schmidt process orthogonalizes the columns of an $n \times n$ matrix:
+    \begin{itemize}
+        \item For each column $j$, it computes the projection against all previous columns, which involves $O(n^2)$ operations.
+        \item This is repeated for all $n$ columns, leading to $O(n^3)$ operations in total.
+    \end{itemize}
+    \text{Time Complexity: } $O\brak{n^3}$
+    \item \textbf{Wilkinson's Shift:} 
+    Computing the shift involves solving a $2 \times 2$ eigenvalue problem, which is a constant-time operation, $O(1)$. This operation is repeated once per iteration.
+    \text{Time Complexity per Iteration: } O(1)
+    \item \textbf{Iterative Updates:} 
+    Each iteration of the QR algorithm involves:
+    \begin{itemize}
+        \item Subtracting the shift from the diagonal elements, $O\brak{n^4}$.
+        \item Performing the QR decomposition, $O(n^3)$.
+        \item Matrix multiplication to update $A_k$, $O\brak{n^3}$
+    \end{itemize}
+    Thus, the cost per iteration is dominated by $O\brak{n^3}$\\
+    \text{Time Complexity per Iteration: } $O\brak{n^3}$
+    \item \textbf{Convergence:} 
+    The algorithm typically converges in approximately $O\brak{n}$ iterations for most matrices.
+    \text{Total Time Complexity: } $O\brak{n^4}$
+
+\end{enumerate}
+The overall time complexity of the QR algorithm with Wilkinson's shift is dominated by the iterative QR decomposition and matrix multiplication steps, resulting in:
+\[
+\text{Total Time Complexity: } O(n^4)
+\]
+\subsection{Memory Complexity}
+\begin{enumerate}
+    \item \textbf{Matrix Storage:}
+    \begin{itemize}
+        \item The algorithm operates on an $n \times n$ matrix. The memory required to store the matrix is $\mathcal{O}(n^2)$.
+    \end{itemize}
+
+    \item \textbf{Intermediate Matrices:}
+    \begin{itemize}
+        \item During the computation, additional matrices such as $Q$, $R$, and intermediate results of matrix operations are created. Each matrix has a memory requirement of $\mathcal{O}(n^2)$.
+    \end{itemize}
+
+    \item \textbf{Extra Data Structures:}
+    \begin{itemize}
+        \item Temporary variables such as vectors ($v$), norms, and shifts are computed, but their memory usage is $\mathcal{O}(n)$, which is negligible compared to the matrices.
+    \end{itemize}
+\end{enumerate}
+\noindent \textbf{Total Memory Complexity:}
+\begin{itemize}
+    \item The dominant factor is the storage and manipulation of $\mathcal{O}(n^2)$ matrices.
+\end{itemize}
+Overall Memory Complexity is: $\mathcal{O}(n^2)$.
+\subsection{Convergence Analysis}
+The QR algorithm with Wilkinson's shift converges rapidly to the eigenvalues of a matrix. Without shifts, the standard QR algorithm converges linearly, which can be slow, especially for matrices with eigenvalues that are close to each other. However, by applying Wilkinson's shift, the convergence is significantly accelerated.
+
+Wilkinson's shift is computed as:
+
+\[
+\sigma = A_{n,n} - \text{sign}(d) \sqrt{d^2 + A_{n-1,n} A_{n,n-1}}
+\]
+
+where \( d = \frac{A_{n-1,n-1} - A_{n,n}}{2} \). This shift focuses on the bottom-right 2x2 block of the matrix, which accelerates the process of diagonalizing the matrix by reducing off-diagonal elements more effectively.
+
+The convergence of the QR algorithm with Wilkinson's shift is quadratic, meaning that the error in the eigenvalue approximation decreases exponentially as the iterations progress. Specifically, if \( \epsilon_k \) represents the error at the \( k \)-th iteration, the error satisfies:
+
+\[
+\epsilon_{k+1} \approx C \cdot \epsilon_k^2
+\]
+
+for some constant \( C \). This quadratic convergence leads to fast approximation of the eigenvalues, with the number of iterations required to reach a desired tolerance being relatively small.
+
+Overall, the QR algorithm with Wilkinson's shift exhibits efficient convergence, especially for larger matrices, making it a preferred method for eigenvalue computation.
+\section{Comparison of Eigenvalue Computation Methods}
+
+The following list provides a comparison of various eigenvalue computation methods, including their pros, cons, and time complexity:
+
+\begin{itemize}
+    \item \textbf{QR Algorithm with Wilkinson's Shift:}
+    \begin{itemize}
+        \item \textbf{Pros:} Handles non-symmetric matrices well. Converges rapidly for large matrices. Efficient for complex and sparse matrices.
+        \item \textbf{Cons:} Computationally expensive ($O(n^4)$). Not ideal for very large $n$.
+        \item \textbf{Time Complexity:} $O(n^4)$.
+    \end{itemize}
+    
+    \item \textbf{Jacobi's Method:}
+    \begin{itemize}
+        \item \textbf{Pros:} Simple and easy to implement. Works well for symmetric matrices.
+        \item \textbf{Cons:} Slow for large matrices, especially for dense matrices.
+        \item \textbf{Time Complexity:} $O(n^3)$.
+    \end{itemize}
+    
+    \item \textbf{Power Iteration:}
+    \begin{itemize}
+        \item \textbf{Pros:} Simple and fast for finding the dominant eigenvalue.
+        \item \textbf{Cons:} Can only find the dominant eigenvalue. Convergence is slow.
+        \item \textbf{Time Complexity:} $O(n^2)$ per iteration.
+    \end{itemize}
+
+    \item \textbf{Householder Method:}
+    \begin{itemize}
+        \item \textbf{Pros:} Efficient for orthogonalization. Fast for large matrices.
+        \item \textbf{Cons:} Requires more memory and may have numerical stability issues for very large matrices.
+        \item \textbf{Time Complexity:} $O(n^3)$.
+    \end{itemize}
+    
+    \item \textbf{Givens Rotation:}
+    \begin{itemize}
+        \item \textbf{Pros:} Effective for sparse matrices. Good for solving least squares problems.
+        \item \textbf{Cons:} Relatively slower for dense matrices. Not as robust as Householder.
+        \item \textbf{Time Complexity:} $O(n^3)$.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Why QR Algorithm with Wilkinson's Shift is the Best}
+Among all the methods listed, the \textbf{QR Algorithm with Wilkinson's Shift} stands out as the best choice for eigenvalue computation in general-purpose applications, especially when dealing with non-symmetric or complex matrices. 
+\begin{itemize}
+    \item \textbf{Convergence Speed:} The Wilkinson's shift significantly accelerates the convergence of the QR Algorithm, especially for matrices with a large number of eigenvalues. This results in faster computation compared to simpler methods like Power Iteration or Jacobi's method.
+    \item \textbf{Versatility:} Unlike Power Iteration, which only computes the dominant eigenvalue, the QR Algorithm computes all eigenvalues, making it a more complete solution.
+    \item \textbf{Handling of Complex Matrices:} The QR Algorithm is robust for both real and complex matrices, whereas methods like Jacobi are limited to symmetric matrices.
+    \item \textbf{Numerical Stability:} The Wilkinson's shift, by focusing on the bottom-right 2x2 submatrix, stabilizes the QR process and reduces errors in numerical calculations, especially in the presence of near-degenerate eigenvalues.
+    \item \textbf{Applicability to Large Matrices:} Although computationally expensive ($O(n^4)$), the QR Algorithm with Wilkinson's shift remains one of the most reliable methods for large matrices, especially in scientific computing and numerical simulations where accurate eigenvalue computation is crucial.
+\end{itemize}
+
+Thus, despite its higher computational cost, the QR Algorithm with Wilkinson's Shift is the best choice for most applications where accuracy and reliability are paramount, especially when dealing with non-symmetric and complex matrices.
+\section{Implementation of QR Algorithm with Wilkinson's Shift in Python}
+Below is the Python code implementing the QR algorithm with Wilkinson's shift, which allows for more rapid convergence:
+\begin{lstlisting}[language=Python, caption=QR Algorithm with Wilkinson's Shift in Python]
+import cmath
+import time
+def matmul(A, B):
+    n = len(A)
+    C = [[0] * n for _ in range(n)]  # Create matrix C nxn
+    for i in range(n):
+        for j in range(n):
+            C[i][j] = sum(A[i][k] * B[k][j] for k in range(n))
+    return C
+
+def gramschmidt(A):
+    n = len(A)
+    Q = [[0] * n for _ in range(n)]  # Initialize Q and R as nxn matrices
+    R = [[0] * n for _ in range(n)]
+    for j in range(n):
+        v = [A[i][j] for i in range(n)]  # j-th column of A
+        for k in range(j):
+            R[k][j] = sum(Q[i][k].conjugate() * v[i] for i in range(n)) #projection of the current vector with the vector we are orthogalizing
+            for i in range(n):
+                v[i] -= R[k][j] * Q[i][k]
+        norm = sum(v[i].conjugate() * v[i] for i in range(n))
+        if abs(norm) < 1e-12:  #if column is linearly independent of other column
+            R[j][j] = 0
+            for i in range(n):
+                Q[i][j] = 0
+        else:
+            R[j][j] = cmath.sqrt(norm)
+            for i in range(n):
+                Q[i][j] = v[i] / R[j][j]
+    return Q, R
+def check(temp):
+    k = 0
+    n=len(temp)
+    eigenvalues = [0 + 0j] * n
+    while k < n:
+        if k < n - 1 and abs(temp[k + 1][k]) > 1e-10:
+            a11 = temp[k][k]  #solving eigne using quadratic
+            a12 = temp[k + 1][k]
+            a21= temp[k][k + 1]
+            a22= temp[k + 1][k + 1]
+            
+            b = -1.0 * (a11+a22)
+            c = (a11*a22-a21*a12)
+            D= b*b-4*c
+
+            eigenvalues[k] = (-1*b + cmath.sqrt(D)) / 2.0
+            eigenvalues[k + 1] = (-1*b- cmath.sqrt(D)) / 2.0
+            temp[k + 1][k] = 0
+            k += 2
+        else:
+            eigenvalues[k] = temp[k][k]
+            k += 1
+    return eigenvalues
+
+def qr_algorithm_with_shift(matrix, Max_iterations=1000, Tolerance=1e-10):
+    n = len(matrix)
+    for iter in range(Max_iterations):
+        if n > 1:
+            d = (matrix[n-2][n-2] - matrix[n-1][n-1])/2.0
+            if d.real>=0:
+                sign=1.0
+            else:
+                sign=-1.0
+            shift = matrix[n-1][n-1] - sign * cmath.sqrt(d * d + matrix[n-1][n-2] * matrix[n-2][n-1])
+        else:
+            shift = matrix[n-1][n-1]
+        
+        for i in range(n):
+            matrix[i][i] -= shift
+        Q, R = gramschmidt(matrix)
+        matrix = matmul(R, Q)
+        for i in range(n):
+            matrix[i][i] += shift
+        flag=0
+        if(all(abs(matrix[i+1][i])<=Tolerance for i in range(n-1))):
+            break
+    return check(matrix)
+
+if __name__ == "__main__":
+    matrix = [
+    [1.0,2.0,5.0],[4.0,5.0,8.0],[2.0,4.0,3.0]#inputing matrix
+]
+    st=time.time()
+    eigenvalues = qr_algorithm_with_shift(matrix)
+    et=time.time()
+    print("Eigen Values are:",eigenvalues)
+    print("Runtime:",et-st,"seconds")
+
+
+\end{lstlisting}
+
+\section{Conclusion}
+This report demonstrated the implementation of the QR Algorithm with Wilkinson's shift for eigenvalue computation. The method accelerates the convergence of the algorithm by effectively applying a shift derived from the bottom-right 2x2 submatrix of the matrix. The QR algorithm is computationally expensive with a time complexity of $O(n^4)$ in general, but it is a powerful tool for computing eigenvalues of complex and non-symmetric matrices. Alternative methods like the power iteration and inverse iteration may be more efficient in certain cases, but the QR algorithm provides a versatile and robust solution handling complex entries and eigenvalues.
+\section{Bibliography}
+\begin{enumerate}
+    \item Wikipedia
+    \item Youtube Channel:Nick Space Cowboy
+    \item Youtube Channel:Veritasium
+    \item Numerical Linear Algebra by David Bau and Lloyd N Trefethen
+    \item Generative AI
+\end{enumerate}
+\end{document} 
