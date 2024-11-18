@@ -78,12 +78,12 @@ This implementation computes the eigenvalues of a square matrix using the QR alg
     
     \begin{enumerate}
         \item \textbf{Compute Wilkinson's Shift:} For the bottom-right $2 \times 2$ submatrix:
-        \[
+        \begin{align}
         B = \begin{bmatrix}
         a_{n-2,n-2} & a_{n-2,n-1} \\
         a_{n-1,n-2} & a_{n-1,n-1}
         \end{bmatrix},
-        \]
+        \end{align}
         calculate:
        \begin{align}
             \text{shift} = A_{\brak{n}\brak{n}} - \sgn\brak{d} \sqrt{d^2 + A_{\brak{n}\brak{n-1}} A_{\brak{n-1}\brak{n}}},
@@ -94,28 +94,28 @@ This implementation computes the eigenvalues of a square matrix using the QR alg
         \end{align}
         where $\text{sign}(d)$ is $1$ if $d \geq 0$ and $-1$ otherwise and $N$ is the size of the matrix
         \item \textbf{Shift the Matrix:} Subtract $\mu$ from the diagonal elements of $A_k$:
-        \[
-        \hat{A}_k = A_k -\mu I.
-        \]
+        \begin{align}
+        \hat{A}_k = A_k - \mu I.
+        \end{align}
 
         \item \textbf{QR Decomposition:} Decompose $\hat{A}_k$ into $Q_k$ (orthogonal) and $R_k$ (upper triangular) using Gram-Schmidt:
-        \[
+        \begin{align}
         \hat{A}_k = Q_k R_k.
-        \]
+        \end{align}
 
         \item \textbf{Update the Matrix:} Compute the next matrix:
-        \[
+        \begin{align}
         A_{k+1} = R_k Q_k + \mu I.
-        \]
+        \end{align}
 
         \item \textbf{Check Convergence:} If all sub-diagonal elements $\hat{A}_k[i+1,i]$ are smaller than $\text{Tolerance}$, break the iteration loop.
     \end{enumerate}
 
     \item \textbf{Extract Eigenvalues:} 
     For the resulting matrix, if any $2 \times 2$ submatrix remains on the diagonal, compute its eigenvalues using the quadratic equation:
-    \[
+    \begin{align}
     \lambda^2 + b\lambda + c = 0,
-    \]
+    \end{align}
     where $b = -(a_{n-2,n-2} + a_{n-1,n-1})$ and $c = a_{n-2,n-2} a_{n-1,n-1} - a_{n-1,n-2} a_{n-2,n-1}$. For diagonal elements, take $\lambda = a_{i,i}$.
 
     \item \textbf{Output:} The eigenvalues of the matrix $A$.
@@ -127,9 +127,9 @@ The QR algorithm with Wilkinson's shift involves several computational steps. Be
     \item \textbf{Matrix Multiplication (\texttt{matmul} function):} 
     The function multiplies two $n \times n$ matrices. For each element in the result matrix, it computes a dot product of two vectors of length $n$. This requires $O(n^3)$ operations.
 
-    \[
+    \begin{align}
     \text{Time Complexity: } O(n^3)
-    \]
+    \end{align}
 
     \item \textbf{QR Decomposition (\texttt{gramschmidt} function):} 
     The Gram-Schmidt process orthogonalizes the columns of an $n \times n$ matrix:
@@ -156,9 +156,9 @@ The QR algorithm with Wilkinson's shift involves several computational steps. Be
 
 \end{enumerate}
 The overall time complexity of the QR algorithm with Wilkinson's shift is dominated by the iterative QR decomposition and matrix multiplication steps, resulting in:
-\[
+\begin{align}
 \text{Total Time Complexity: } O(n^4)
-\]
+\end{align}
 \subsection{Memory Complexity}
 \begin{enumerate}
     \item \textbf{Matrix Storage:}
@@ -186,17 +186,17 @@ The QR algorithm with Wilkinson's shift converges rapidly to the eigenvalues of 
 
 Wilkinson's shift is computed as:
 
-\[
+\begin{align}
 \sigma = A_{n,n} - \text{sign}(d) \sqrt{d^2 + A_{n-1,n} A_{n,n-1}}
-\]
+\end{align}
 
 where \( d = \frac{A_{n-1,n-1} - A_{n,n}}{2} \). This shift focuses on the bottom-right 2x2 block of the matrix, which accelerates the process of diagonalizing the matrix by reducing off-diagonal elements more effectively.
 
 The convergence of the QR algorithm with Wilkinson's shift is quadratic, meaning that the error in the eigenvalue approximation decreases exponentially as the iterations progress. Specifically, if \( \epsilon_k \) represents the error at the \( k \)-th iteration, the error satisfies:
 
-\[
+\begin{align}
 \epsilon_{k+1} \approx C \cdot \epsilon_k^2
-\]
+\end{align}
 
 for some constant \( C \). This quadratic convergence leads to fast approximation of the eigenvalues, with the number of iterations required to reach a desired tolerance being relatively small.
 
@@ -355,6 +355,6 @@ This report demonstrated the implementation of the QR Algorithm with Wilkinson's
     \item Youtube Channel:Nick Space Cowboy
     \item Youtube Channel:Veritasium
     \item Numerical Linear Algebra by David Bau and Lloyd N Trefethen
-    \item Generative AI
 \end{enumerate}
-\end{document} 
+\end{document}
+
